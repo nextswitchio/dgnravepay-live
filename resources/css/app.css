@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-sm;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h1 {
+    @apply text-[clamp(2.4rem,_5vw,_74px)] leading-[1.3];
+    /* @apply text-5xl md:text-6xl lg:text-[74px]; */
+}
+
+h2 {
+    @apply text-[clamp(2rem,_3vw,_58px)];
+    /* @apply  text-3xl md:text-5xl lg:text-[48px]; */
+}
+
+h3 {
+    @apply text-[clamp(1.5rem,_2vw,_24px)];
+}
+
+button {
+    cursor: pointer;
+}
+
+.full-width-text {
+    font-size: clamp(3rem, 10rem, 100vw);
+}
+
+/* Add to your global CSS */
+.minimal-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(240, 241, 244);
+    border-radius: 2px;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(156, 163, 175);
+}
+
+.minimal-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(242, 243, 245) transparent;
+}
+
+.join-active {
+    @apply bg-stone-50 relative;
+}
+
+.join-active::after {
+    @apply h-20 w-full rounded-xl bg-primary absolute left-0 -bottom-[1.5px] -z-[1] transition-all;
+    
+    animation: join-animate 5s ease-in-out;
+    content: "";
+}
+
+@keyframes join-animate {
+    0% {
+        width: 5%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.nav-selected {
+    @apply bg-white;
+}
+
+.nav-selected button svg {
+    @apply fill-primary;
+}
+
+.tab-active {
+    @apply  bg-white text-black;
+}
