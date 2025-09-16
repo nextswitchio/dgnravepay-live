@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <section class="min-h-screen relative">
+    <section class="py-20 relative">
         <div class="pt-20 md:pt-32 lg:pt-40">
             <div class="container mx-auto max-w-6xl px-5 md:px-10">
                 <div class="text-center mb-10">
@@ -49,7 +49,8 @@
         <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10">
             <div class="lg:grid lg:grid-cols-2 space-y-10 lg:space-y-0">
                 <div class="">
-                <h2 class="mb-3 leading-[1] sticky top-32">Our core values</h2></div>
+                    <h2 class="mb-3 leading-[1] sticky top-32">Our core values</h2>
+                </div>
                 <div class="grid md:grid-cols-2 gap-5">
                     <article class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-200 overflow-hidden">
                         <div class="p-5 md:p-10">
@@ -108,11 +109,12 @@
         <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10">
             <div class="lg:grid lg:grid-cols-2 space-y-10 lg:space-y-0">
                 <div class="">
-                <h2 class="mb-3 leading-[1] sticky top-32">Perks we enjoy</h2></div>
+                    <h2 class="mb-3 leading-[1] sticky top-32">Perks we enjoy</h2>
+                </div>
                 <div class="grid md:grid-cols-2 gap-5">
                     <article class="rounded-xl bg-gradient-to-br from-rose-50 to-rose-200">
                         <div class="p-5 md:p-7">
-                            <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""
+                            <img src="{{ Vite::asset('resources/images/competitive.png') }}" alt=""
                                 class="h-16 md:h-24 lg:h-32 mb-5">
                             <h6 class="font-bold text-lg md:text-lg">Competitive Pay & Performance Bonuses</h6>
                             <span class="text-base md:text-sm">Earn industry leading compensation with
@@ -122,28 +124,27 @@
                     </article>
                     <article class="rounded-xl bg-gradient-to-br from-cyan-50 to-cyan-200">
                         <div class="p-5 md:p-7">
-                            <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""
+                            <img src="{{ Vite::asset('resources/images/health.png') }}" alt=""
                                 class="h-16 md:h-24 lg:h-32 mb-5">
-                            <h6 class="font-bold text-lg md:text-lg">Competitive Pay & Performance Bonuses</h6>
-                            <span class="text-base md:text-sm">Earn industry leading compensation with
-                                performance driven bonuses that reward your impact in shaping Africa’s financial future.
+                            <h6 class="font-bold text-lg md:text-lg">Health & Family Support</h6>
+                            <span class="text-base md:text-sm">Stay protected with robust health insurance covering you
+                                and your dependents, plus wellness programs tailored for balance and peace of mind.
                             </span>
                         </div>
                     </article>
                     <article class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-200">
                         <div class="p-5 md:p-7">
-                            <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""
+                            <img src="{{ Vite::asset('resources/images/learning.png') }}" alt=""
                                 class="h-16 md:h-24 lg:h-32 mb-5">
-                            <h6 class="font-bold text-lg md:text-lg">Health & Family Support</h6>
-                            <span class="text-base md:text-sm">Stay protected with robust health
-                                insurance covering you and your dependents, plus wellness programs tailored for balance
-                                and peace of mind
+                            <h6 class="font-bold text-lg md:text-lg">Learning & Career Growth</h6>
+                            <span class="text-base md:text-sm">Level up with access to global fintech courses, sponsored
+                                certifications, leadership tracks, and mentorship programs to help you grow faster.
                             </span>
                         </div>
                     </article>
                     <article class="rounded-xl bg-gradient-to-br from-lime-50 to-lime-200">
                         <div class="p-5 md:p-7">
-                            <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""
+                            <img src="{{ Vite::asset('resources/images/flexible.png') }}" alt=""
                                 class="h-16 md:h-24 lg:h-32 mb-5">
                             <h6 class="font-bold text-lg md:text-lg">Flexible & Hybrid Work</h6>
                             <span class="text-base md:text-sm">Level up with access to global fintech
@@ -154,7 +155,7 @@
                     </article>
                     <article class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-200">
                         <div class="p-5 md:p-7">
-                            <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""
+                            <img src="{{ Vite::asset('resources/images/lifestyle.png') }}" alt=""
                                 class="h-16 md:h-24 lg:h-32 mb-5">
                             <h6 class="font-bold text-lg md:text-lg">Lifestyle & Team Culture</h6>
                             <span class="text-base md:text-sm">Enjoy vibrant team retreats, hackathons,
@@ -166,7 +167,7 @@
                     </article>
                     <article class="rounded-xl bg-gradient-to-br from-violet-50 to-violet-200">
                         <div class="p-5 md:p-7">
-                            <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""
+                            <img src="{{ Vite::asset('resources/images/exclusive.png') }}" alt=""
                                 class="h-16 md:h-24 lg:h-32 mb-5">
                             <h6 class="font-bold text-lg md:text-lg">Exclusive Financial Perks</h6>
                             <span class="text-base md:text-sm">Benefit from staff loans, savings
