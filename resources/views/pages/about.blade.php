@@ -25,31 +25,45 @@
         <h2 class="mb-7 md:mb-10 leading-[1.5] text-center">
             Built for Trust. Designed for Growth
         </h2>
-        <div class="grid md:grid-cols-4 gap-10 md:gap-5 items-center" id="about-grid-swipe">
-            <div class="space-y-5 transition-all ease-in-out duration-300">
-                <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt=""
-                    class="aspect-video rounded-lg object-cover w-full">
-                <span class="uppercase text-xs md:text-sm text-stone-300">evolution</span>
-                <h6 class="text-base md:text-lg font-semibold">Use your currencies in digital payments.</h6>
+        <section class="splide max-w-7xl mx-auto" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="space-y-5 transition-all ease-in-out duration-300">
+                            <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt=""
+                                class="aspect-video rounded-lg object-cover w-full mb-5">
+                            <span class="uppercase text-xs md:text-sm text-stone-300">evolution</span>
+                            <h6 class="text-base md:text-lg font-semibold">Use your currencies in digital payments.</h6>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="space-y-5 md:col-span-2 transition-all ease-in-out duration-300">
+                            <img src="{{ Vite::asset('resources/images/article 2.jpg') }}" alt=""
+                                class="aspect-video rounded-lg object-cover w-full mb-5">
+                            <span class="uppercase text-xs md:text-sm text-stone-300">evolution</span>
+                            <h6 class="text-base md:text-lg font-semibold">Growth from simple transfers to full
+                                financial ecosystem.
+                            </h6>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="space-y-5 transition-all ease-in-out duration-300">
+                            <img src="{{ Vite::asset('resources/images/article 3.jpg') }}" alt=""
+                                class="aspect-video rounded-lg object-cover w-full mb-5">
+                            <span class="uppercase text-xs md:text-sm text-stone-300">promise</span>
+                            <h6 class="text-base md:text-lg font-semibold">A platform that scales with you — individual
+                                or
+                                enterprise</h6>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="space-y-5 md:col-span-2 transition-all ease-in-out duration-300">
-                <img src="{{ Vite::asset('resources/images/article 2.jpg') }}" alt=""
-                    class="aspect-video rounded-lg object-cover w-full">
-                <span class="uppercase text-xs md:text-sm text-stone-300">evolution</span>
-                <h6 class="text-base md:text-lg font-semibold">Growth from simple transfers to full financial ecosystem.
-                </h6>
+            <!-- Add the progress bar element -->
+            <div class="splide__progress mt-10 md:mt-20">
+                <div class="splide__progress__bar">
+                </div>
             </div>
-            <div class="space-y-5 transition-all ease-in-out duration-300">
-                <img src="{{ Vite::asset('resources/images/article 3.jpg') }}" alt=""
-                    class="aspect-video rounded-lg object-cover w-full">
-                <span class="uppercase text-xs md:text-sm text-stone-300">promise</span>
-                <h6 class="text-base md:text-lg font-semibold">A platform that scales with you — individual or
-                    enterprise</h6>
-            </div>
-        </div>
-        <div class="w-0 transition-all md:max-w-2xl lg:max-w-4xl mx-auto h-[2px] rounded bg-gradient-to-tr from-stone-100 to-primary mt-10"
-            id="loading-bar">
-        </div>
+        </section>
     </div>
     <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10 my-20 md:mt-30 gap-10 grid md:grid-cols-3">
         <div class="">
@@ -189,32 +203,33 @@
                 <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
                 <p class="text-primary font-semibold">Explore Careers at DngRavePay</p>
             </div>
-            <img src="{{ Vite::asset('resources/images/lady with phone.png') }}" alt=""
-                class="mt-5 h-40 md:h-52 lg:h-64 mx-auto">
+            <img src="{{ Vite::asset('resources/images/about-bag.png') }}" alt="" class="ml-auto">
             <div class="absolute left-6 bottom-6 p-3 rounded-full bg-black w-14 h-14 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
                     stroke="currentColor" class="size-6 stroke-white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                 </svg>
             </div>
-            <img src="{{ Vite::asset('resources/images/hand-card-grid-bg.png') }}" alt=""
-                class="w-full absolute top-0 left-0 -z-[1]">
+            {{-- <img src="{{ Vite::asset('resources/images/hand-card-grid-bg.png') }}" alt=""
+                class="w-full absolute top-0 left-0 -z-[1]"> --}}
         </div>
         <div class="rounded-xl overflow-hidden bg-gradient-to-b from-primary to-primary-2/50 relative -z-[0]">
             <div class="p-5">
                 <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
                 <p class="text-primary font-semibold">Explore Careers at DngRavePay</p>
             </div>
-            <img src="{{ Vite::asset('resources/images/lady with phone.png') }}" alt=""
-                class="mt-5 h-40 md:h-52 lg:h-64 mx-auto">
+            <div class="h-full relative overflow-hidden">
+                <img src="{{ Vite::asset('resources/images/about-handshake.png') }}" alt=""
+                    class="absolute w-full bottom-20">
+            </div>
             <div class="absolute left-6 bottom-6 p-3 rounded-full bg-black w-14 h-14 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
                     stroke="currentColor" class="size-6 stroke-white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                 </svg>
             </div>
-            <img src="{{ Vite::asset('resources/images/hand-card-grid-bg.png') }}" alt=""
-                class="w-full absolute top-0 left-0 -z-[1]">
+            {{-- <img src="{{ Vite::asset('resources/images/hand-card-grid-bg.png') }}" alt=""
+                class="w-full absolute top-0 left-0 -z-[1]"> --}}
         </div>
     </section>
 </x-guest-layout>

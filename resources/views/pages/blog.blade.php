@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="md:col-span-2 flex flex-col items-end mt-10 md:mt-0">
-                    <img src="{{ Vite::asset('resources/images/woman hand.png') }}" alt=""
+                    <img src="{{ Vite::asset('resources/images/woman hand holding phone dark.png') }}" alt=""
                         class="h-80 md:h-96 lg:h-[33rem] mx-auto">
                 </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="mt-5 md:mt-10">
                 <article class="bg-white rounded-xl p-3">
                     <div class="bg-primary-3 rounded-lg md:grid-cols-5 md:grid">
-                        <div class="md:col-span-3 px-5 md:px-7 py-10">
+                        <div class="md:col-span-3 px-5 md:px-7 py-10 md:py-14">
                             <div class="bg-primary rounded-full uppercase mb-5 inline-block px-3 md:px-4 py-2 md:py-3">
                                 New Feature</div>
                             <h2 class="text-white mb-5 leading-[1.5]">Why choose
@@ -49,9 +49,9 @@
                                 Mastercard?
                             </h2>
                         </div>
-                        <div class="md:col-span-2 flex items-end justify-center">
-                            <img src="{{ Vite::asset('resources/images/woman hand.png') }}" alt=""
-                                class="h-48 md:h-60 lg:h-[20rem]">
+                        <div class="md:col-span-2 flex items-end justify-center overflow-hidden relative">
+                            <img src="{{ Vite::asset('resources/images/black hand holding card.png') }}" alt=""
+                                class="h-[120%] -rotate-[20deg] absolute -bottom-10">
                         </div>
                     </div>
                     <div class="p-5">

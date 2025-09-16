@@ -17,7 +17,7 @@
                     </div>
                 </div>
 
-                <img src="{{ Vite::asset('resources/images/woman hand holding phone.png') }}"
+                <img src="{{ Vite::asset('resources/images/woman hand holding phone dark.png') }}"
                     alt="A happy black lady dressed in bright sunny yellow dress happily stretching her hands forward while holding a phone"
                     class="mx-auto h-60 md:h-96 lg:h-[30rem]">
             </div>
@@ -35,7 +35,54 @@
                     Smarter
                     Worldwide Spending</h2>
             </div>
-        </div>
+            <div class="grid md:grid-cols-3 gap-5 mt-10">
+                <div class="bg-primary rounded-xl flex flex-col justify-between">
+                    <div class="px-4 py-5 md:px-5 md:py-6">
+                        <h6 class="font-bold text-xl md:text-2xl mb-1">A zero maintenance card</h6>
+                        <p>Get debited only for your purchases. No maintenance and hidden fees.</p>
+                    </div>
+                    <img src="{{ Vite::asset('resources/images/amount circle.png') }}" alt="" class="w-full">
+                </div>
+                <div class="bg-stone-200 rounded-xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="px-4 py-5 md:px-5 md:py-6">
+                        <h6 class="font-bold text-xl md:text-2xl mb-1">Real-Time Tracking</h6>
+                        <p>Get instant notifications, detailed spend insights, and downloadable statements.</p>
+                    </div>
+                    <img src="{{ Vite::asset('resources/images/stats 2.png') }}" alt=""
+                        class="h-64 object-cover mx-auto">
+                </div>
+                <div class="bg-stone-900 text-white rounded-xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="px-4 py-5 md:px-5 md:py-6">
+                        <h6 class="font-bold text-xl md:text-2xl mb-1">Global Acceptance</h6>
+                        <p>Pay for shopping, subscriptions, travel, and services anywhere USD is accepted.</p>
+                    </div>
+                    <img src="{{ Vite::asset('resources/images/outbound circle logo.png') }}" alt=""
+                        class="w-full">
+                </div>
+                <div class="bg-indigo-200 rounded-xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="px-4 py-5 md:px-5 md:py-6">
+                        <h6 class="font-bold text-xl md:text-2xl mb-1">Instant Issuance</h6>
+                        <p>Create your card in less than 2 minutes, directly in the DgnRavePay app.</p>
+                    </div>
+                    <img src="{{ Vite::asset('resources/images/world circle cards.png') }}" alt=""
+                        class="w-full">
+                </div>
+                <div class="bg-indigo-200 rounded-xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="px-4 py-5 md:px-5 md:py-6">
+                        <h6 class="font-bold text-xl md:text-2xl mb-1">Easy Funding</h6>
+                        <p>Top up from your DgnRavePay wallet using Naira, automatically converted to USD.</p>
+                    </div>
+                    <img src="{{ Vite::asset('resources/images/amount notification.png') }}" alt=""
+                        class="w-full">
+                </div>
+                <div class="bg-teal-100 rounded-xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="px-4 py-5 md:px-5 md:py-6">
+                        <h6 class="font-bold text-xl md:text-2xl mb-1">Secure & Protected</h6>
+                        <p>Freeze/unfreeze instantly, set spending limits, and enjoy advanced fraud detection.</p>
+                    </div>
+                    <img src="{{ Vite::asset('resources/images/safe-box.png') }}" alt="" class="w-full">
+                </div>
+            </div>
     </section>
 
     <!-- Dark Section -->
@@ -125,13 +172,13 @@
                     </div>
                 </div>
                 <div class="md:col-span-3 flex items-end justify-center">
-                    <img src="{{ Vite::asset('resources/images/woman hand holding phone.png') }}" alt=""
+                    <img src="{{ Vite::asset('resources/images/black hand holding card.png') }}" alt=""
                         class="h-60 md:h-96 lg:h-[30rem]">
                 </div>
             </div>
         </div>
 
-        <div class="bg-black/20 relative -z-[0] overflow-hidden py-20 flex flex-col items-center relative">
+        <div class="bg-black/20 -z-[0] overflow-hidden py-20 flex flex-col items-center relative">
             <div
                 class="rounded-xl aspect-square inline-flex items-center justify-center p-3 mb-10 bg-white-/5 border border-white/10">
                 <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="DgnRavePay’s Logo"

@@ -142,7 +142,7 @@
         </div>
         <div class="">
             <a href="#"
-                class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">Get
+                class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 font-medium shadow-lg">Get
                 Started
             </a>
         </div>

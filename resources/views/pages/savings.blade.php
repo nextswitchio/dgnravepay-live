@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="mt-20">
-                    <img src="{{ Vite::asset('resources/images/hand touching cards') }}" alt=""
+                    <img src="{{ Vite::asset('resources/images/pig safe.png') }}" alt=""
                         class="mx-auto h-60 md:h-96 lg:h-[30rem]">
                 </div>
                 {{-- <img src="{{ Vite::asset('resources/images/hand-card-grid-bg.png') }}" alt=""
@@ -42,23 +42,23 @@
                             <h6 class="font-bold text-xl md:text-2xl mb-1">Save Your Way</h6>
                             <p>Choose a plan that matches your lifestyle, not the other way around.</p>
                         </div>
-                        <img src="{{ Vite::asset('resources/images/black hand holding phone.png') }}" alt=""
-                            class="mx-auto h-40 md:h-52 lg:h-64">
+                        <img src="{{ Vite::asset('resources/images/hand coin save.png') }}" alt=""
+                            class="h-40 md:h-52 lg:h-64">
                     </div>
                     <div class="bg-secondary/50 rounded-xl">
                         <div class="px-4 py-5 md:px-5 md:py-6">
                             <h6 class="font-bold text-xl md:text-2xl mb-1">No Excuses</h6>
                             <p>Automated savings keep you consistent, even on busy days.</p>
                         </div>
-                        <img src="{{ Vite::asset('resources/images/black hand holding phone.png') }}" alt=""
-                            class="mx-auto h-40 md:h-52 lg:h-64">
+                        <img src="{{ Vite::asset('resources/images/hand money save.png') }}" alt=""
+                            class="ml-auto h-40 md:h-52 lg:h-64">
                     </div>
                     <div class="bg-stone-950 rounded-xl text-white">
                         <div class="px-4 py-5 md:px-5 md:py-6">
                             <h6 class="font-bold text-xl md:text-2xl mb-1">Grow with Confidence</h6>
                             <p>Earn interest, stay flexible, and keep your funds safe with CBN regulated protection.</p>
                         </div>
-                        <img src="{{ Vite::asset('resources/images/black hand holding phone.png') }}" alt=""
+                        <img src="{{ Vite::asset('resources/images/growth savings.png') }}" alt=""
                             class="mx-auto h-40 md:h-52 lg:h-64">
                     </div>
                 </div>
@@ -93,7 +93,8 @@
                             </h6>
                             <div class="mt-6 lg:mt-8">
                                 <div>
-                                    <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">Achieve Your
+                                    <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">Achieve
+                                        Your
                                         Dreams,
                                         One Goal at a Time</h4>
                                     <p>Create personalized savings goals (e.g., rent, gadgets, tuition,
@@ -116,8 +117,8 @@
                         </div>
                     </div>
                     <div class="md:col-span-3 aspect-[16/12] lg:aspect-square relative">
-                        <img src="{{ Vite::asset('resources/images/account credited.svg') }}"
-                            alt="Mockup of a phone making transanctions" class="w-full object-cover">
+                        <img src="{{ Vite::asset('resources/images/treasure-box.png') }}" alt="treasure box"
+                            class="w-full object-cover">
                         <div
                             class="absolute bottom-10 right-10 bg-white p-3 rounded-xl inline-flex items-center justify-between gap-5 md:gap-10 shadow-md">
                             <p>RaveGoals</p>
@@ -156,9 +157,9 @@
                             </a>
                         </div>
                     </div>
-                    <div class="md:col-span-3 aspect-[16/12] lg:aspect-square relative">
-                        <img src="{{ Vite::asset('resources/images/account credited.svg') }}"
-                            alt="Mockup of a phone making transanctions" class="w-full object-cover">
+                    <div class="md:col-span-3 aspect-[16/12] lg:aspect-square relative overflow-hidden">
+                        <img src="{{ Vite::asset('resources/images/yellow pig.png') }}" alt="yellow savings pig"
+                            class="h-[80%] object-cover absolute -bottom-10">
                         <div
                             class="absolute bottom-10 right-10 bg-white p-3 rounded-xl inline-flex items-center justify-between gap-5 md:gap-10 shadow-md">
                             <p>RaveGoals</p>
@@ -198,8 +199,9 @@
                             </a>
                         </div>
                     </div>
-                    <div class="md:col-span-3 aspect-[16/12] lg:aspect-square relative">
-                        <img src="{{ Vite::asset('resources/images/account credited.svg') }}"
+                    <div
+                        class="md:col-span-3 aspect-[16/12] lg:aspect-square relative flex items-center justify-center">
+                        <img src="{{ Vite::asset('resources/images/safe-box.png') }}"
                             alt="Mockup of a phone making transanctions" class="w-full object-cover">
                         <div
                             class="absolute bottom-10 right-10 bg-white p-3 rounded-xl inline-flex items-center justify-between gap-5 md:gap-10 shadow-md">

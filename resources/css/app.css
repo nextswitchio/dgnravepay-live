@@ -79,7 +79,7 @@ button {
 
 .join-active::after {
     @apply h-20 w-full rounded-xl bg-primary absolute left-0 -bottom-[1.5px] -z-[1] transition-all;
-    
+
     animation: join-animate 5s ease-in-out;
     content: "";
 }
@@ -102,5 +102,10 @@ button {
 }
 
 .tab-active {
-    @apply  bg-white text-black;
+    @apply bg-white text-black;
+}
+
+.splide__progress__bar {
+    height: 3px;
+    background: #fbbb0c;
 }

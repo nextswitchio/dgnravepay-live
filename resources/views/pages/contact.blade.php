@@ -1,6 +1,6 @@
 <x-guest-layout>
-  <section class="relative">
-    <div class="pt-28 md:pt-40 lg:pt-52 pb-40">
+    <section class="relative">
+        <div class="pt-28 md:pt-40 lg:pt-52 pb-40">
             <div class="container mx-auto max-w-6xl px-5 md:px-10">
                 <div class="text-center">
                     <h2
@@ -14,8 +14,8 @@
             <img src="{{ Vite::asset('resources/images/vector line.svg') }}" alt="vector line"
                 class="absolute -z-[10] blur-[5rem] opacity-50 w-full bottom-16 left-0">
         </div>
-  </section>
-  <!-- Dark Section -->
+    </section>
+    <!-- Dark Section -->
     <section class="bg-accent-black relative -z-[0]">
         <div class="container mx-auto max-w-6xl px-5 md:px-10 py-20 md:py-28">
             <div class="text-center">
@@ -25,28 +25,28 @@
                 </h2>
                 <div class="mt-5 inline-flex bg-white rounded-full p-2">
                     <button class="border border-primary px-3 py-2 rounded-full flex gap-2 fount-semibold">
-                        <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}" alt=""
-                            class="w-5 rounded-full">
+                        <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
+                            alt="" class="w-5 rounded-full">
                         <span>Lagos</span>
                     </button>
                     <button class="px-3 py-2 rounded-full flex gap-2 fount-semibold">
-                        <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}" alt=""
-                            class="w-5 rounded-full">
+                        <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
+                            alt="" class="w-5 rounded-full">
                         <span>Abakaliki</span>
                     </button>
                     <button class="px-3 py-2 rounded-full flex gap-2 fount-semibold">
-                        <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}" alt=""
-                            class="w-5 rounded-full">
+                        <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
+                            alt="" class="w-5 rounded-full">
                         <span>Abuja</span>
                     </button>
                 </div>
             </div>
-            <div class="md:grid md:grid-cols-7 mt-20">
+            <div class="md:grid gap-10 md:grid-cols-7 mt-20">
                 <div class="md:col-span-3 text-white font-medium space-y-5">
                     <div class="bg-primary rounded-xl p-5 divide-y divide-white/30">
                         <p class="flex items-center gap-2 pb-5">
-                            <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}" alt=""
-                                class="w-10 rounded-full">
+                            <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
+                                alt="" class="w-10 rounded-full">
                             <span class="text-lg md:text-xl font-semibold">Lagos ( Headquarters)</span>
                         </p>
                         <ul class="pt-5 space-y-3">
@@ -92,8 +92,8 @@
                     </div>
                     <div class="bg-primary rounded-xl p-5 divide-y divide-white/30">
                         <p class="flex items-center gap-2 pb-5">
-                            <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}" alt=""
-                                class="w-10 rounded-full">
+                            <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
+                                alt="" class="w-10 rounded-full">
                             <span class="text-lg md:text-xl font-semibold">Lagos ( Branch)</span>
                         </p>
                         <ul class="pt-5 space-y-3">
