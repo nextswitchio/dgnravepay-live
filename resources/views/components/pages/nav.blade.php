@@ -1,14 +1,15 @@
 <nav class="hidden lg:block fixed z-[10000] w-full {{ request()->is('about') ? 'bg-accent-black' : 'bg-white' }}">
-    <div class="container mx-auto  px-5 md:px-10 py-4 flex items-center justify-between gap-10">
-        <a href="/">
-            @if (request()->is('about'))
-                <img src="{{ Vite::asset('resources/images/logo wide white.png') }}" alt="DgnRavePay Logo"
-                    class="h-16 pt-3 pb-3">
-            @else
-                <img src="{{ Vite::asset('resources/images/logo wide.png') }}" alt="DgnRavePay Logo" class="h-20">
-            @endif
-        </a>
-        <div class="hidden lg:flex flex-1 items-center justify-between">
+    <div class="container mx-auto  px-5 md:px-10 py-4 grid grid-cols-2">
+        <div class="flex items-center gap-10">
+            <a href="/">
+                @if (request()->is('about'))
+                    <img src="{{ Vite::asset('resources/images/logo wide white.png') }}" alt="DgnRavePay Logo"
+                        class="h-16 pt-3 pb-3">
+                @else
+                    <img src="{{ Vite::asset('resources/images/logo wide.png') }}" alt="DgnRavePay Logo"
+                        class="h-14 lg:h-16">
+                @endif
+            </a>
             <div class="bg-primary/50 rounded-full p-1">
                 <button
                     class="px-3 py-2 rounded-full transition-all duration-[.5s] ease-in-out {{ !request()->is('business') ? 'tab-active' : '' }}"
@@ -17,11 +18,13 @@
                     class="px-3 py-2 rounded-full transition-all duration-[.5s] ease-in-out {{ request()->is('business') ? 'tab-active' : '' }}"
                     id="for-business">For Business</button>
             </div>
+        </div>
+        <div class="flex items-center justify-end lg:justify-between gap-10">
             <ul class="font-medium flex gap-5">
                 <li class="group cursor-pointer nav-list">
                     <span>Product</span>
                     <div id="navbar-product"
-                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-40 lg:right-60 text-black bg-slate-100 rounded-xl p-3 grid grid-cols-2">
+                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-20 lg:right-[40vw] text-black bg-slate-100 rounded-xl p-3 grid grid-cols-2">
                         <div class="p-3" id="navbar-select">
                             <button type="button" class="nav-selected rounded-xl p-3 flex items-start gap-5">
                                 <img id="nav-product-individual-img"
@@ -53,7 +56,7 @@
                 <li class="group cursor-pointer nav-list">
                     <span>Company</span>
                     <div id="navbar-company"
-                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-60 lg:right-80 text-black bg-slate-100 rounded-xl p-3">
+                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-40 lg:right-[35vw] text-black bg-slate-100 rounded-xl p-3">
                         <div class="p-3 bg-white rounded-xl">
                             <a href="/about" class="rounded-xl p-3 flex items-start  gap-5">
                                 <img src="{{ Vite::asset('resources/images/dng-about.png') }}" alt="user icon"
@@ -98,7 +101,7 @@
                 <li class="group cursor-pointer nav-list">
                     <span>Resources</span>
                     <div id="navbar-resources"
-                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-40 lg:right-60 text-black bg-slate-100 rounded-xl p-3">
+                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-32 lg:right-[30vw] text-black bg-slate-100 rounded-xl p-3">
                         <div class="p-3 bg-white rounded-xl">
                             <a href="/blog" class="rounded-xl p-3 flex items-start  gap-5">
                                 <img id="nav-dropdown-resources-blog-img"
@@ -145,12 +148,12 @@
                     </div>
                 </li>
             </ul>
-        </div>
-        <div class="">
-            <a href="#"
-                class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 font-medium shadow-lg">Get
-                Started
-            </a>
+            <div class="">
+                <a href="#"
+                    class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 font-medium shadow-lg">Get
+                    Started
+                </a>
+            </div>
         </div>
     </div>
 </nav>
@@ -164,7 +167,7 @@
                 <img src="{{ Vite::asset('resources/images/logo wide white.png') }}" alt="DgnRavePay Logo"
                     class="h-16 pt-3 pb-3">
             @else
-                <img src="{{ Vite::asset('resources/images/logo wide.png') }}" alt="DgnRavePay Logo" class="h-20">
+                <img src="{{ Vite::asset('resources/images/logo wide.png') }}" alt="DgnRavePay Logo" class="h-14">
             @endif
         </a>
 

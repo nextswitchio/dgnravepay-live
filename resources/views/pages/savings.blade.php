@@ -37,29 +37,29 @@
                 <h2 class="text-center mb-5 leading-[1.2]">
                     Why People Choose DgnRavePay</h2>
                 <div class="grid md:grid-cols-3 gap-5 mt-10">
-                    <div class="bg-primary rounded-xl">
+                    <div class="bg-primary rounded-xl flex flex-col justify-between">
                         <div class="px-4 py-5 md:px-5 md:py-6">
                             <h6 class="font-bold text-xl md:text-2xl mb-1">Save Your Way</h6>
                             <p>Choose a plan that matches your lifestyle, not the other way around.</p>
                         </div>
                         <img src="{{ Vite::asset('resources/images/hand coin save.png') }}" alt=""
-                            class="h-40 md:h-52 lg:h-64">
+                            class="w-4/5">
                     </div>
-                    <div class="bg-secondary/50 rounded-xl">
+                    <div class="bg-secondary/50 rounded-xl flex flex-col justify-between">
                         <div class="px-4 py-5 md:px-5 md:py-6">
                             <h6 class="font-bold text-xl md:text-2xl mb-1">No Excuses</h6>
                             <p>Automated savings keep you consistent, even on busy days.</p>
                         </div>
                         <img src="{{ Vite::asset('resources/images/hand money save.png') }}" alt=""
-                            class="ml-auto h-40 md:h-52 lg:h-64">
+                            class="ml-auto w-[70%]">
                     </div>
-                    <div class="bg-stone-950 rounded-xl text-white">
+                    <div class="bg-stone-950 rounded-xl text-white flex flex-col justify-between">
                         <div class="px-4 py-5 md:px-5 md:py-6">
                             <h6 class="font-bold text-xl md:text-2xl mb-1">Grow with Confidence</h6>
                             <p>Earn interest, stay flexible, and keep your funds safe with CBN regulated protection.</p>
                         </div>
                         <img src="{{ Vite::asset('resources/images/growth savings.png') }}" alt=""
-                            class="mx-auto h-40 md:h-52 lg:h-64">
+                            class="mx-auto w-4/5">
                     </div>
                 </div>
             </div>

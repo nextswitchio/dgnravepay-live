@@ -1,4 +1,4 @@
-<div class="">
+<div class="container mx-auto">
     <div class="mb-10 px-5 md:px-10">
         <h2 class="text-center mb-5">Get Savvy About Your
             Financial Life</h2>

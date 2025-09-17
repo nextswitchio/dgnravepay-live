@@ -1,10 +1,12 @@
+@props([
+    'title' => 'Voices of Trust. Stories of Impact.',
+    'description' =>
+        'See why over 100,000 Nigerians have made DgnRavePay their go-to financial app. Real reviews, real stories, real results.',
+])
 <div class="">
     <div class="mb-10 px-5 md:px-10">
-        <h2 class="text-center mb-5 leading-[1]">Voices of Trust.
-            Stories of Impact.</h2>
-        <p class="text-center">See why over 100,000 Nigerians have made DgnRavePay their go-to financial
-            app.
-            Real reviews, real stories, real results.</p>
+        <h2 class="text-center mb-5 leading-[1]">{{ $title }}</h2>
+        <p class="text-center">{{ $description }}</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
         {{-- <div class="embla">
