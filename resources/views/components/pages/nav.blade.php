@@ -1,5 +1,5 @@
 <nav class="hidden lg:block fixed z-[10000] w-full {{ request()->is('about') ? 'bg-accent-black' : 'bg-white' }}">
-    <div class="container mx-auto max-w-6xl px-5 md:px-10 py-4 flex items-center justify-between gap-10">
+    <div class="container mx-auto  px-5 md:px-10 py-4 flex items-center justify-between gap-10">
         <a href="/">
             @if (request()->is('about'))
                 <img src="{{ Vite::asset('resources/images/logo wide white.png') }}" alt="DgnRavePay Logo"
@@ -24,7 +24,8 @@
                         class="group-[.is-open]:visible invisible transition-all absolute top-24 right-40 lg:right-60 text-black bg-slate-100 rounded-xl p-3 grid grid-cols-2">
                         <div class="p-3" id="navbar-select">
                             <button type="button" class="nav-selected rounded-xl p-3 flex items-start gap-5">
-                                <img src="{{ Vite::asset('resources/images/user.svg') }}" alt="briefcase icon"
+                                <img id="nav-product-individual-img"
+                                    src="{{ Vite::asset('resources/images/user colored.png') }}" alt="briefcase icon"
                                     class="size-6">
                                 <div class="text-left max-w-[11rem]">
                                     <p class="font-bold text-sm mb-1.5 leading-1">For Individuals</p>
@@ -34,7 +35,8 @@
                                 </div>
                             </button>
                             <button type="button" class="rounded-xl p-3 flex items-start gap-5">
-                                <img src="{{ Vite::asset('resources/images/briefcase.svg') }}" alt="briefcase icon"
+                                <img id="nav-product-business-img"
+                                    src="{{ Vite::asset('resources/images/briefcase.svg') }}" alt="briefcase icon"
                                     class="size-6">
 
                                 <div class="text-left max-w-[11rem]">
@@ -54,7 +56,7 @@
                         class="group-[.is-open]:visible invisible transition-all absolute top-24 right-60 lg:right-80 text-black bg-slate-100 rounded-xl p-3">
                         <div class="p-3 bg-white rounded-xl">
                             <a href="/about" class="rounded-xl p-3 flex items-start  gap-5">
-                                <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon"
+                                <img src="{{ Vite::asset('resources/images/dng-about.png') }}" alt="user icon"
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">About Us</p>
@@ -72,7 +74,7 @@
                                 </div>
                             </a>
                             <a href="/contact" class="rounded-xl p-3 flex items-start  gap-5">
-                                <img src="{{ Vite::asset('resources/images/savings.png') }}" alt="savings icon"
+                                <img src="{{ Vite::asset('resources/images/location.png') }}" alt="savings icon"
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Contact Us</p>
@@ -81,7 +83,7 @@
                                 </div>
                             </a>
                             <a href="/press" class="rounded-xl p-3 flex items-start  gap-5">
-                                <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon"
+                                <img src="{{ Vite::asset('resources/images/file.png') }}" alt="loan icon"
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Press and Media</p>
@@ -99,7 +101,8 @@
                         class="group-[.is-open]:visible invisible transition-all absolute top-24 right-40 lg:right-60 text-black bg-slate-100 rounded-xl p-3">
                         <div class="p-3 bg-white rounded-xl">
                             <a href="/blog" class="rounded-xl p-3 flex items-start  gap-5">
-                                <img src="{{ Vite::asset('resources/images/blogger.png') }}" alt="blogger icon"
+                                <img id="nav-dropdown-resources-blog-img"
+                                    src="{{ Vite::asset('resources/images/blogger.png') }}" alt="blogger icon"
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">DgnRavePay Blog</p>
@@ -108,7 +111,8 @@
                                 </div>
                             </a>
                             <a href="#" class="rounded-xl p-3 flex items-start  gap-5">
-                                <img src="{{ Vite::asset('resources/images/help_center.png') }}" alt="help center icon"
+                                <img id="nav-dropdown-resources-help_center-img"
+                                    src="{{ Vite::asset('resources/images/help_center.png') }}" alt="help center icon"
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Help Center</p>
@@ -117,7 +121,8 @@
                                 </div>
                             </a>
                             <a href="/policy" class="rounded-xl p-3 flex items-start  gap-5">
-                                <img src="{{ Vite::asset('resources/images/policy.png') }}" alt="policy icon"
+                                <img id="nav-dropdown-resources-policy-img"
+                                    src="{{ Vite::asset('resources/images/policy.png') }}" alt="policy icon"
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">IMF Policy</p>
@@ -126,7 +131,8 @@
                                 </div>
                             </a>
                             <a href="/whistleblower" class="rounded-xl p-3 flex items-start  gap-5">
-                                <img src="{{ Vite::asset('resources/images/whistle.png') }}" alt="whistle icon"
+                                <img id="nav-dropdown-resources-whistleblower-img"
+                                    src="{{ Vite::asset('resources/images/whistle.png') }}" alt="whistle icon"
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Whistleblower Policy</p>

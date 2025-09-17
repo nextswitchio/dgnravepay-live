@@ -1,16 +1,18 @@
 <x-guest-layout>
-  <div class="container mx-auto max-w-6xl px-5 md:px-10 pb-10 pt-40">
+    <div class="container mx-auto  px-5 md:px-10 pb-10 pt-40">
         <div class="text-center text-xs md:text-sm">Freelancer • <span class="text-stone-400">August 15, 2025</span>
         </div>
         <h1 class="max-w-3xl mx-auto leading-[1.2] font-bold text-center mt-10 mb-20">
             Global accounts vs traditional banks: What remote workers should know
         </h1>
-        <img src="{{ Vite::asset('resources/images/article 2.jpg') }}" alt="" class="w-full rounded-xl aspect-video mb-10 object-cover">
+        <img src="{{ Vite::asset('resources/images/article 2.jpg') }}" alt=""
+            class="w-full rounded-xl aspect-video mb-10 object-cover">
 
         <div class="md:grid md:grid-cols-10 md:gap-5 border-b border-slate-200 pb-20">
             <div class="col-span-3">
                 <div class="flex items-center gap-3">
-                    <img src="{{ Vite::asset('resources/images/profile.jpg') }}" alt="Author' image" class="h-10 rounded-full">
+                    <img src="{{ Vite::asset('resources/images/profile.jpg') }}" alt="Author' image"
+                        class="h-10 rounded-full">
                     <p class="text-stone-600 text-xs md:text-sm font-semibold">Tunde Adelolu</p>
                 </div>
                 <p class="text-stone-600 text-xs md:text-sm uppercase mt-10 mb-3">share this post</p>
@@ -206,7 +208,8 @@
                 <p class="text-xs md:text-sm text-slate-600 uppercase ml-2">IF YOU ENJOYED THIS, CHECK THESE OUT</p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-5 mt-3">
                     <article class="space-y-2">
-                        <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt="" class="aspect-video rounded-xl object-cover">
+                        <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt=""
+                            class="aspect-video rounded-xl object-cover">
                         <h6 class="font-bold text-lg">FX-saving strategies every freelancer in Indonesia should know
                         </h6>
                         <p class="font-medium">Reduce your conversion losses as a freelancer in Indonesia with these
@@ -216,7 +219,8 @@
                         </div>
                     </article>
                     <article class="space-y-2">
-                        <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt="" class="aspect-video rounded-xl object-cover">
+                        <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt=""
+                            class="aspect-video rounded-xl object-cover">
                         <h6 class="font-bold text-lg">FX-saving strategies every freelancer in Indonesia should know
                         </h6>
                         <p class="font-medium">Reduce your conversion losses as a freelancer in Indonesia with these

@@ -1,5 +1,5 @@
 <x-guest-layout>
-  <div class="container mx-auto max-w-6xl px-5 md:px-10 pb-10 md:grid md:grid-cols-10 md:gap-5 pt-32 md:pt-40">
+    <div class="container mx-auto  px-5 md:px-10 pb-10 md:grid md:grid-cols-10 md:gap-5 pt-32 md:pt-40">
         <div class="col-span-3">
             <a href="/career" class="flex items-center gap-2 text-primary font-semibold text-sm md:text-base">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -14,8 +14,8 @@
                     <span
                         class="px-4 py-2 md:py-3 rounded-full bg-primary/20 font-semibold items-center gap-2 inline-flex">
                         <span>Kano, Nigeria</span>
-                        <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}" alt="Nigerian Flag Icon"
-                            class="h-4">
+                        <img src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
+                            alt="Nigerian Flag Icon" class="h-4">
                     </span>
                 </li>
                 <li class="">
@@ -54,8 +54,8 @@
                         </svg>
                         <button
                             class="bg-primary/20 hover:bg-primary-2/10 font-medium py-2 px-4 rounded-lg transition duration-200 inline-flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
                             </svg>
@@ -247,8 +247,8 @@
                     <a href="#"
                         class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg inline-flex items-center gap-2">
                         <span>Apply for this role</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4 fill-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-4 fill-white">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
@@ -259,7 +259,7 @@
     </div>
     <!-- Dark Section -->
     <section class="bg-accent-black">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10">
+        <div class="container mx-auto  px-5 md:px-10">
             <div class="py-20 md:pt-28 flex flex-col justify-center text-center">
                 <h3 class="text-white mb-5 text-3xl md:text-5xl lg:text-[48px] leading-[1]">We’re just getting started
                 </h3>

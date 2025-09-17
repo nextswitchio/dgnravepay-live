@@ -1,7 +1,7 @@
 <x-guest-layout>
-  <section class="relative">
-    <div class="pt-20 md:pt-32 lg:pt-40">
-            <div class="container mx-auto max-w-6xl px-5 md:px-14 lg:py-16">
+    <section class="relative">
+        <div class="pt-20 md:pt-32 lg:pt-40">
+            <div class="container mx-auto  px-5 md:px-14 lg:py-16">
                 <div class="text-center mb-10">
                     <h1
                         class="capitalize leading-[1.2] text-center mb-5 bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
@@ -14,8 +14,8 @@
             <img src="{{ Vite::asset('resources/images/vector line.svg') }}" alt="vector line"
                 class="absolute -z-[10] blur-[5rem] opacity-50 w-full bottom-0 left-0">
         </div>
-  </section>
-  <div class="container mx-auto max-w-6xl px-5 md:px-10 pb-20 md:mt-10">
+    </section>
+    <div class="container mx-auto  px-5 md:px-10 pb-20 md:mt-10">
         <ol class="list-decimal ml-5">
             <li class="mb-3">
                 <h6 class="text-base font-bold mb-4">Policy Statement</h6>
@@ -71,7 +71,8 @@
             </li>
             <li class="mb-3">
                 <h6 class="text-base font-bold mb-4">Reporting Channels</h6>
-                <p class="">Whistleblowers can report concerns through any of the following secure and confidential
+                <p class="">Whistleblowers can report concerns through any of the following secure and
+                    confidential
                     channels:</p>
                 <ul class="ml-5 list-disc">
                     <li>Dedicated Email: whistleblow@dgnravepay.com</li>

@@ -1,7 +1,7 @@
 <x-guest-layout>
     <section class="min-h-screen relative">
         <div class="pt-20 md:pt-32 lg:pt-40">
-            <div class="container mx-auto max-w-6xl px-5 md:px-10">
+            <div class="container mx-auto  px-5 md:px-10">
                 <div class="text-center mb-10">
                     <span class="text-xs md:text-xs text-stone-500 uppercase">About us</span>
                     <h1 class="capitalize leading-[1.2] mt-2 mb-5">
@@ -65,7 +65,7 @@
             </div>
         </section>
     </div>
-    <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10 my-20 md:mt-30 gap-10 grid md:grid-cols-3">
+    <div class="container mx-auto  px-5 md:px-10 py-10 my-20 md:mt-30 gap-10 grid md:grid-cols-3">
         <div class="">
             <h6 class="text-xs md:text-sm text-stone-500 uppercase">founded</h6>
             <p class="text-base md:text-lg font-medium">2024</p>
@@ -102,7 +102,7 @@
             class="w-full hidden lg:block">
     </div>
     <section class="my-20 md:mt-30">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10">
+        <div class="container mx-auto  px-5 md:px-10 py-10">
             <div class="lg:grid lg:grid-cols-2 space-y-10 lg:space-y-0">
                 <div class="">
                     <h2 class="mb-5 leading-[1] sticky top-32">Our core values</h2>
@@ -161,7 +161,7 @@
         </div>
     </section>
     <section class="">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10">
+        <div class="container mx-auto  px-5 md:px-10">
             <div class="py-20 flex flex-col justify-center text-center">
                 <h2 class="text-white mb-5 leading-[1.5]">We’re just getting started</h2>
                 <p class="text-white">
@@ -197,13 +197,14 @@
         </div>
     </section>
 
-    <section class="container mx-auto max-w-6xl px-5 md:px-10 py-10 my-20 gap-10 grid md:grid-cols-2">
-        <div class="rounded-xl overflow-hidden bg-gradient-to-b from-black to-stone-900 relative -z-[0]">
+    <section class="container mx-auto  px-5 md:px-10 py-10 my-20 gap-10 grid lg:grid-cols-2">
+        <div
+            class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-black to-stone-900 relative -z-[0]">
             <div class="p-5">
                 <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
                 <p class="text-primary font-semibold">Explore Careers at DngRavePay</p>
             </div>
-            <img src="{{ Vite::asset('resources/images/about-bag.png') }}" alt="" class="ml-auto">
+            <img src="{{ Vite::asset('resources/images/about-bag.png') }}" alt="" class="ml-auto w-3/5">
             <div class="absolute left-6 bottom-6 p-3 rounded-full bg-black w-14 h-14 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
                     stroke="currentColor" class="size-6 stroke-white">
@@ -213,14 +214,15 @@
             {{-- <img src="{{ Vite::asset('resources/images/hand-card-grid-bg.png') }}" alt=""
                 class="w-full absolute top-0 left-0 -z-[1]"> --}}
         </div>
-        <div class="rounded-xl overflow-hidden bg-gradient-to-b from-primary to-primary-2/50 relative -z-[0]">
+        <div
+            class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-primary to-primary-2/50 relative -z-[0]">
             <div class="p-5">
                 <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
-                <p class="text-primary font-semibold">Explore Careers at DngRavePay</p>
+                <p class="font-semibold">Explore Careers at DngRavePay</p>
             </div>
             <div class="h-full relative overflow-hidden">
                 <img src="{{ Vite::asset('resources/images/about-handshake.png') }}" alt=""
-                    class="absolute w-full bottom-20">
+                    class="absolute w-full bottom-10">
             </div>
             <div class="absolute left-6 bottom-6 p-3 rounded-full bg-black w-14 h-14 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"

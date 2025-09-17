@@ -1,6 +1,6 @@
 <x-guest-layout>
     <section class="min-h-screen pt-24 lg:pt-28 flex items-center">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10 w-full">
+        <div class="container mx-auto  px-5 md:px-10 w-full">
             <div class="grid lg:grid-cols-2 gap-10 items-center">
                 <!-- Visual/Brand panel -->
                 <div class="hidden lg:block order-last lg:order-first">

@@ -1,7 +1,7 @@
 <x-guest-layout>
     <section class="min-h-screen relative">
         <div class="pt-20 md:pt-32 lg:pt-40">
-            <div class="container mx-auto max-w-6xl px-5 md:px-10">
+            <div class="container mx-auto  px-5 md:px-10">
                 <div class="text-center mb-10">
                     <h1 class="capitalize leading-[1.2] mb-5 text-center mb-5">
                         Spend worldwide, stay secure, with a dollar card that works.
@@ -29,7 +29,7 @@
     </section>
 
     <section class="my-28">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10">
+        <div class="container mx-auto  px-5 md:px-10">
             <div class="mb-10 px-5 md:px-10">
                 <h2 class="text-center mb-5 leading-[1.2]">Your Passport to Safe,
                     Smarter
@@ -87,7 +87,7 @@
 
     <!-- Dark Section -->
     <section class="bg-accent-black">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10">
+        <div class="container mx-auto  px-5 md:px-10">
             <div class="grid md:grid-cols-7 gap-7 pt-20">
                 <div class="md:col-span-4">
                     <h2 class="text-white mb-5 leading-[1.2]">Why choose
@@ -199,7 +199,7 @@
     </section>
 
     <section class="my-28">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10 space-y-30 md:space-y-40">
+        <div class="container mx-auto  px-5 md:px-10 space-y-30 md:space-y-40">
             <!-- TESTIMONIAL -->
             <div class="">
                 <div class="mb-10 px-5 md:px-10 max-w-4xl mx-auto">

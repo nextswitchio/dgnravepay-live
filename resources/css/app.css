@@ -34,7 +34,7 @@ h1 {
 }
 
 h2 {
-    @apply text-[clamp(2rem,_3vw,_58px)];
+    @apply text-[clamp(2rem,_3vw,_58px)] leading-[1.3];
     /* @apply  text-3xl md:text-5xl lg:text-[48px]; */
 }
 
@@ -108,4 +108,88 @@ button {
 .splide__progress__bar {
     height: 3px;
     background: #fbbb0c;
+}
+
+.embla {
+    overflow: hidden;
+    height: 23rem; /* Example height */
+}
+
+.embla__container {
+    display: flex;
+    flex-direction: column; /* Arrange slides vertically */
+    height: 100%;
+}
+
+.embla__slide {
+    flex: 0 0 auto; /* Adapt slide size to its content */
+    min-height: 0;
+    /* Add any other styling for your slides */
+}
+.embla2 {
+    overflow: hidden;
+    height: 32rem; /* Example height */
+}
+
+.embla2__container {
+    display: flex;
+    flex-direction: column-reverse; /* Arrange slides vertically */
+    height: 100%;
+}
+
+.embla2__slide {
+    flex: 0 0 auto; /* Adapt slide size to its content */
+    min-height: 0;
+    /* Add any other styling for your slides */
+}
+/* 
+#bottom-to-top-slide {
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+}
+.bottom-to-top-list {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+ */
+#bottom-to-top-slide {
+    overflow: hidden;
+    height: 500px; /* Set to the height of your visible area */
+    position: relative;
+}
+.bottom-to-top-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+    animation: scroll-up 25s linear infinite;
+}
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    } /* Move up by half the list height (since duplicated) */
+}
+#bottom-to-bottom-slide {
+    overflow: hidden;
+    height: 500px; /* Set to the height of your visible area */
+    position: relative;
+}
+.bottom-to-bottom-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+    animation: scroll-down 25s linear infinite;
+}
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    } /* Move down by half the list height (since duplicated) */
 }

@@ -6,7 +6,7 @@
             class="object-cover w-4/5 ml-auto aspect-video rounded-md">
     </div>
     <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" id="aboutImgScroll"
-        class="object-cover aspect-video rounded-xl max-w-6xl w-[300px] md:w-[400px] lg:w-[700px] transition-all" />
+        class="object-cover aspect-video rounded-xl  w-[300px] md:w-[400px] lg:w-[700px] transition-all" />
     <img src="{{ Vite::asset('resources/images/article 3.jpg') }}" alt=""
         class="object-cover w-[100px] md:w-[200px] aspect-square rounded-lg">
 </div>

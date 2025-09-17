@@ -1,7 +1,7 @@
 <x-guest-layout>
-    <section class="min-h-screen relative">
+    <section class="relative">
         <div class="pt-20 md:pt-32 lg:pt-40">
-            <div class="container mx-auto max-w-6xl px-5 md:px-10 md:grid md:grid-cols-5 md:gap-5">
+            <div class="container mx-auto  px-5 md:px-10 md:grid md:grid-cols-5 md:gap-5">
                 <div class="md:col-span-3">
                     <span class="uppercase text-xs md:text-sm">STAY UP TO DATE</span>
                     <h1
@@ -34,7 +34,7 @@
         </div>
     </section>
     <section class="bg-stone-200 py-20">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10">
+        <div class="container mx-auto  px-5 md:px-10 py-10">
             <h6 class="uppercase text-xs md:text-sm">Featured Articles</h6>
             <div class="mt-5 md:mt-10">
                 <article class="bg-white rounded-xl p-3">
@@ -72,16 +72,17 @@
 
     <!-- News -->
     <section class="my-28">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10">
+        <div class="container mx-auto  px-5 md:px-10">
             <h6 class="uppercase text-xs md:text-sm">Featured Articles</h6>
             <div class="mt-5 md:mt-10">
                 <div>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                         <article class="space-y-2">
                             <a href="/blog/fx-saving-strategies-every-freelancer-in-indonesia-should-know">
                                 <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt=""
-                                    class="aspect-video rounded-xl object-cover">
-                                <h6 class="font-bold text-lg">FX-saving strategies every freelancer in Indonesia should
+                                    class="aspect-video rounded-xl object-cover w-full mb-4">
+                                <h6 class="font-bold text-lg md:text-xl mb-2">FX-saving strategies every freelancer in
+                                    Indonesia should
                                     know
                                 </h6>
                                 <p class="font-medium">Reduce your conversion losses as a freelancer in Indonesia with
@@ -95,8 +96,9 @@
                         <article class="space-y-2">
                             <a href="/blog/how-to-manage-your-freelance-finances-in-south-africa">
                                 <img src="{{ Vite::asset('resources/images/article 2.jpg') }}" alt=""
-                                    class="aspect-video rounded-xl object-cover">
-                                <h6 class="font-bold text-lg">How to manage your freelance finances in South Africa
+                                    class="aspect-video rounded-xl object-cover w-full mb-4">
+                                <h6 class="font-bold text-lg md:text-xl mb-2">How to manage your freelance finances in
+                                    South Africa
                                 </h6>
                                 <p class="font-medium">Discover how to manage your freelance finances in South Africa
                                     with
@@ -109,8 +111,9 @@
                         <article class="space-y-2">
                             <a href="/blog/how-to-manage-your-freelance-finances-in-south-africa">
                                 <img src="{{ Vite::asset('resources/images/article 3.jpg') }}" alt=""
-                                    class="aspect-video rounded-xl object-cover">
-                                <h6 class="font-bold text-lg">How Kenyan creators are earning and saving in multiple
+                                    class="aspect-video rounded-xl object-cover w-full mb-4">
+                                <h6 class="font-bold text-lg md:text-xl mb-2">How Kenyan creators are earning and saving
+                                    in multiple
                                     currencies
                                 </h6>
                                 <p class="font-medium">Here is how Kenyan creators are earning and saving in multiple
@@ -123,8 +126,9 @@
                         <article class="space-y-2">
                             <a href="/blog/how-to-manage-your-freelance-finances-in-south-africa">
                                 <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt=""
-                                    class="aspect-video rounded-xl object-cover">
-                                <h6 class="font-bold text-lg">FX-saving strategies every freelancer in Indonesia should
+                                    class="aspect-video rounded-xl object-cover w-full mb-4">
+                                <h6 class="font-bold text-lg md:text-xl mb-2">FX-saving strategies every freelancer in
+                                    Indonesia should
                                     know
                                 </h6>
                                 <p class="font-medium">Reduce your conversion losses as a freelancer in Indonesia with
@@ -138,8 +142,9 @@
                         <article class="space-y-2">
                             <a href="/blog/how-to-manage-your-freelance-finances-in-south-africa">
                                 <img src="{{ Vite::asset('resources/images/article 2.jpg') }}" alt=""
-                                    class="aspect-video rounded-xl object-cover">
-                                <h6 class="font-bold text-lg">How to manage your freelance finances in South Africa
+                                    class="aspect-video rounded-xl object-cover w-full mb-4">
+                                <h6 class="font-bold text-lg md:text-xl mb-2">How to manage your freelance finances in
+                                    South Africa
                                 </h6>
                                 <p class="font-medium">Discover how to manage your freelance finances in South Africa
                                     with
@@ -152,8 +157,9 @@
                         <article class="space-y-2">
                             <a href="/blog/how-to-manage-your-freelance-finances-in-south-africa">
                                 <img src="{{ Vite::asset('resources/images/article 3.jpg') }}" alt=""
-                                    class="aspect-video rounded-xl object-cover">
-                                <h6 class="font-bold text-lg">How Kenyan creators are earning and saving in multiple
+                                    class="aspect-video rounded-xl object-cover w-full mb-4">
+                                <h6 class="font-bold text-lg md:text-xl mb-2">How Kenyan creators are earning and saving
+                                    in multiple
                                     currencies
                                 </h6>
                                 <p class="font-medium">Here is how Kenyan creators are earning and saving in multiple

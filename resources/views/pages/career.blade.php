@@ -1,7 +1,7 @@
 <x-guest-layout>
     <section class="py-20 relative">
         <div class="pt-20 md:pt-32 lg:pt-40">
-            <div class="container mx-auto max-w-6xl px-5 md:px-10">
+            <div class="container mx-auto  px-5 md:px-10">
                 <div class="text-center mb-10">
                     <h1
                         class="capitalize leading-[1.2] mb-5 text-center text-5xl md:text-6xl lg:text-[74px] bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
@@ -29,7 +29,7 @@
         </div>
     </section>
     <section class="pb-20">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10">
+        <div class="container mx-auto  px-5 md:px-10 py-10">
             <div class="md:grid md:grid-cols-2 md:items-center justify-between">
                 <h2 class="mb-3 leading-[1.2]">Don’t Just Work. Disrupt.
                     Redefine Fintech with
@@ -46,7 +46,7 @@
     </section>
 
     <section class="py-20 bg-slate-200">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10">
+        <div class="container mx-auto  px-5 md:px-10 py-10">
             <div class="lg:grid lg:grid-cols-2 space-y-10 lg:space-y-0">
                 <div class="">
                     <h2 class="mb-3 leading-[1] sticky top-32">Our core values</h2>
@@ -106,7 +106,7 @@
     </section>
 
     <section class="py-20">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10">
+        <div class="container mx-auto  px-5 md:px-10 py-10">
             <div class="lg:grid lg:grid-cols-2 space-y-10 lg:space-y-0">
                 <div class="">
                     <h2 class="mb-3 leading-[1] sticky top-32">Perks we enjoy</h2>
@@ -183,7 +183,7 @@
 
     <!-- Available roles -->
     <section class="py-20 bg-slate-200">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10 py-10">
+        <div class="container mx-auto  px-5 md:px-10 py-10">
             <div class="mb-10 px-5 md:px-10">
                 <h2 class="mb-3 leading-[1] text-center">
                     Your Next Big Career Move Starts Here
@@ -469,7 +469,7 @@
 
     <!-- Dark Section -->
     <section class="bg-accent-black">
-        <div class="container mx-auto max-w-6xl px-5 md:px-10">
+        <div class="container mx-auto  px-5 md:px-10">
             <div class="py-20 md:pt-28 flex flex-col justify-center text-center">
                 <h2 class="text-white mb-5 leading-[1]">We’re just getting started
                 </h2>
