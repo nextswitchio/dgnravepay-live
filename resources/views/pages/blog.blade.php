@@ -73,7 +73,7 @@
     <!-- News -->
     <section class="my-28">
         <div class="container mx-auto  px-5 md:px-10">
-            <h6 class="uppercase text-xs md:text-sm">Featured Articles</h6>
+            <h6 class="uppercase text-xs md:text-sm">Latest Articles</h6>
             <div class="mt-5 md:mt-10">
                 <div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
