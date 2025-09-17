@@ -27,7 +27,7 @@
         <footer class="bg-[#1a1a1a] text-white pt-12 pb-8 px-4 md:px-8 rounded-3xl">
             <div class="container mx-auto ">
                 <!-- Main footer content -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-6">
                     <!-- Company info -->
                     <div class="lg:col-span-2">
                         <a href="/">
@@ -35,9 +35,16 @@
                                 class="h-10 md:h-14 mb-5" />
                         </a>
                         <p class="text-neutral-400 mb-4 max-w-md">
-                            DgnRavePay is a financial technology platform duly licensed by the Central Bank of
-                            Nigeria (CBN) to provide unique banking services to the unbanked and underbanked.
+                            DgnRavePay is a financial technology platform. All Banking and Financial Services are
+                            provided by licenced partners in
+                            compliance with applicable regulations, including CBN guidelines and NDIC standards.
                         </p>
+                        <div class="mb-4 flex items-center gap-2">
+                            <img src="{{ Vite::asset('resources/images/cbn logo.jpg') }}" alt="CBN logo"
+                                class="h-8 md:h-10 rounded">
+                            <img src="{{ Vite::asset('resources/images/ndic logo.jpg') }}" alt="NDIC logo"
+                                class="h-8 md:h-10 rounded">
+                        </div>
                         <div class="text-neutral-400 mb-2">
                             <p><span class="font-semibold text-white">Head Office:</span>
                                 No. 4, Bashiru Olusesi Street, off
@@ -49,7 +56,7 @@
                                 <a href="/contact" class="text-primary font-semibold ml-1">see more</a>
                             </p>
                         </div>
-                        <div class="space-y-5">
+                        <div class="space-y-3 mb-5">
                             <div class="">
                                 <a href="mailto:help@dgnravepay.com"
                                     class="px-2 py-2 rounded bg-white/5 inline-flex gap-1 items-center">
@@ -75,6 +82,28 @@
 
                                     +234 916 000 1561</a>
                             </div>
+                        </div>
+                        <div class="flex items-center gap-5">
+                            <a href="#"
+                                class="flex items-center justify-center px-2 aspect-square rounded-full border-2 border-white/10 hover:bg-white/10 transition">
+                                <img src="{{ Vite::asset('resources/images/twitter icon.svg') }}"
+                                    alt="Twitter/X Icon svg" class="">
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center px-2 aspect-square rounded-full border-2 border-white/10 hover:bg-white/10 transition">
+                                <img src="{{ Vite::asset('resources/images/linkedin icon.svg') }}"
+                                    alt="LinkedIn Icon svg" class="">
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center px-2 aspect-square rounded-full border-2 border-white/10 hover:bg-white/10 transition">
+                                <img src="{{ Vite::asset('resources/images/instagram icon.svg') }}"
+                                    alt="Instagram Icon svg" class="">
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center px-2 aspect-square rounded-full border-2 border-white/10 hover:bg-white/10 transition">
+                                <img src="{{ Vite::asset('resources/images/facebook icon.svg') }}"
+                                    alt="Facebook Icon svg" class="">
+                            </a>
                         </div>
                     </div>
 
@@ -131,16 +160,17 @@
                 <div class="flex flex-col md:flex-row justify-between items-center gap-5">
                     <div class="flex items-center gap-2">
                         <img src="{{ Vite::asset('resources/images/qr.png') }}"
-                            alt="Qr code to download the DgnRavePay App" class="h-12 md:h-14">
+                            alt="Qr code to download the DgnRavePay App" class="h-14 md:h-16">
                         <div class="">
-                            <h6 class="text-white font-semibold text-base">Download the app now</h6>
+                            <h6 class="text-white font-semibold text-base md:text-lg mb-1">Download the app now
+                            </h6>
                             <p class="">Scan the code to download the Personal Banking App</p>
                         </div>
                     </div>
 
                     <div class="">
                         <p class="text-neutral-500 text-sm mb-4 md:mb-5">© 2025 DgnRavePay. All Rights Reserved.
-                            Company No 14163956.</p>
+                            Company No 7195417.</p>
                         <div class="flex space-x-6">
                             <a href="#" class="text-neutral-400 hover:text-white text-sm">Privacy Policy</a>
                             <a href="#" class="text-neutral-400 hover:text-white text-sm">Terms of Service</a>
