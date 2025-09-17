@@ -193,3 +193,56 @@ button {
         transform: translateY(0);
     } /* Move down by half the list height (since duplicated) */
 }
+
+/* FAQ Section */
+details[open] summary ~ * {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* details > summary::marker {
+    content: none;
+} */
+
+/* For older WebKit browsers */
+/* details > summary::-webkit-details-marker {
+    display: none;
+} */
+details {
+    width: 100%;
+}
+
+details > summary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none; /* Remove default marker */
+}
+
+details > summary::after {
+    content: " ";
+    display: inline-block;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+details[open] > summary::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='0.5' stroke='currentColor' class='size-4'><path stroke-linecap='round' stroke-linejoin='round' d='M5 12h14' /></svg>");
+    transform: rotate(180deg);
+}
