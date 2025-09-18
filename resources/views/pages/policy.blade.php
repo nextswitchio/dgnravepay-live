@@ -3,7 +3,7 @@
     'DgnRavePay’s IMS policy aligns with ISO 9001, 27001, 22301, and 45001 for quality,
     security, continuity, and safety across operations.')
     <x-guest-layout>
-        <section class="relative">
+        <section class="relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
                 <div class="container mx-auto  px-5 md:px-14 lg:py-16">
                     <div class="text-center mb-10">

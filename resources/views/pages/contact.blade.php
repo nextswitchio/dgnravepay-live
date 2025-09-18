@@ -3,7 +3,7 @@
     'Reach DgnRavePay team across Nigeria—contact details for offices, support, and
     partnerships.')
     <x-guest-layout>
-        <section class="relative">
+        <section class="relative pt-10">
             <div class="pt-28 md:pt-40 lg:pt-52 pb-40">
                 <div class="container mx-auto  px-5 md:px-10">
                     <div class="text-center">

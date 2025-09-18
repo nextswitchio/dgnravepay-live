@@ -34,7 +34,7 @@
         @push('head')
             <x-seo :jsonLd="$jobSchema" :title="null" :description="null" :onlyJsonLd="true" />
         @endpush
-        <div class="container mx-auto  px-5 md:px-10 pb-10 md:grid md:grid-cols-10 md:gap-5 pt-32 md:pt-40">
+        <div class="container mx-auto px-5 md:px-10 pb-10 md:grid md:grid-cols-10 md:gap-5 pt-40 md:pt-52">
             <div class="col-span-3">
                 <a href="/career" class="flex items-center gap-2 text-primary font-semibold text-sm md:text-base">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

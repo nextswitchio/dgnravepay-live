@@ -31,7 +31,7 @@
         @push('head')
             <x-seo :jsonLd="$articleSchema" :title="null" :description="null" :onlyJsonLd="true" />
         @endpush
-        <div class="container mx-auto  px-5 md:px-10 pb-10 pt-40">
+        <div class="container mx-auto  px-5 md:px-10 pb-10 pt-40 md:pt-52">
             <div class="text-center text-xs md:text-sm">Freelancer • <span class="text-stone-400">August 15, 2025</span>
             </div>
             <h1 class="max-w-3xl mx-auto leading-[1.2] font-bold text-center mt-10 mb-20">

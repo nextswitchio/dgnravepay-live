@@ -4,9 +4,9 @@
     financial freedom.')
     <x-guest-layout>
         <!-- HERO -->
-        <section class="min-h-screen relative">
+        <section class="min-h-screen relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
-                <div class="container mx-auto  px-5 md:px-10">
+                <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
                         <h1 class="capitalize leading-[1.2] text-center mb-5">
                             Take Control of Your Money without Boundaries.</h1>
@@ -32,7 +32,7 @@
             </div>
         </section>
         <section class="my-28">
-            <div class="container mx-auto  px-5 md:px-10">
+            <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="mb-10 px-5 md:px-10">
                     <h2 class="text-center mb-5 leading-[1.2]">One App. Endless <span
                             class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-2">Freedom</span>
@@ -264,7 +264,7 @@
 
         <!-- Dark Section -->
         <section class="bg-accent-black">
-            <div class="container mx-auto  px-5 md:px-10 md:grid md:grid-cols-2">
+            <div class="custom-container mx-auto  px-5 md:px-10 md:grid md:grid-cols-2">
                 <div class="pt-20 pb-10 md:py-28 flex flex-col justify-center">
                     <h2 class="text-white mb-5 leading-[1.2]">Do more with your Personal
                         Account</h2>
@@ -285,7 +285,7 @@
                 </div>
             </div>
             <div class="w-full border-t border-white/20"></div>
-            <div class="container mx-auto  px-5 md:px-10 py-10 md:py-20 grid md:grid-cols-3 gap-5 text-white">
+            <div class="custom-container mx-auto  px-5 md:px-10 py-10 md:py-20 grid md:grid-cols-3 gap-5 text-white">
                 <div class="bg-white/5 rounded-xl">
                     <div class="p-5 pb-7">
                         <img src="{{ Vite::asset('resources/images/Outbound integrations 1.png') }}" alt=""
@@ -319,7 +319,7 @@
         </section>
 
         <section class="my-32">
-            <div class="container mx-auto px-5 md:px-10 space-y-20 md:space-y-40">
+            <div class="custom-container mx-auto px-5 md:px-10 space-y-20 md:space-y-40">
                 <!-- JOIN SECTION -->
                 <x-pages.join-section />
                 <!-- TESTIMONIAL -->

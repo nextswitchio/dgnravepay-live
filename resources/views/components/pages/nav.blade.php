@@ -1,5 +1,6 @@
-<nav class="hidden lg:block fixed z-[10000] w-full {{ request()->is('about') ? 'bg-accent-black' : 'bg-white' }}">
-    <div class="container mx-auto  px-5 md:px-10 py-4 grid grid-cols-2">
+<nav
+    class="hidden lg:block fixed z-[10000] w-full backdrop-blur-md {{ request()->is('about') ? 'bg-accent-black/60' : 'bg-white/60' }}">
+    <div class="custom-container mx-auto  px-5 md:px-10 py-4 grid grid-cols-2">
         <div class="flex items-center gap-10">
             <a href="/">
                 @if (request()->is('about'))
@@ -158,7 +159,8 @@
     </div>
 </nav>
 
-<nav class="shadow-lg lg:hidden {{ request()->is('about') ? 'bg-accent-black' : 'bg-white' }}">
+<nav
+    class="fixed z-[10000] w-full shadow-lg lg:hidden backdrop-blur-md {{ request()->is('about') ? 'bg-accent-black/60' : 'bg-white/60' }}">
     <!-- Top bar with logo and hamburger -->
     <div class="flex justify-between items-center px-4 py-3">
         <!-- Logo -->
@@ -173,18 +175,20 @@
 
         <!-- Hamburger Menu Button -->
         <button id="hamburger"
-            class="p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary">
+            class="p-2 rounded-md {{ request()->is('about') ? '' : 'hover:bg-gray-100' }} focus:outline-none focus:ring-2 focus:ring-primary">
             <div class="hamburger-lines">
-                <span class="line line1 block w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
-                <span class="line line2 block w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
-                <span class="line line3 block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+                <span
+                    class="line line1 block w-6 h-0.5 {{ request()->is('about') ? 'bg-white' : 'bg-gray-800' }} mb-1 transition-all duration-300"></span>
+                <span
+                    class="line line2 block w-6 h-0.5 {{ request()->is('about') ? 'bg-white' : 'bg-gray-800' }} mb-1 transition-all duration-300"></span>
+                <span
+                    class="line line3 block w-6 h-0.5 {{ request()->is('about') ? 'bg-white' : 'bg-gray-800' }} transition-all duration-300"></span>
             </div>
         </button>
     </div>
 
     <!-- Mobile Menu Content -->
-    <div id="mobile-menu"
-        class="overflow-y-scroll transition-all duration-300 max-h-0 bg-white border-t border-gray-200">
+    <div id="mobile-menu" class="overflow-y-scroll transition-all duration-300 max-h-0 bg-white">
         <div class="px-4 py-4 space-y-4">
             <!-- First Dropdown - Products (2 column style) -->
             <div class="border-b border-gray-200 pb-4">
@@ -224,7 +228,7 @@
                             <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon"
                                 class="size-6">
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Personal Account</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Personal Account</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -234,7 +238,7 @@
                                 class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Virtual Cards</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Virtual Cards</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -244,7 +248,7 @@
                                 class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Savings</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Savings</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -254,7 +258,7 @@
                                 class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Loan</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Loan</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -264,7 +268,7 @@
                                 class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Travel and Hotel</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Travel and Hotel</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -276,7 +280,7 @@
                             <img src="{{ Vite::asset('resources/images/briefcase.png') }}" alt="briefcase icon"
                                 class="size-6">
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Business Account</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Business Account</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -286,7 +290,7 @@
                                 alt="POS & Terminals icon" class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">POS & Terminals</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">POS & Terminals</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -296,7 +300,7 @@
                                 alt="Business graph up icon" class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Business Management</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Business Management</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -307,7 +311,7 @@
 
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Payroll</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Payroll</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -318,7 +322,7 @@
 
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1">Invoicing</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Invoicing</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -350,7 +354,7 @@
                     <a href="/about" class="p-2 flex items-start  gap-5">
                         <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon" class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1">About Us</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">About Us</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
@@ -359,7 +363,7 @@
                         <img src="{{ Vite::asset('resources/images/virtual_card.png') }}" alt="virtual card icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1">Careers</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">Careers</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
@@ -368,7 +372,7 @@
                         <img src="{{ Vite::asset('resources/images/savings.png') }}" alt="savings icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1">Contact Us</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">Contact Us</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
@@ -376,7 +380,7 @@
                     <a href="/press" class="rounded-xl p-3 flex items-start  gap-5">
                         <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon" class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1">Press and Media</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">Press and Media</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
@@ -409,7 +413,7 @@
                         <img src="{{ Vite::asset('resources/images/blogger.png') }}" alt="blogger icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1">DgnRavePay Blog</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">DgnRavePay Blog</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
@@ -418,7 +422,7 @@
                         <img src="{{ Vite::asset('resources/images/help_center.png') }}" alt="help center icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1">Help Center</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">Help Center</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>

@@ -3,7 +3,7 @@
     'Automate savings with RaveGoals, stay flexible with RaveFlex, and lock value with
     RaveVault—earn more and stay in control.')
     <x-guest-layout>
-        <section class="min-h-screen relative">
+        <section class="min-h-screen relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
                 <div class="container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">

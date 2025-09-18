@@ -3,7 +3,7 @@
     'Download DgnRavePay logos, media kits, product screenshots, and brand guidelines for press
     and partners.')
     <x-guest-layout>
-        <section class="relative">
+        <section class="relative pt-10">
             <div class="py-20 md:py-32 lg:py-40">
                 <div class="container mx-auto  px-5 md:px-14">
                     <div class="text-center">

@@ -3,7 +3,7 @@
     'Report unethical behavior securely and without retaliation. Read DgnRavePay’s
     whistleblowing guidelines and reporting channels.')
     <x-guest-layout>
-        <section class="relative">
+        <section class="relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
                 <div class="container mx-auto  px-5 md:px-14 lg:py-16">
                     <div class="text-center mb-10">

@@ -3,11 +3,11 @@
     'Create a secure virtual dollar card in minutes—shop globally, pay subscriptions, and track
     spending in real time with DgnRavePay.')
     <x-guest-layout>
-        <section class="min-h-screen relative">
+        <section class="min-h-screen relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
                 <div class="container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
-                        <h1 class="capitalize leading-[1.2] mb-5 text-center mb-5">
+                        <h1 class="capitalize leading-[1.2] text-center mb-5">
                             Spend worldwide, stay secure, with a dollar card that works.
                         </h1>
                         <p class="md:font-[500] md:text-lg lg:text-xl mb-10">Unlock global spending power with DgnRavePay s

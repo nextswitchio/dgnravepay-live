@@ -19,6 +19,10 @@ h3 {
     font-style: normal;
 }
 
+.custom-container {
+    @apply container max-w-[1600px];
+}
+
 h1,
 h2 {
     font-weight: 700;
@@ -115,7 +119,7 @@ button {
     height: 23rem; /* Example height */
 }
 
-.embla__container {
+.embla__custom-container {
     display: flex;
     flex-direction: column; /* Arrange slides vertically */
     height: 100%;
@@ -131,7 +135,7 @@ button {
     height: 32rem; /* Example height */
 }
 
-.embla2__container {
+.embla2__custom-container {
     display: flex;
     flex-direction: column-reverse; /* Arrange slides vertically */
     height: 100%;

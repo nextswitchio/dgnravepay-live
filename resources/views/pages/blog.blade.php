@@ -3,7 +3,7 @@
     'Explore DgnRavePay product updates, tutorials, and money insights to help you save, spend,
     and grow smarter.')
     <x-guest-layout>
-        <section class="relative">
+        <section class="relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
                 <div class="container mx-auto  px-5 md:px-10 md:grid md:grid-cols-5 md:gap-5">
                     <div class="md:col-span-3">
