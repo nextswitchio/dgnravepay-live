@@ -256,7 +256,7 @@
                                                 <span>Kano, Nigeria</span>
                                                 <!-- small round flag-like dot (uses emoji) -->
                                                 <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/') }}round-nigerian-flag-of-nigeria-vector.jpg"
+                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
                                                         alt="Nigerian flag" class="h-4"></span>
                                             </div>
                                         </div>
@@ -287,7 +287,7 @@
                                             <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
                                                 <span>Lagos, Nigeria</span>
                                                 <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/') }}round-nigerian-flag-of-nigeria-vector.jpg"
+                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
                                                         alt="Nigerian flag" class="h-4"></span>
                                             </div>
                                         </div>
