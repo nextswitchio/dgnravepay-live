@@ -10,7 +10,7 @@ class AdminUserSeeder extends Seeder
 {
     public function run(): void
     {
-        $email = env('ADMIN_EMAIL', 'admin@dgnravepay.com');
+        $email = env('ADMIN_EMAIL', 'admin@DgnRavePay.com');
         $password = env('ADMIN_PASSWORD', 'password');
         $name = env('ADMIN_NAME', 'Admin User');
 

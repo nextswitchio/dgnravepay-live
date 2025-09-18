@@ -28,12 +28,19 @@ Route::view('/press', 'pages.press');
 Route::view('/contact', 'pages.contact');
 Route::view('/policy', 'pages.policy');
 Route::view('/whistleblower', 'pages.whistleblower');
+
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
+
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blog/{slug}', [BlogController::class, 'show']);
 Route::get('/career', [CareerController::class, 'index']);
 Route::get('/career/{slug}', [CareerController::class, 'show']);
+
+// Sitemap
+Route::get('/sitemap.xml', function () {
+    return response()->view('sitemap')->header('Content-Type', 'application/xml');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -45,7 +52,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 // Admin routes
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {

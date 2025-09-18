@@ -58,7 +58,7 @@
                         </div>
                         <div class="space-y-3 mb-5">
                             <div class="">
-                                <a href="mailto:help@dgnravepay.com"
+                                <a href="mailto:help@DgnRavePay.com"
                                     class="px-2 py-2 rounded bg-white/5 inline-flex gap-1 items-center">
 
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -68,7 +68,7 @@
                                     </svg>
 
 
-                                    help@dgnravepay.com</a>
+                                    help@DgnRavePay.com</a>
                             </div>
                             <div class="">
                                 <a href="tel:+234-916-000-1561"
