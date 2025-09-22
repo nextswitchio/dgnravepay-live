@@ -12,7 +12,7 @@
                             Take Control of Your Money without Boundaries.</h1>
                         <p class="md:font-[500] md:text-lg lg:text-xl mb-10">One Powerful app to send, save, spend, borrow
                             and
-                            live boldly. No paperwork. No friction. Just pure financial freedom on your terms.</p>
+                            live boldly. No paperwork. No friction.<br>Just pure financial freedom on your terms.</p>
                         <div class="">
                             <a href="#"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">Get
