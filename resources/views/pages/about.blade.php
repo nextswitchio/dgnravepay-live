@@ -112,7 +112,8 @@
                         <h2 class="mb-5 leading-[1] sticky top-32">Our core values</h2>
                     </div>
                     <div class="grid md:grid-cols-2 gap-5">
-                        <article class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">001</span>
                                 <h6 class="font-bold text-base md:text-lg">Innovation with Purpose</h6>
@@ -120,7 +121,8 @@
                             <img src="{{ Vite::asset('resources/images/innovation.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">002</span>
                                 <h6 class="font-bold text-base md:text-lg">Trust and Integrity</h6>
@@ -128,7 +130,8 @@
                             <img src="{{ Vite::asset('resources/images/trust.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">003</span>
                                 <h6 class="font-bold text-base md:text-lg">Excellence at Scale</h6>
@@ -136,7 +139,8 @@
                             <img src="{{ Vite::asset('resources/images/excellence.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">004</span>
                                 <h6 class="font-bold text-base md:text-lg">Empowerment & Inclusion</h6>
@@ -144,7 +148,8 @@
                             <img src="{{ Vite::asset('resources/images/empowerment.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">005</span>
                                 <h6 class="font-bold text-base md:text-lg">Empowerment & Inclusion</h6>
@@ -152,7 +157,8 @@
                             <img src="{{ Vite::asset('resources/images/inclusion.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-black/50 to-black/70 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">006</span>
                                 <h6 class="font-bold text-base md:text-lg">Sustainable Growth</h6>
@@ -203,7 +209,7 @@
 
         <section class="custom-container mx-auto  px-5 md:px-10 py-10 my-20 gap-10 grid lg:grid-cols-2">
             <div
-                class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-black to-stone-900 relative -z-[0]">
+                class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-black to-stone-900 relative -z-[0] hover:!scale-[1.02] transition-transform">
                 <div class="p-5">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
                     <p class="text-primary font-semibold">Explore Careers at DngRavePay</p>
@@ -219,7 +225,7 @@
                 class="w-full absolute top-0 left-0 -z-[1]"> --}}
             </div>
             <div
-                class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-primary to-primary-2/50 relative -z-[0]">
+                class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-primary to-primary-2/50 relative -z-[0] hover:!scale-[1.02] transition-transform">
                 <div class="p-5">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
                     <p class="font-semibold">Explore Careers at DngRavePay</p>

@@ -41,7 +41,8 @@
                     <h2 class="text-center mb-5 leading-[1.2]" data-aos="fade-up">
                         Why People Choose DgnRavePay</h2>
                     <div class="grid md:grid-cols-3 gap-5 mt-10">
-                        <div class="bg-primary rounded-xl flex flex-col justify-between">
+                        <div class="bg-primary rounded-xl flex flex-col justify-between hover:!scale-[1.02] transition-transform"
+                            data-aos="fade-up">
                             <div class="px-4 py-5 md:px-5 md:py-6">
                                 <h6 class="font-bold text-xl md:text-2xl mb-1">Save Your Way</h6>
                                 <p>Choose a plan that matches your lifestyle, not the other way around.</p>
@@ -49,7 +50,8 @@
                             <img src="{{ Vite::asset('resources/images/hand coin save.png') }}" alt=""
                                 class="w-4/5">
                         </div>
-                        <div class="bg-secondary/50 rounded-xl flex flex-col justify-between">
+                        <div class="bg-secondary/50 rounded-xl flex flex-col justify-between hover:!scale-[1.02] transition-transform"
+                            data-aos="fade-up">
                             <div class="px-4 py-5 md:px-5 md:py-6">
                                 <h6 class="font-bold text-xl md:text-2xl mb-1">No Excuses</h6>
                                 <p>Automated savings keep you consistent, even on busy days.</p>
@@ -57,7 +59,8 @@
                             <img src="{{ Vite::asset('resources/images/hand money save.png') }}" alt=""
                                 class="ml-auto w-[70%]">
                         </div>
-                        <div class="bg-stone-950 rounded-xl text-white flex flex-col justify-between">
+                        <div class="bg-stone-950 rounded-xl text-white flex flex-col justify-between hover:!scale-[1.02] transition-transform"
+                            data-aos="fade-up">
                             <div class="px-4 py-5 md:px-5 md:py-6">
                                 <h6 class="font-bold text-xl md:text-2xl mb-1">Grow with Confidence</h6>
                                 <p>Earn interest, stay flexible, and keep your funds safe with CBN regulated protection.</p>
@@ -89,7 +92,7 @@
                 </div>
                 <div class="mt-20 space-y-10">
                     <!-- Card 1 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-white to-secondary lg:grid grid-cols-7"
+                    <div class="rounded-2xl bg-gradient-to-br from-white to-secondary lg:grid grid-cols-7 hover:!scale-[1.02] transition-transform"
                         data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
@@ -132,7 +135,8 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-white to-red-200 lg:grid grid-cols-7" data-aos="zoom-in">
+                    <div class="rounded-2xl bg-gradient-to-br from-white to-red-200 lg:grid grid-cols-7 hover:!scale-[1.02] transition-transform"
+                        data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
                                 <h6 class="uppercase text-xs text-blue-500">
@@ -173,7 +177,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-white to-green-200 lg:grid grid-cols-7"
+                    <div class="rounded-2xl bg-gradient-to-br from-white to-green-200 lg:grid grid-cols-7 hover:!scale-[1.02] transition-transform"
                         data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>

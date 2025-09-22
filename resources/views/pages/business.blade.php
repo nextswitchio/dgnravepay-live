@@ -42,7 +42,7 @@
                 </div>
                 <div class="space-y-10">
                     <!-- Card 1 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-primary/10 to-primary/30 lg:grid grid-cols-7"
+                    <div class="rounded-2xl bg-gradient-to-br from-primary/10 to-primary/30 lg:grid grid-cols-7 hover:!scale-[1.02] transition-transform"
                         data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-green-200/10 to-green-500/30 lg:grid grid-cols-7"
+                    <div class="rounded-2xl bg-gradient-to-br from-green-200/10 to-green-500/30 lg:grid grid-cols-7 hover:!scale-[1.02] transition-transform"
                         data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
@@ -119,7 +119,8 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="lg:grid lg:grid-cols-7 gap-5 space-y-10 lg:space-y-0" data-aos="zoom-in">
+                    <div class="lg:grid lg:grid-cols-7 gap-5 space-y-10 lg:space-y-0 hover:!scale-[1.02] transition-transform"
+                        data-aos="zoom-in">
                         <div
                             class="bg-primary/30 rounded-xl lg:col-span-3 flex justify-center lg:block aspect-video lg:aspect-[auto] overflow-hidden relative">
                             <img src="{{ Vite::asset('resources/images/lady-holding-card.png') }}" alt=""
@@ -161,7 +162,8 @@
                         </div>
                     </div>
                     <!-- Card 4 -->
-                    <div class="lg:grid lg:grid-cols-7 gap-5 space-y-10 lg:space-y-0" data-aos="zoom-in">
+                    <div class="lg:grid lg:grid-cols-7 gap-5 space-y-10 lg:space-y-0 hover:!scale-[1.02] transition-transform"
+                        data-aos="zoom-in">
                         <div class="bg-gradient-to-br from-red-300/10 to-red-300/60 lg:col-span-4 rounded-xl">
                             <div class="px-5 py-7 md:py-10">
                                 <h6 class="uppercase text-primary-2 text-xs">
@@ -203,7 +205,7 @@
                         </div>
                     </div>
                     <!-- Card 5 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-purple-200/10 to-purple-500/30 lg:grid grid-cols-7"
+                    <div class="rounded-2xl bg-gradient-to-br from-purple-200/10 to-purple-500/30 lg:grid grid-cols-7 hover:!scale-[1.02] transition-transform"
                         data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
@@ -242,7 +244,7 @@
                         </div>
                     </div>
                     <!-- Card 6 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-lime-200/10 to-lime-500/30 lg:grid grid-cols-7"
+                    <div class="rounded-2xl bg-gradient-to-br from-lime-200/10 to-lime-500/30 lg:grid grid-cols-7 hover:!scale-[1.02] transition-transform"
                         data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
@@ -311,7 +313,8 @@
             </div>
             <div class="w-full border-t border-white/20"></div>
             <div class="custom-container mx-auto  px-5 md:px-10 py-10 md:py-20 grid md:grid-cols-3 gap-5 text-white">
-                <div class="hover:scale-105 transition-all bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                <div
+                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/statistics.png') }}" alt=""
                         class="w-full object-cover mx-auto">
                     <div class="mt-10 md:mt-0">
@@ -320,7 +323,8 @@
                             in Real Time</h5>
                     </div>
                 </div>
-                <div class="hover:scale-105 transition-all bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                <div
+                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/cards stack.png') }}" alt="" class="w-full">
                     <div class="mt-10 md:mt-0">
                         <span class="text-sm text-white/40">02-</span>
@@ -330,7 +334,8 @@
                         </h5>
                     </div>
                 </div>
-                <div class="hover:scale-105 transition-all bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                <div
+                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/pie chart dark.png') }}" alt="" class="w-full">
                     <div class="mt-10 md:mt-0">
                         <span class="text-sm text-white/40">03-</span>
@@ -340,7 +345,8 @@
                         </h5>
                     </div>
                 </div>
-                <div class="hover:scale-105 transition-all bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                <div
+                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/world.png') }}" alt="" class="w-4/5 mx-auto">
                     <div class="mt-10">
                         <span class="text-sm text-white/40">04-</span>
@@ -350,7 +356,8 @@
                         </h5>
                     </div>
                 </div>
-                <div class="hover:scale-105 transition-all bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                <div
+                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/outbound card circle dark.png') }}" alt=""
                         class="w-full">
                     <div class="mt-10 md:mt-0">
@@ -362,7 +369,7 @@
                     </div>
                 </div>
                 <div
-                    class="hover:scale-105 transition-all bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between relative">
+                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between relative">
                     {{-- <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="DngRavePay Logo black colored"
                     class="absolute w-full top-0 left-0 -z-[1]"> --}}
                     <img src="{{ Vite::asset('resources/images/outbound circle logo.png') }}" alt=""

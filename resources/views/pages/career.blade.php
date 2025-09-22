@@ -56,7 +56,8 @@
                         <h2 class="mb-3 leading-[1] sticky top-32">Our core values</h2>
                     </div>
                     <div class="grid md:grid-cols-2 gap-5">
-                        <article class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-200 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-200 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">001</span>
                                 <h6 class="font-bold text-base md:text-lg">Innovation with Purpose</h6>
@@ -64,7 +65,8 @@
                             <img src="{{ Vite::asset('resources/images/innovation.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-fuchsia-50 to-fuchsia-200 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-fuchsia-50 to-fuchsia-200 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">002</span>
                                 <h6 class="font-bold text-base md:text-lg">Trust and Integrity</h6>
@@ -72,7 +74,8 @@
                             <img src="{{ Vite::asset('resources/images/trust.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-violet-50 to-violet-200 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-violet-50 to-violet-200 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">003</span>
                                 <h6 class="font-bold text-base md:text-lg">Excellence at Scale</h6>
@@ -80,7 +83,8 @@
                             <img src="{{ Vite::asset('resources/images/excellence.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-sky-50 to-sky-200 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-sky-50 to-sky-200 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">004</span>
                                 <h6 class="font-bold text-base md:text-lg">Empowerment & Inclusion</h6>
@@ -88,7 +92,8 @@
                             <img src="{{ Vite::asset('resources/images/empowerment.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-stone-50 to-stone-200 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-stone-50 to-stone-200 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">005</span>
                                 <h6 class="font-bold text-base md:text-lg">Empowerment & Inclusion</h6>
@@ -96,7 +101,8 @@
                             <img src="{{ Vite::asset('resources/images/innovation.png') }}" alt=""
                                 class="h-36 md:h-44 lg:h-56 mx-auto">
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-lime-50 to-lime-200 overflow-hidden">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-lime-50 to-lime-200 overflow-hidden hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-10">
                                 <span class="text-xs md:text-sm text-stone-300">006</span>
                                 <h6 class="font-bold text-base md:text-lg">Sustainable Growth</h6>
@@ -116,7 +122,8 @@
                         <h2 class="mb-3 leading-[1] sticky top-32">Perks we enjoy</h2>
                     </div>
                     <div class="grid md:grid-cols-2 gap-5">
-                        <article class="rounded-xl bg-gradient-to-br from-rose-50 to-rose-200">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-rose-50 to-rose-200 hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-7">
                                 <img src="{{ Vite::asset('resources/images/competitive.png') }}" alt=""
                                     class="h-16 md:h-24 lg:h-32 mb-5">
@@ -126,7 +133,8 @@
                                 </span>
                             </div>
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-cyan-50 to-cyan-200">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-cyan-50 to-cyan-200 hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-7">
                                 <img src="{{ Vite::asset('resources/images/health.png') }}" alt=""
                                     class="h-16 md:h-24 lg:h-32 mb-5">
@@ -136,7 +144,8 @@
                                 </span>
                             </div>
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-200">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-200 hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-7">
                                 <img src="{{ Vite::asset('resources/images/learning.png') }}" alt=""
                                     class="h-16 md:h-24 lg:h-32 mb-5">
@@ -146,7 +155,8 @@
                                 </span>
                             </div>
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-lime-50 to-lime-200">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-lime-50 to-lime-200 hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-7">
                                 <img src="{{ Vite::asset('resources/images/flexible.png') }}" alt=""
                                     class="h-16 md:h-24 lg:h-32 mb-5">
@@ -157,7 +167,8 @@
                                 </span>
                             </div>
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-200">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-200 hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-7">
                                 <img src="{{ Vite::asset('resources/images/lifestyle.png') }}" alt=""
                                     class="h-16 md:h-24 lg:h-32 mb-5">
@@ -169,7 +180,8 @@
                                 </span>
                             </div>
                         </article>
-                        <article class="rounded-xl bg-gradient-to-br from-violet-50 to-violet-200">
+                        <article
+                            class="rounded-xl bg-gradient-to-br from-violet-50 to-violet-200 hover:!scale-[1.02] transition-transform">
                             <div class="p-5 md:p-7">
                                 <img src="{{ Vite::asset('resources/images/exclusive.png') }}" alt=""
                                     class="h-16 md:h-24 lg:h-32 mb-5">
