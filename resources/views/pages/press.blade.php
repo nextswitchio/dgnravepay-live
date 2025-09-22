@@ -5,7 +5,7 @@
     <x-guest-layout>
         <section class="relative pt-10">
             <div class="py-20 md:py-32 lg:py-40">
-                <div class="container mx-auto  px-5 md:px-14">
+                <div class="custom-container mx-auto  px-5 md:px-14">
                     <div class="text-center">
                         <h1
                             class="capitalize leading-[1.2] text-center mb-5 bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
@@ -24,23 +24,23 @@
                     class="absolute -z-[10] blur-[5rem] opacity-50 w-full bottom-0 left-0">
             </div>
         </section>
-        <div class="container mx-auto  px-5 md:px-10 pb-28 md:grid md:grid-cols-10 md:gap-5">
+        <div class="custom-container mx-auto  px-5 md:px-10 pb-28 md:grid md:grid-cols-10 md:gap-5">
             <div class="col-span-3">
-                <ul class="inline-flex md:flex-col gap-3 text-xs md:text-sm mb-5 md:mb-0 p-5">
-                    <li class="py-2 md:py-2 px-2 rounded-full bg-stone-100 text-primary font-semibold">
+                <ul class="inline-flex flex-wrap md:flex-col gap-3 text-xs md:text-sm mb-5 md:mb-0 p-5">
+                    <li class="py-2 md:py-2 px-2 rounded-full bg-stone-100 text-primary font-semibold whitespace-nowrap">
                         Inside the news
                     </li>
                     <li class="ml-3">
-                        <a href="#" class="text-[#1a1a1c] font-semibold">Logo</a>
+                        <a href="#" class="text-[#1a1a1c] font-semibold whitespace-nowrap">Logo</a>
                     </li>
                     <li class="ml-3">
-                        <a href="#" class="text-[#1a1a1c] font-semibold">Team Pictures</a>
+                        <a href="#" class="text-[#1a1a1c] font-semibold whitespace-nowrap">Team Pictures</a>
                     </li>
                     <li class="ml-3">
-                        <a href="#" class="text-[#1a1a1c] font-semibold">Product images</a>
+                        <a href="#" class="text-[#1a1a1c] font-semibold whitespace-nowrap">Product images</a>
                     </li>
                     <li class="ml-3">
-                        <a href="#" class="text-[#1a1a1c] font-semibold">Featured businesses</a>
+                        <a href="#" class="text-[#1a1a1c] font-semibold whitespace-nowrap">Featured businesses</a>
                     </li>
                 </ul>
             </div>

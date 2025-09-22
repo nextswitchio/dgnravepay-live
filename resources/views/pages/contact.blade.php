@@ -5,7 +5,7 @@
     <x-guest-layout>
         <section class="relative pt-10">
             <div class="pt-28 md:pt-40 lg:pt-52 pb-40">
-                <div class="container mx-auto  px-5 md:px-10">
+                <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center">
                         <h2
                             class="capitalize leading-[1.5] mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
@@ -21,7 +21,7 @@
         </section>
         <!-- Dark Section -->
         <section class="bg-accent-black relative -z-[0]">
-            <div class="container mx-auto  px-5 md:px-10 py-20 md:py-28">
+            <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
                 <div class="text-center">
                     <h2 class="text-white mb-5 leading-[1.5]">
                         Want to meet our team in your state? <br />

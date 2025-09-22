@@ -5,7 +5,7 @@
     <x-guest-layout>
         <section class="min-h-screen relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
-                <div class="container mx-auto  px-5 md:px-10">
+                <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
                         <h1 class="capitalize leading-[1.2] mb-5 text-center">
                             Turn every Naira into
@@ -36,9 +36,9 @@
             </div>
         </section>
         <section class="my-28">
-            <div class="container mx-auto  px-5 md:px-10">
+            <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="mb-10 px-5 md:px-10">
-                    <h2 class="text-center mb-5 leading-[1.2]">
+                    <h2 class="text-center mb-5 leading-[1.2]" data-aos="fade-up">
                         Why People Choose DgnRavePay</h2>
                     <div class="grid md:grid-cols-3 gap-5 mt-10">
                         <div class="bg-primary rounded-xl flex flex-col justify-between">
@@ -72,7 +72,7 @@
 
         <!-- Dark Section -->
         <section class="bg-accent-black relative -z-[0]">
-            <div class="container mx-auto  px-5 md:px-10 py-20 md:py-28">
+            <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
                 <div class="text-center text-white">
                     <h2 class="text-white mb-5 leading-[1.2]">
                         Find the Savings Plan That Works for You
@@ -89,7 +89,8 @@
                 </div>
                 <div class="mt-20 space-y-10">
                     <!-- Card 1 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-white to-secondary lg:grid grid-cols-7">
+                    <div class="rounded-2xl bg-gradient-to-br from-white to-secondary lg:grid grid-cols-7"
+                        data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
                                 <h6 class="uppercase text-xs text-blue-500">
@@ -131,7 +132,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-white to-red-200 lg:grid grid-cols-7">
+                    <div class="rounded-2xl bg-gradient-to-br from-white to-red-200 lg:grid grid-cols-7" data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
                                 <h6 class="uppercase text-xs text-blue-500">
@@ -172,7 +173,8 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-white to-green-200 lg:grid grid-cols-7">
+                    <div class="rounded-2xl bg-gradient-to-br from-white to-green-200 lg:grid grid-cols-7"
+                        data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
                                 <h6 class="uppercase text-xs text-blue-500">
@@ -219,7 +221,7 @@
         </section>
 
         <section class="my-40">
-            <div class="container mx-auto  px-5 md:px-10 space-y-20 md:space-y-40">
+            <div class="custom-container mx-auto  px-5 md:px-10 space-y-20 md:space-y-40">
                 <!-- JOIN SECTION -->
                 <x-pages.join-section />
                 <!-- TESTIMONIAL -->

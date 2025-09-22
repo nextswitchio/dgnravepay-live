@@ -4,13 +4,13 @@
         'See why over 100,000 Nigerians have made DgnRavePay their go-to financial app. Real reviews, real stories, real results.',
 ])
 <div class="">
-    <div class="mb-10 px-5 md:px-10">
+    <div class="mb-10 px-5 md:px-10" data-aos="fade-up">
         <h2 class="text-center mb-5 leading-[1]">{{ $title }}</h2>
         <p class="text-center">{{ $description }}</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
         {{-- <div class="embla">
-            <div class="embla__container space-y-6">
+            <div class="embla__custom-container space-y-6">
                 <div class="embla__slide">
                     <article class="break-inside-avoid rounded-3xl bg-[#fbbb0c] text-white shadow-lg p-6">
                         <header class="flex items-center gap-3">

@@ -1,10 +1,13 @@
 import "./bootstrap";
 
 import Alpine from "alpinejs";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 window.Alpine = Alpine;
 
 Alpine.start();
+AOS.init();
 
 import.meta.glob(["../images/**", "../fonts/**"]);
 
@@ -38,7 +41,7 @@ businessTabButton.addEventListener("click", () => {
 
 const navbarProductPersonal = `
     
-                                    <a href="/" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="/" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-individual-img" src="${getImageUrl(
                                             "user.png"
                                         )}" alt="user icon" class="size-6">
@@ -48,7 +51,7 @@ const navbarProductPersonal = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="/virtual" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="/virtual" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-virtual-img" src="${getImageUrl(
                                             "pos_terminal.png"
                                         )}" alt="pos terminal icon" class="size-6">
@@ -59,7 +62,7 @@ const navbarProductPersonal = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="/savings" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="/savings" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-savings-img" src="${getImageUrl(
                                             "savings.png"
                                         )}" alt="savings icon" class="size-6">
@@ -70,7 +73,7 @@ const navbarProductPersonal = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-loan-img" src="${getImageUrl(
                                             "loan.png"
                                         )}" alt="loan icon" class="size-6">
@@ -81,7 +84,7 @@ const navbarProductPersonal = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-hotel-img" src="${getImageUrl(
                                             "hotel-bed.png"
                                         )}" alt="hotel bed icon" class="size-6">
@@ -95,7 +98,7 @@ const navbarProductPersonal = `
 `;
 
 const navbarProductBusiness = `
-                                    <a href="/business" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="/business" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-business-img" src="${getImageUrl(
                                             "briefcase.png"
                                         )}" alt="briefcase icon" class="size-6">
@@ -105,7 +108,7 @@ const navbarProductBusiness = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-pos-img" src="${getImageUrl(
                                             "pos_terminal.png"
                                         )}" alt="POS & Terminals icon"
@@ -117,7 +120,7 @@ const navbarProductBusiness = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-graph-img" src="${getImageUrl(
                                             "graph-up.png"
                                         )}" alt="Business graph up icon"
@@ -129,7 +132,7 @@ const navbarProductBusiness = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-loan-img" src="${getImageUrl(
                                             "loan.png"
                                         )}" alt="loan icon" class="size-6">
@@ -141,7 +144,7 @@ const navbarProductBusiness = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start  gap-5">
+                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-invoice-img" src="${getImageUrl(
                                             "invoice.png"
                                         )}" alt="invoice icon" class="size-6">
@@ -334,5 +337,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 "#nav-dropdown-product-pos_terminal-img"
             ).src = getImageUrl("pos_terminal colored.png");
             break;
+    }
+});
+
+document.addEventListener("scroll", () => {
+    const navbars = document.querySelectorAll("nav");
+    const viewportHeight = window.innerHeight;
+    const scrollY = window.scrollY;
+
+    if (scrollY > viewportHeight) {
+        navbars[0].classList.add("fixed");
+        navbars[0].classList.remove("absolute");
+        navbars[1].classList.add("fixed");
+        navbars[1].classList.remove("absolute");
+    } else {
+        navbars[0].classList.remove("fixed");
+        navbars[0].classList.add("absolute");
+        navbars[1].classList.remove("fixed");
+        navbars[1].classList.add("absolute");
     }
 });

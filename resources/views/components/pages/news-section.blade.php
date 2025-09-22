@@ -1,5 +1,5 @@
-<div class="container mx-auto">
-    <div class="mb-10 px-5 md:px-10">
+<div class="custom-container mx-auto">
+    <div class="mb-10 px-5 md:px-10" data-aos="fade-up">
         <h2 class="text-center mb-5">Get Savvy About Your
             Financial Life</h2>
         <p class="text-center">See why over 100,000 Nigerians have made DgnRavePay their go-to financial

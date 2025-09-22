@@ -5,7 +5,7 @@
     <x-guest-layout>
         <section class="min-h-screen relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
-                <div class="container mx-auto  px-5 md:px-10">
+                <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
                         <h1 class="capitalize leading-[1.2] text-center mb-5">
                             Spend worldwide, stay secure, with a dollar card that works.
@@ -33,8 +33,8 @@
         </section>
 
         <section class="my-28">
-            <div class="container mx-auto  px-5 md:px-10">
-                <div class="mb-10 px-5 md:px-10">
+            <div class="custom-container mx-auto  px-5 md:px-10">
+                <div class="mb-10 px-5 md:px-10" data-aos="fade-up">
                     <h2 class="text-center mb-5 leading-[1.2]">Your Passport to Safe,
                         Smarter
                         Worldwide Spending</h2>
@@ -91,7 +91,7 @@
 
         <!-- Dark Section -->
         <section class="bg-accent-black">
-            <div class="container mx-auto  px-5 md:px-10">
+            <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="grid md:grid-cols-7 gap-7 pt-20">
                     <div class="md:col-span-4">
                         <h2 class="text-white mb-5 leading-[1.2]">Why choose
@@ -203,7 +203,7 @@
         </section>
 
         <section class="my-28">
-            <div class="container mx-auto px-5 md:px-10 space-y-20 md:space-y-40">
+            <div class="custom-container mx-auto px-5 md:px-10 space-y-20 md:space-y-40">
                 <!-- TESTIMONIAL -->
                 <x-pages.testimonial-section title="Why Smart Users Trust Our Virtual USD Cards"
                     description="From global shopping to streaming subscriptions, see how thousands of people like you are using DgnRavePay cards to spend securely and without borders." />

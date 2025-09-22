@@ -33,7 +33,7 @@
         </section>
         <section class="my-28">
             <div class="custom-container mx-auto  px-5 md:px-10">
-                <div class="mb-10 px-5 md:px-10">
+                <div class="mb-10 px-5 md:px-10" data-aos="fade-up">
                     <h2 class="text-center mb-5 leading-[1.2]">One App. Endless <span
                             class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-2">Freedom</span>
                     </h2>
@@ -42,7 +42,8 @@
                 </div>
                 <div class="space-y-10">
                     <!-- Card 1 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-primary/10 to-primary/30 lg:grid grid-cols-7">
+                    <div class="rounded-2xl bg-gradient-to-br from-primary/10 to-primary/30 lg:grid grid-cols-7"
+                        data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
                                 <h6 class="uppercase text-primary-2 text-xs">
@@ -78,7 +79,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="lg:grid lg:grid-cols-7 gap-5 space-y-10 lg:space-y-0">
+                    <div class="lg:grid lg:grid-cols-7 gap-5 space-y-10 lg:space-y-0" data-aos="zoom-in">
                         <div
                             class="bg-primary/30 relative rounded-xl lg:col-span-3 flex justify-center items-center lg:block aspect-video lg:aspect-[auto] overflow-hidden">
                             <img src="{{ Vite::asset('resources/images/black woman smiling while pressing phone.png') }}"
@@ -114,7 +115,8 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-green-200/10 to-green-500/30 lg:grid grid-cols-7">
+                    <div class="rounded-2xl bg-gradient-to-br from-green-200/10 to-green-500/30 lg:grid grid-cols-7"
+                        data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
                                 <h6 class="uppercase text-primary-2 text-xs">
@@ -149,7 +151,7 @@
                         </div>
                     </div>
                     <!-- Card 4 -->
-                    <div class="lg:grid lg:grid-cols-7 gap-5 space-y-10 lg:space-y-0">
+                    <div class="lg:grid lg:grid-cols-7 gap-5 space-y-10 lg:space-y-0" data-aos="zoom-in">
                         <div class="bg-gradient-to-br from-red-300/10 to-red-300/60 lg:col-span-4 rounded-xl">
                             <div class="px-5 py-7 md:py-10">
                                 <h6 class="uppercase text-primary-2 text-xs">
@@ -163,13 +165,13 @@
                                         loans right from your wallet.</p>
                                     <div class="flex gap-5 mt-5 text-sm font-semibold">
                                         <div class="flex items-center">
-                                            <img src="{{ Vite::asset('resources/images/chrome-icon.png') }}" alt=""
-                                                class="h-4">
+                                            <img src="{{ Vite::asset('resources/images/chrome-icon.png') }}"
+                                                alt="" class="h-4">
                                             <p>Instant Micro-Loans</p>
                                         </div>
                                         <div class="flex items-center">
-                                            <img src="{{ Vite::asset('resources/images/chrome-icon.png') }}" alt=""
-                                                class="h-4">
+                                            <img src="{{ Vite::asset('resources/images/chrome-icon.png') }}"
+                                                alt="" class="h-4">
                                             <p>Personal Loans</p>
                                         </div>
                                         <div class="flex items-center">
@@ -208,7 +210,8 @@
                         </div>
                     </div>
                     <!-- Card 5 -->
-                    <div class="rounded-2xl bg-gradient-to-br from-purple-200/10 to-purple-500/30 lg:grid grid-cols-7">
+                    <div class="rounded-2xl bg-gradient-to-br from-purple-200/10 to-purple-500/30 lg:grid grid-cols-7"
+                        data-aos="zoom-in">
                         <div class="lg:col-span-4 px-5 md:px-10 flex flex-col justify-between py-7 md:py-10">
                             <div>
                                 <h6 class="uppercase text-primary-2 text-xs">

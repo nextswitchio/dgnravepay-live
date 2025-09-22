@@ -2,7 +2,7 @@
 <section class="bg-black relative -z-[0]">
     <img src="{{ Vite::asset('resources/images/vector line.svg') }}" alt="vector line"
         class="absolute -z-[1] blur-[3rem] w-full bottom-28 left-0">
-    <div class="container mx-auto  px-5 md:px-10 py-20">
+    <div class="custom-container mx-auto  px-5 md:px-10 py-20">
         <div class="text-center mb-20">
             <h2 class="text-white mb-5 leading-[1.2]">Do more with your Personal
                 Account</h2>
@@ -25,7 +25,7 @@
         </div>
         <!-- Footer -->
         <footer class="bg-[#1a1a1a] text-white pt-12 pb-8 px-4 md:px-8 rounded-3xl">
-            <div class="container mx-auto ">
+            <div class="custom-container mx-auto ">
                 <!-- Main footer content -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-6">
                     <!-- Company info -->

@@ -18,6 +18,7 @@
     "dependencies": {
         "@splidejs/splide": "^4.1.4",
         "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+        "aos": "^2.3.4",
         "embla-carousel": "^8.6.0",
         "embla-carousel-autoplay": "^8.6.0"
     }

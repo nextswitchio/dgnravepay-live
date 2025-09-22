@@ -20,7 +20,7 @@ h3 {
 }
 
 .custom-container {
-    @apply container max-w-[1600px];
+    @apply container max-w-[1600px] xl:px-20;
 }
 
 h1,
@@ -214,14 +214,14 @@ details[open] summary ~ * {
     }
 }
 
-/* details > summary::marker {
+details > summary::marker {
     content: none;
-} */
+}
 
 /* For older WebKit browsers */
-/* details > summary::-webkit-details-marker {
+details > summary::-webkit-details-marker {
     display: none;
-} */
+}
 details {
     width: 100%;
 }
@@ -249,4 +249,10 @@ details > summary::after {
 details[open] > summary::after {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='0.5' stroke='currentColor' class='size-4'><path stroke-linecap='round' stroke-linejoin='round' d='M5 12h14' /></svg>");
     transform: rotate(180deg);
+}
+
+.nav-drop-item:hover img {
+    transition: all 0.3s ease-in-out;
+    filter: invert(50%) sepia(120%) saturate(1000%) contrast(100%)
+        brightness(140%);
 }

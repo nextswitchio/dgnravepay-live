@@ -50,8 +50,8 @@ function startJoinInterval() {
 
 startJoinInterval();
 /*
-const container = document.getElementById("bottom-to-top-slide");
-const list = container.querySelector(".bottom-to-top-list");
+const custom-container = document.getElementById("bottom-to-top-slide");
+const list = custom-container.querySelector(".bottom-to-top-list");
 const articles = Array.from(list.children);
 const gap = 24; // Tailwind space-y-6 = 1.5rem = 24px
 const articleHeight = articles[0].offsetHeight + gap;

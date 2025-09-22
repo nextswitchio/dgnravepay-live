@@ -1,5 +1,5 @@
 <nav
-    class="hidden lg:block fixed z-[10000] w-full backdrop-blur-md {{ request()->is('about') ? 'bg-accent-black/60' : 'bg-white/60' }}">
+    class="hidden lg:block absolute top-0 left-0 transition-all z-[10000] duration-500 w-full backdrop-blur-md {{ request()->is('about') ? 'bg-accent-black/60' : 'bg-white/60' }}">
     <div class="custom-container mx-auto  px-5 md:px-10 py-4 grid grid-cols-2">
         <div class="flex items-center gap-10">
             <a href="/">
@@ -22,12 +22,13 @@
         </div>
         <div class="flex items-center justify-end lg:justify-between gap-10">
             <ul class="font-medium flex gap-5">
-                <li class="group cursor-pointer nav-list">
+                <li class="group cursor-pointer nav-list relative">
                     <span>Product</span>
                     <div id="navbar-product"
-                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-20 lg:right-[40vw] text-black bg-slate-100 rounded-xl p-3 grid grid-cols-2">
+                        class="group-[.is-open]:visible invisible transition-all absolute  top-10 -left-52 w-[1100%] text-black bg-slate-100 rounded-xl p-3 grid grid-cols-2">
                         <div class="p-3" id="navbar-select">
-                            <button type="button" class="nav-selected rounded-xl p-3 flex items-start gap-5">
+                            <button type="button"
+                                class="nav-selected rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img id="nav-product-individual-img"
                                     src="{{ Vite::asset('resources/images/user colored.png') }}" alt="briefcase icon"
                                     class="size-6">
@@ -38,7 +39,7 @@
                                         grow</span>
                                 </div>
                             </button>
-                            <button type="button" class="rounded-xl p-3 flex items-start gap-5">
+                            <button type="button" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img id="nav-product-business-img"
                                     src="{{ Vite::asset('resources/images/briefcase.svg') }}" alt="briefcase icon"
                                     class="size-6">
@@ -54,12 +55,12 @@
                         <div class="p-3 bg-white rounded-xl"></div>
                     </div>
                 </li>
-                <li class="group cursor-pointer nav-list">
+                <li class="group cursor-pointer nav-list relative">
                     <span>Company</span>
                     <div id="navbar-company"
-                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-40 lg:right-[35vw] text-black bg-slate-100 rounded-xl p-3">
+                        class="group-[.is-open]:visible invisible transition-all absolute top-10 -left-20 w-[450%] text-black bg-slate-100 rounded-xl p-3">
                         <div class="p-3 bg-white rounded-xl">
-                            <a href="/about" class="rounded-xl p-3 flex items-start  gap-5">
+                            <a href="/about" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img src="{{ Vite::asset('resources/images/dng-about.png') }}" alt="user icon"
                                     class="size-6">
                                 <div class="text-left">
@@ -68,7 +69,7 @@
                                         grow</span>
                                 </div>
                             </a>
-                            <a href="/career" class="rounded-xl p-3 flex items-start  gap-5">
+                            <a href="/career" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img src="{{ Vite::asset('resources/images/virtual_card.png') }}"
                                     alt="virtual card icon" class="size-6">
                                 <div class="text-left">
@@ -77,7 +78,7 @@
                                         grow</span>
                                 </div>
                             </a>
-                            <a href="/contact" class="rounded-xl p-3 flex items-start  gap-5">
+                            <a href="/contact" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img src="{{ Vite::asset('resources/images/location.png') }}" alt="savings icon"
                                     class="size-6">
                                 <div class="text-left">
@@ -86,7 +87,7 @@
                                         grow</span>
                                 </div>
                             </a>
-                            <a href="/press" class="rounded-xl p-3 flex items-start  gap-5">
+                            <a href="/press" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img src="{{ Vite::asset('resources/images/file.png') }}" alt="loan icon"
                                     class="size-6">
                                 <div class="text-left">
@@ -99,12 +100,12 @@
                         </div>
                     </div>
                 </li>
-                <li class="group cursor-pointer nav-list">
+                <li class="group cursor-pointer nav-list relative">
                     <span>Resources</span>
                     <div id="navbar-resources"
-                        class="group-[.is-open]:visible invisible transition-all absolute top-24 right-32 lg:right-[30vw] text-black bg-slate-100 rounded-xl p-3">
+                        class="group-[.is-open]:visible invisible transition-all absolute  top-10 -left-20 w-[450%] text-black bg-slate-100 rounded-xl p-3">
                         <div class="p-3 bg-white rounded-xl">
-                            <a href="/blog" class="rounded-xl p-3 flex items-start  gap-5">
+                            <a href="/blog" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img id="nav-dropdown-resources-blog-img"
                                     src="{{ Vite::asset('resources/images/blogger.png') }}" alt="blogger icon"
                                     class="size-6">
@@ -114,7 +115,7 @@
                                         grow</span>
                                 </div>
                             </a>
-                            <a href="#" class="rounded-xl p-3 flex items-start  gap-5">
+                            <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img id="nav-dropdown-resources-help_center-img"
                                     src="{{ Vite::asset('resources/images/help_center.png') }}" alt="help center icon"
                                     class="size-6">
@@ -124,7 +125,7 @@
                                         grow</span>
                                 </div>
                             </a>
-                            <a href="/policy" class="rounded-xl p-3 flex items-start  gap-5">
+                            <a href="/policy" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img id="nav-dropdown-resources-policy-img"
                                     src="{{ Vite::asset('resources/images/policy.png') }}" alt="policy icon"
                                     class="size-6">
@@ -134,7 +135,7 @@
                                         grow</span>
                                 </div>
                             </a>
-                            <a href="/whistleblower" class="rounded-xl p-3 flex items-start  gap-5">
+                            <a href="/whistleblower" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img id="nav-dropdown-resources-whistleblower-img"
                                     src="{{ Vite::asset('resources/images/whistle.png') }}" alt="whistle icon"
                                     class="size-6">
@@ -160,7 +161,7 @@
 </nav>
 
 <nav
-    class="fixed z-[10000] w-full shadow-lg lg:hidden backdrop-blur-md {{ request()->is('about') ? 'bg-accent-black/60' : 'bg-white/60' }}">
+    class="absolute top-0 left-0 transition-all z-[10000] w-full lg:hidden backdrop-blur-md {{ request()->is('about') ? 'bg-accent-black/60' : 'bg-white/60' }}">
     <!-- Top bar with logo and hamburger -->
     <div class="flex justify-between items-center px-4 py-3">
         <!-- Logo -->
@@ -224,7 +225,7 @@
 
                     <!-- Products Content -->
                     <div id="products-content1" class="space-y-2">
-                        <a href="/" class="p-2 flex items-start  gap-5">
+                        <a href="/" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon"
                                 class="size-6">
                             <div class="text-left">
@@ -233,7 +234,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="/virtual" class="p-2 flex items-start  gap-5">
+                        <a href="/virtual" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/pos_terminal.png') }}" alt="pos terminal icon"
                                 class="size-6">
 
@@ -243,7 +244,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="/savings" class="p-2 flex items-start  gap-5">
+                        <a href="/savings" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/savings.png') }}" alt="savings icon"
                                 class="size-6">
 
@@ -253,7 +254,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start  gap-5">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon"
                                 class="size-6">
 
@@ -263,7 +264,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start  gap-5">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/hotel-bed.png') }}" alt="hotel bed icon"
                                 class="size-6">
 
@@ -276,7 +277,7 @@
                     </div>
 
                     <div id="products-content2" class="space-y-2 hidden">
-                        <a href="/business" class="p-2 flex items-start  gap-5">
+                        <a href="/business" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/briefcase.png') }}" alt="briefcase icon"
                                 class="size-6">
                             <div class="text-left">
@@ -285,7 +286,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start  gap-5">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/pos_terminal.png') }}"
                                 alt="POS & Terminals icon" class="size-6">
 
@@ -295,7 +296,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start  gap-5">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/graph-up.png') }}"
                                 alt="Business graph up icon" class="size-6">
 
@@ -305,7 +306,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start  gap-5">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon"
                                 class="size-6">
 
@@ -316,7 +317,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start  gap-5">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/invoice.png') }}" alt="invoice icon"
                                 class="size-6">
 
@@ -351,7 +352,7 @@
 
                 <div id="dropdown2-content"
                     class="overflow-hidden transition-all duration-300 max-h-0 ml-4 mt-2 space-y-2">
-                    <a href="/about" class="p-2 flex items-start  gap-5">
+                    <a href="/about" class="p-2 flex items-start gap-5 nav-drop-item">
                         <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon" class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 text-black">About Us</p>
@@ -359,7 +360,7 @@
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/career" class="p-2 flex items-start  gap-5">
+                    <a href="/career" class="p-2 flex items-start gap-5 nav-drop-item">
                         <img src="{{ Vite::asset('resources/images/virtual_card.png') }}" alt="virtual card icon"
                             class="size-6">
                         <div class="text-left">
@@ -368,7 +369,7 @@
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/contact" class="p-2 flex items-start  gap-5">
+                    <a href="/contact" class="p-2 flex items-start gap-5 nav-drop-item">
                         <img src="{{ Vite::asset('resources/images/savings.png') }}" alt="savings icon"
                             class="size-6">
                         <div class="text-left">
@@ -377,7 +378,7 @@
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/press" class="rounded-xl p-3 flex items-start  gap-5">
+                    <a href="/press" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                         <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon" class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 text-black">Press and Media</p>
@@ -409,7 +410,7 @@
 
                 <div id="dropdown3-content"
                     class="overflow-hidden transition-all duration-300 max-h-0 ml-4 mt-2 space-y-2">
-                    <a href="/blog" class="p-2 flex items-start  gap-5">
+                    <a href="/blog" class="p-2 flex items-start gap-5 nav-drop-item">
                         <img src="{{ Vite::asset('resources/images/blogger.png') }}" alt="blogger icon"
                             class="size-6">
                         <div class="text-left">
@@ -418,7 +419,7 @@
                                 grow</span>
                         </div>
                     </a>
-                    <a href="#" class="p-2 flex items-start  gap-5">
+                    <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
                         <img src="{{ Vite::asset('resources/images/help_center.png') }}" alt="help center icon"
                             class="size-6">
                         <div class="text-left">
@@ -427,7 +428,7 @@
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/policy" class="p-2 flex items-start  gap-5">
+                    <a href="/policy" class="p-2 flex items-start gap-5 nav-drop-item">
                         <img src="{{ Vite::asset('resources/images/policy.png') }}" alt="policy icon"
                             class="size-6">
                         <div class="text-left">
@@ -436,7 +437,7 @@
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/whistleblower" class="p-2 flex items-start  gap-5">
+                    <a href="/whistleblower" class="p-2 flex items-start gap-5 nav-drop-item">
                         <img src="{{ Vite::asset('resources/images/whistle.png') }}" alt="whistle icon"
                             class="size-6">
                         <div class="text-left">

@@ -5,7 +5,7 @@
     <x-guest-layout>
         <section class="relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
-                <div class="container mx-auto  px-5 md:px-10 md:grid md:grid-cols-5 md:gap-5">
+                <div class="custom-container mx-auto  px-5 md:px-10 md:grid md:grid-cols-5 md:gap-5">
                     <div class="md:col-span-3">
                         <span class="uppercase text-xs md:text-sm">STAY UP TO DATE</span>
                         <h1
@@ -38,7 +38,7 @@
             </div>
         </section>
         <section class="bg-stone-200 py-20">
-            <div class="container mx-auto  px-5 md:px-10 py-10">
+            <div class="custom-container mx-auto  px-5 md:px-10 py-10">
                 <h6 class="uppercase text-xs md:text-sm">Featured Articles</h6>
                 <div class="mt-5 md:mt-10">
                     <article class="bg-white rounded-xl p-3">
@@ -76,7 +76,7 @@
 
         <!-- News -->
         <section class="my-28">
-            <div class="container mx-auto  px-5 md:px-10">
+            <div class="custom-container mx-auto  px-5 md:px-10">
                 <h6 class="uppercase text-xs md:text-sm">Latest Articles</h6>
                 <div class="mt-5 md:mt-10">
                     <div>
