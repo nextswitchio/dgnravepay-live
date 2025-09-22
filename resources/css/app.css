@@ -20,7 +20,7 @@ h3 {
 }
 
 .custom-container {
-    @apply container max-w-[1600px] xl:px-20;
+    @apply container max-w-[1500px];
 }
 
 h1,
