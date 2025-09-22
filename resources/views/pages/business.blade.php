@@ -13,7 +13,7 @@
                         </h1>
                         <p class="md:font-[500] md:text-lg lg:text-xl mb-10">Open a business account in minutes and access
                             powerful tools built to
-                            help you thrive whether you re just starting or scaling fast.</p>
+                            help you thrive<br>whether you re just starting or scaling fast.</p>
                         <div class="">
                             <a href="#"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
