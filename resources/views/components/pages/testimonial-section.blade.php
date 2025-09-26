@@ -22,7 +22,7 @@
                             $isYellow = $t->variant === 'yellow';
                             $cardClasses = $isYellow
                                 ? 'bg-[#fbbb0c] text-white shadow-lg p-6'
-                                : 'bg-white shadow-lg ring-1 ring-black/5 p-6';
+                                : 'bg-neutral-100 shadow-lg ring-1 ring-black/5 p-6';
                             $nameClasses = $isYellow ? 'font-semibold' : 'font-semibold text-neutral-900';
                             $textClasses = $isYellow ? '' : 'text-neutral-700';
                         @endphp
@@ -89,7 +89,7 @@
                             $isYellow = $t->variant === 'yellow';
                             $cardClasses = $isYellow
                                 ? 'bg-[#fbbb0c] text-white shadow-lg p-6'
-                                : 'bg-white shadow-lg ring-1 ring-black/5 p-6';
+                                : 'bg-neutral-100 shadow-lg ring-1 ring-black/5 p-6';
                             $nameClasses = $isYellow ? 'font-semibold' : 'font-semibold text-neutral-900';
                             $textClasses = $isYellow ? '' : 'text-gray-700';
                         @endphp
