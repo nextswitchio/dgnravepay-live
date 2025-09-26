@@ -236,7 +236,7 @@
                         <div class="flex items-center gap-3">
                             <h3 class="font-bold text-gray-800">Available Roles</h3>
                             <span
-                                class="inline-flex items-center justify-center text-xs font-semibold bg-yellow-400 text-gray-900 px-2 py-1 rounded-full shadow-sm">93</span>
+                                class="inline-flex items-center justify-center text-xs font-semibold bg-yellow-400 text-gray-900 px-2 py-1 rounded-full shadow-sm">{{ $posts->total() }}</span>
                         </div>
                     </div>
 
@@ -254,232 +254,46 @@
 
                             <!-- List -->
                             <div class="space-y-4 h-88 md:h-[20rem] lg:h-[30rem] overflow-y-auto minimal-scrollbar">
-                                <a href="/career/admin-officer" class="block">
-                                    <div
-                                        class="bg-white rounded-lg shadow-sm px-4 py-3 md:grid md:grid-cols-12 md:items-center hover:shadow-md transition-shadow">
-                                        <div class="md:col-span-5">
-                                            <div class="text-sm font-semibold text-gray-800">Admin Officer (Kano)</div>
-                                        </div>
-                                        <div class="md:col-span-4 mt-2 md:mt-0">
-                                            <div class="text-xs text-gray-500 md:text-sm">People Operations</div>
-                                        </div>
-                                        <div class="md:col-span-2 mt-2 md:mt-0">
-                                            <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
-                                                <span>Kano, Nigeria</span>
-                                                <!-- small round flag-like dot (uses emoji) -->
-                                                <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
-                                                        alt="Nigerian flag" class="h-4"></span>
+                                @forelse ($posts as $post)
+                                    <a href="{{ url('/career/' . $post->slug) }}" class="block">
+                                        <div
+                                            class="bg-white rounded-lg shadow-sm px-4 py-3 md:grid md:grid-cols-12 md:items-center hover:shadow-md transition-shadow">
+                                            <div class="md:col-span-5">
+                                                <div class="text-sm font-semibold text-gray-800">{{ $post->title }}</div>
+                                            </div>
+                                            <div class="md:col-span-4 mt-2 md:mt-0">
+                                                <div class="text-xs text-gray-500 md:text-sm">
+                                                    {{ $post->department ?? 'General' }}</div>
+                                            </div>
+                                            <div class="md:col-span-2 mt-2 md:mt-0">
+                                                <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
+                                                    <span>{{ $post->location ?? 'Nigeria' }}</span>
+                                                    <span class="text-base"><img
+                                                            src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
+                                                            alt="Nigerian flag" class="h-4"></span>
+                                                </div>
+                                            </div>
+                                            <div class="md:col-span-1 flex justify-end mt-2 md:mt-0">
+                                                <div class="w-8 h-8 flex items-center justify-center rounded-full">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600"
+                                                        fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                        stroke-width="2" aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="md:col-span-1 flex justify-end mt-2 md:mt-0">
-                                            <div class="w-8 h-8 flex items-center justify-center rounded-full">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                    stroke-width="2" aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="/career/business-development-executive" class="block">
-                                    <div
-                                        class="bg-white rounded-lg shadow-sm px-4 py-3 md:grid md:grid-cols-12 md:items-center hover:shadow-md transition-shadow">
-                                        <div class="md:col-span-5">
-                                            <div class="text-sm font-semibold text-gray-800">Business Development Executive
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-4 mt-2 md:mt-0">
-                                            <div class="text-xs text-gray-500 md:text-sm">Enterprise Sales</div>
-                                        </div>
-                                        <div class="md:col-span-2 mt-2 md:mt-0">
-                                            <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
-                                                <span>Lagos, Nigeria</span>
-                                                <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
-                                                        alt="Nigerian flag" class="h-4"></span>
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-1 flex justify-end mt-2 md:mt-0">
-                                            <div class="w-8 h-8 flex items-center justify-center rounded-full">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                    stroke-width="2">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="block">
-                                    <div
-                                        class="bg-white rounded-lg shadow-sm px-4 py-3 md:grid md:grid-cols-12 md:items-center hover:shadow-md transition-shadow">
-                                        <div class="md:col-span-5">
-                                            <div class="text-sm font-semibold text-gray-800">Business Relationship Manager
-                                                (Abuja)
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-4 mt-2 md:mt-0">
-                                            <div class="text-xs text-gray-500 md:text-sm">Enterprise Sales</div>
-                                        </div>
-                                        <div class="md:col-span-2 mt-2 md:mt-0">
-                                            <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
-                                                <span>FCT, Nigeria</span>
-                                                <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
-                                                        alt="Nigerian flag" class="h-4"></span>
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-1 flex justify-end mt-2 md:mt-0">
-                                            <div class="w-8 h-8 flex items-center justify-center rounded-full">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                    stroke-width="2">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="block">
-                                    <div
-                                        class="bg-white rounded-lg shadow-sm px-4 py-3 md:grid md:grid-cols-12 md:items-center hover:shadow-md transition-shadow">
-                                        <div class="md:col-span-5">
-                                            <div class="text-sm font-semibold text-gray-800">Business Relationship Manager
-                                                (Anambra)
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-4 mt-2 md:mt-0">
-                                            <div class="text-xs text-gray-500 md:text-sm">Enterprise Sales</div>
-                                        </div>
-                                        <div class="md:col-span-2 mt-2 md:mt-0">
-                                            <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
-                                                <span>Remote, Nigeria</span>
-                                                <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
-                                                        alt="Nigerian flag" class="h-4"></span>
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-1 flex justify-end mt-2 md:mt-0">
-                                            <div class="w-8 h-8 flex items-center justify-center rounded-full">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                    stroke-width="2">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="block">
-                                    <div
-                                        class="bg-white rounded-lg shadow-sm px-4 py-3 md:grid md:grid-cols-12 md:items-center hover:shadow-md transition-shadow">
-                                        <div class="md:col-span-5">
-                                            <div class="text-sm font-semibold text-gray-800">Business Relationship Manager
-                                                (Benue)
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-4 mt-2 md:mt-0">
-                                            <div class="text-xs text-gray-500 md:text-sm">Enterprise Sales</div>
-                                        </div>
-                                        <div class="md:col-span-2 mt-2 md:mt-0">
-                                            <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
-                                                <span>Benue, Nigeria</span>
-                                                <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
-                                                        alt="Nigerian flag" class="h-4"></span>
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-1 flex justify-end mt-2 md:mt-0">
-                                            <div class="w-8 h-8 flex items-center justify-center rounded-full">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                    stroke-width="2">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="block">
-                                    <div
-                                        class="bg-white rounded-lg shadow-sm px-4 py-3 md:grid md:grid-cols-12 md:items-center hover:shadow-md transition-shadow">
-                                        <div class="md:col-span-5">
-                                            <div class="text-sm font-semibold text-gray-800">Business Relationship Manager
-                                                (Borno)
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-4 mt-2 md:mt-0">
-                                            <div class="text-xs text-gray-500 md:text-sm">Enterprise Sales</div>
-                                        </div>
-                                        <div class="md:col-span-2 mt-2 md:mt-0">
-                                            <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
-                                                <span>Borno, Nigeria</span>
-                                                <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
-                                                        alt="Nigerian flag" class="h-4"></span>
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-1 flex justify-end mt-2 md:mt-0">
-                                            <div class="w-8 h-8 flex items-center justify-center rounded-full">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                    stroke-width="2">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="block">
-                                    <div
-                                        class="bg-white rounded-lg shadow-sm px-4 py-3 md:grid md:grid-cols-12 md:items-center hover:shadow-md transition-shadow">
-                                        <div class="md:col-span-5">
-                                            <div class="text-sm font-semibold text-gray-800">Business Relationship Manager
-                                                (Lagos)
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-4 mt-2 md:mt-0">
-                                            <div class="text-xs text-gray-500 md:text-sm">Enterprise Sales</div>
-                                        </div>
-                                        <div class="md:col-span-2 mt-2 md:mt-0">
-                                            <div class="flex items-center gap-2 text-xs text-gray-600 md:text-sm">
-                                                <span>Lagos, Nigeria</span>
-                                                <span class="text-base"><img
-                                                        src="{{ Vite::asset('resources/images/round-nigerian-flag-of-nigeria-vector.jpg') }}"
-                                                        alt="Nigerian flag" class="h-4"></span>
-                                            </div>
-                                        </div>
-                                        <div class="md:col-span-1 flex justify-end mt-2 md:mt-0">
-                                            <div class="w-8 h-8 flex items-center justify-center rounded-full">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                    stroke-width="2">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
+                                    </a>
+                                @empty
+                                    <div class="text-center text-sm text-gray-500 py-6">No open roles at the moment. Please
+                                        check back soon.</div>
+                                @endforelse
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 

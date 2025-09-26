@@ -8,6 +8,7 @@
         <thead>
             <tr class="text-left">
                 <th class="p-2">Title</th>
+                <th class="p-2">Cover</th>
                 <th class="p-2">Slug</th>
                 <th class="p-2">Published</th>
                 <th class="p-2"></th>
@@ -17,6 +18,12 @@
             @foreach ($posts as $post)
                 <tr class="border-t">
                     <td class="p-2">{{ $post->title }}</td>
+                    <td class="p-2">
+                        @if ($post->cover_image_path)
+                            <img src="{{ asset('storage/' . $post->cover_image_path) }}" alt="cover"
+                                class="h-10 w-16 object-cover rounded">
+                        @endif
+                    </td>
                     <td class="p-2">{{ $post->slug }}</td>
                     <td class="p-2">{{ $post->is_published ? 'Yes' : 'No' }}</td>
                     <td class="p-2 text-right space-x-2">

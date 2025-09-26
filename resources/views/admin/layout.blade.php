@@ -7,6 +7,7 @@
     <title>Admin · {{ config('app.name') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    @stack('head')
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -90,5 +91,7 @@
         </div>
     </div>
 </body>
+
+@stack('scripts')
 
 </html>

@@ -6,9 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\CareerPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class CareerPostController extends Controller
 {
+    private const STR255 = 'nullable|string|max:255';
     public function index()
     {
         $posts = CareerPost::latest()->paginate(15);
@@ -25,11 +27,12 @@ class CareerPostController extends Controller
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'nullable|string|max:255|unique:career_posts,slug',
-            'location' => 'nullable|string|max:255',
-            'department' => 'nullable|string|max:255',
+            'location' => self::STR255,
+            'department' => self::STR255,
             'employment_type' => 'required|in:full_time,part_time,contract,internship',
             'summary' => 'nullable|string',
             'description' => 'required|string',
+            'cover_image' => 'nullable|image|max:2048',
             'is_published' => 'sometimes|boolean',
             'published_at' => 'nullable|date',
         ]);
@@ -38,7 +41,26 @@ class CareerPostController extends Controller
             $data['slug'] = Str::slug($data['title']);
         }
 
-        CareerPost::create($data);
+        // Handle cover image upload
+        $coverPath = null;
+        if ($request->hasFile('cover_image')) {
+            $coverPath = $request->file('cover_image')->store('career_covers', 'public');
+        }
+
+        $payload = [
+            'title' => $data['title'],
+            'slug' => $data['slug'],
+            'location' => $data['location'] ?? null,
+            'department' => $data['department'] ?? null,
+            'employment_type' => $data['employment_type'],
+            'summary' => $data['summary'] ?? null,
+            'description' => $data['description'],
+            'cover_image_path' => $coverPath,
+            'is_published' => $data['is_published'] ?? false,
+            'published_at' => $data['published_at'] ?? null,
+        ];
+
+        CareerPost::create($payload);
         return redirect()->route('admin.career-posts.index')->with('status', 'Career post created');
     }
 
@@ -51,22 +73,48 @@ class CareerPostController extends Controller
     {
         $data = $request->validate([
             'title' => 'required|string|max:255',
-            'slug' => 'required|string|max:255|unique:career_posts,slug,'.$career_post->id,
-            'location' => 'nullable|string|max:255',
-            'department' => 'nullable|string|max:255',
+            'slug' => 'required|string|max:255|unique:career_posts,slug,' . $career_post->id,
+            'location' => self::STR255,
+            'department' => self::STR255,
             'employment_type' => 'required|in:full_time,part_time,contract,internship',
             'summary' => 'nullable|string',
             'description' => 'required|string',
+            'cover_image' => 'nullable|image|max:2048',
             'is_published' => 'sometimes|boolean',
             'published_at' => 'nullable|date',
         ]);
 
-        $career_post->update($data);
+        // Handle cover image replacement
+        $coverPath = $career_post->cover_image_path;
+        if ($request->hasFile('cover_image')) {
+            if ($coverPath) {
+                Storage::disk('public')->delete($coverPath);
+            }
+            $coverPath = $request->file('cover_image')->store('career_covers', 'public');
+        }
+
+        $payload = [
+            'title' => $data['title'],
+            'slug' => $data['slug'],
+            'location' => $data['location'] ?? null,
+            'department' => $data['department'] ?? null,
+            'employment_type' => $data['employment_type'],
+            'summary' => $data['summary'] ?? null,
+            'description' => $data['description'],
+            'cover_image_path' => $coverPath,
+            'is_published' => $data['is_published'] ?? false,
+            'published_at' => $data['published_at'] ?? null,
+        ];
+
+        $career_post->update($payload);
         return redirect()->route('admin.career-posts.index')->with('status', 'Career post updated');
     }
 
     public function destroy(CareerPost $career_post)
     {
+        if ($career_post->cover_image_path) {
+            Storage::disk('public')->delete($career_post->cover_image_path);
+        }
         $career_post->delete();
         return redirect()->route('admin.career-posts.index')->with('status', 'Career post deleted');
     }

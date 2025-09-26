@@ -10,6 +10,15 @@ class CareerPost extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'slug', 'location', 'department', 'employment_type', 'summary', 'description', 'is_published', 'published_at'
+        'title',
+        'slug',
+        'location',
+        'department',
+        'employment_type',
+        'summary',
+        'description',
+        'cover_image_path',
+        'is_published',
+        'published_at'
     ];
 }
