@@ -1,5 +1,5 @@
 <nav
-    class="hidden lg:block absolute top-0 left-0 transition-all z-[10000] duration-500 w-full backdrop-blur-md {{ request()->is('about') ? 'bg-accent-black/60' : 'bg-white/60' }}">
+    class="hidden lg:block absolute top-0 left-0 transition-all z-[10000] duration-500 w-full {{ request()->is('about') ? 'bg-accent-black' : 'bg-white' }}">
     <div class="custom-container mx-auto  px-5 md:px-10 py-4 grid grid-cols-2">
         <div class="flex items-center gap-10">
             <a href="/">
@@ -161,7 +161,7 @@
 </nav>
 
 <nav
-    class="absolute top-0 left-0 transition-all z-[10000] w-full lg:hidden backdrop-blur-md {{ request()->is('about') ? 'bg-accent-black/60' : 'bg-white/60' }}">
+    class="absolute top-0 left-0 transition-all z-[10000] w-full lg:hidden {{ request()->is('about') ? 'bg-accent-black' : 'bg-white' }}">
     <!-- Top bar with logo and hamburger -->
     <div class="flex justify-between items-center px-4 py-3">
         <!-- Logo -->

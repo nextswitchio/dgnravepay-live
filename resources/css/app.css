@@ -20,7 +20,15 @@ h3 {
 }
 
 .custom-container {
-    @apply container max-w-[1400px];
+    @apply container max-w-[1350px];
+}
+
+/* Large screens: add generous side spacing using a fluid clamp between 60px and 120px */
+@media (min-width: 1024px) {
+    .custom-container {
+        padding-left: clamp(60px, 6vw, 120px) !important;
+        padding-right: clamp(60px, 6vw, 120px) !important;
+    }
 }
 
 h1,

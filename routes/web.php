@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\BlogPostController;
 use App\Http\Controllers\Admin\CareerPostController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -64,4 +65,5 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
         'career-posts' => 'career_post'
     ]);
     Route::resource('faqs', FaqController::class);
+    Route::resource('testimonials', TestimonialController::class);
 });

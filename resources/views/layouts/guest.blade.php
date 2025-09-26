@@ -32,6 +32,7 @@
     </div>
 
     <x-pages.footer />
+    @stack('scripts')
 </body>
 
 </html>
