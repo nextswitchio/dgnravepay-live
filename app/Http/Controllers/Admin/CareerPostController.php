@@ -24,7 +24,8 @@ class CareerPostController extends Controller
                     ->orWhere('summary', 'like', "%{$search}%")
                     ->orWhere('department', 'like', "%{$search}%")
                     ->orWhere('location', 'like', "%{$search}%")
-                    ->orWhere('employment_type', 'like', "%{$search}%");
+                    ->orWhere('employment_type', 'like', "%{$search}%")
+                    ->orWhere('slug', 'like', "%{$search}%");
             });
         }
         if ($status === 'published') {

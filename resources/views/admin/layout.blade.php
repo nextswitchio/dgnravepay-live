@@ -62,7 +62,7 @@
         </aside>
 
         <!-- Main content area -->
-        <div class="flex-1 min-w-0 md:ml-72">
+        <div class="flex-1 min-w-0">
             <!-- Top bar -->
             <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-gray-200">
                 <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">

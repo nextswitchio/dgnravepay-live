@@ -20,80 +20,101 @@
             <a href="{{ route('admin.career-posts.index') }}" class="text-sm text-gray-600 underline">Reset</a>
         @endif
     </form>
-    <div class="bg-white/90 backdrop-blur rounded-xl shadow ring-1 ring-black/5 overflow-hidden">
-        <table class="min-w-full">
-            <thead>
-                <tr class="text-left bg-gray-50 border-b">
-                    <th class="p-3 text-sm font-semibold text-gray-600">Title</th>
-                    <th class="p-3 text-sm font-semibold text-gray-600">Cover</th>
-                    <th class="p-3 text-sm font-semibold text-gray-600">Slug</th>
-                    <th class="p-3 text-sm font-semibold text-gray-600">Department</th>
-                    <th class="p-3 text-sm font-semibold text-gray-600">Type</th>
-                    <th class="p-3 text-sm font-semibold text-gray-600">Published</th>
-                    <th class="p-3"></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($posts as $post)
-                    <tr class="border-b hover:bg-gray-50">
-                        <td class="p-3">{{ $post->title }}</td>
-                        <td class="p-3">
-                            @if ($post->cover_image_path)
-                                <img src="{{ asset('storage/' . $post->cover_image_path) }}" alt="cover"
-                                    class="h-10 w-16 object-cover rounded">
-                            @endif
-                        </td>
-                        <td class="p-3 text-sm text-gray-700">{{ $post->slug }}</td>
-                        <td class="p-3">{{ $post->department }}</td>
-                        <td class="p-3">{{ $post->employment_type }}</td>
-                        <td class="p-3">
-                            @if ($post->is_published)
-                                <span
-                                    class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-green-50 text-green-700 ring-1 ring-green-200">Published</span>
-                            @else
-                                <span
-                                    class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-100 text-gray-700 ring-1 ring-gray-200">Draft</span>
-                            @endif
-                        </td>
-                        <td class="p-3 text-right space-x-2">
-                            <form action="{{ route('admin.career-posts.toggle-publish', $post) }}" method="POST"
-                                class="inline"
-                                onsubmit="return {{ $post->is_published ? 'confirm(\'Unpublish this job?\')' : 'true' }};">
-                                @csrf
-                                <button
-                                    class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm {{ $post->is_published ? 'bg-amber-600 hover:bg-amber-500' : 'bg-green-600 hover:bg-green-500' }} text-white">
-                                    {{ $post->is_published ? 'Unpublish' : 'Publish' }}
-                                </button>
-                            </form>
-                            <a href="{{ route('admin.career-posts.edit', $post) }}"
-                                class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm bg-blue-600 text-white hover:bg-blue-500">Edit</a>
-                            <button
-                                class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm bg-red-600 text-white hover:bg-red-500"
-                                x-data
-                                @click="$dispatch('open-modal', 'delete-career-{{ $post->id }}')">Delete</button>
-
-                            <x-modal name="delete-career-{{ $post->id }}">
-                                <div class="p-6">
-                                    <h3 class="text-lg font-semibold">Delete career post</h3>
-                                    <p class="text-gray-600 mt-1">Are you sure you want to delete "{{ $post->title }}"?
-                                        This
-                                        action cannot be undone.</p>
-                                    <div class="mt-6 flex justify-end gap-3">
-                                        <button class="px-4 py-2 rounded-lg bg-gray-100"
-                                            x-on:click="$dispatch('close-modal', 'delete-career-{{ $post->id }}')">Cancel</button>
-                                        <form action="{{ route('admin.career-posts.destroy', $post) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="px-4 py-2 rounded-lg bg-red-600 text-white">Delete</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </x-modal>
-                        </td>
+    <div class="bg-white/90 backdrop-blur rounded-xl shadow ring-1 ring-black/5">
+        <div class="overflow-x-auto">
+            <table class="min-w-full">
+                <thead>
+                    <tr class="text-left bg-gray-50 border-b">
+                        <th class="p-3 text-sm font-semibold text-gray-600">Title</th>
+                        <th class="p-3 text-sm font-semibold text-gray-600">Cover</th>
+                        <th class="p-3 text-sm font-semibold text-gray-600">Slug</th>
+                        <th class="p-3 text-sm font-semibold text-gray-600">Department</th>
+                        <th class="p-3 text-sm font-semibold text-gray-600">Type</th>
+                        <th class="p-3 text-sm font-semibold text-gray-600">Published</th>
+                        <th class="p-3 text-sm font-semibold text-gray-600">Published at</th>
+                        <th class="p-3 text-sm font-semibold text-gray-600">Last updated</th>
+                        <th class="p-3"></th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach ($posts as $post)
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3">{{ $post->title }}</td>
+                            <td class="p-3">
+                                @if ($post->cover_image_path)
+                                    <img src="{{ asset('storage/' . $post->cover_image_path) }}" alt="cover"
+                                        class="h-10 w-16 object-cover rounded">
+                                @endif
+                            </td>
+                            <td class="p-3 text-sm text-gray-700">
+                                <div class="flex items-center gap-2">
+                                    <span class="truncate max-w-[200px]"
+                                        title="{{ $post->slug }}">{{ $post->slug }}</span>
+                                    <button type="button" class="text-xs px-2 py-1 rounded bg-gray-100 hover:bg-gray-200"
+                                        onclick="navigator.clipboard.writeText('{{ url('/career/' . $post->slug) }}');this.innerText='Copied';setTimeout(()=>this.innerText='Copy link',1200);">Copy
+                                        link</button>
+                                    <button type="button" class="text-xs px-2 py-1 rounded bg-gray-100 hover:bg-gray-200"
+                                        onclick="navigator.clipboard.writeText('{{ $post->slug }}');this.innerText='Copied';setTimeout(()=>this.innerText='Copy slug',1200);">Copy
+                                        slug</button>
+                                </div>
+                            </td>
+                            <td class="p-3">{{ $post->department }}</td>
+                            <td class="p-3">{{ $post->employment_type }}</td>
+                            <td class="p-3">
+                                @if ($post->is_published)
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-green-50 text-green-700 ring-1 ring-green-200">Published</span>
+                                @else
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-100 text-gray-700 ring-1 ring-gray-200">Draft</span>
+                                @endif
+                            </td>
+                            <td class="p-3 text-sm text-gray-600"
+                                title="{{ optional($post->published_at)->toDayDateTimeString() }}">
+                                {{ optional($post->published_at)->format('Y-m-d H:i') ?? '—' }}</td>
+                            <td class="p-3 text-sm text-gray-600">{{ optional($post->updated_at)->diffForHumans() }}</td>
+                            <td class="p-3 text-right space-x-2">
+                                <form action="{{ route('admin.career-posts.toggle-publish', $post) }}" method="POST"
+                                    class="inline"
+                                    onsubmit="return {{ $post->is_published ? 'confirm(\'Unpublish this job?\')' : 'true' }};">
+                                    @csrf
+                                    <button
+                                        class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm {{ $post->is_published ? 'bg-amber-600 hover:bg-amber-500' : 'bg-green-600 hover:bg-green-500' }} text-white">
+                                        {{ $post->is_published ? 'Unpublish' : 'Publish' }}
+                                    </button>
+                                </form>
+                                <a href="{{ route('admin.career-posts.edit', $post) }}"
+                                    class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm bg-blue-600 text-white hover:bg-blue-500">Edit</a>
+                                <button
+                                    class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm bg-red-600 text-white hover:bg-red-500"
+                                    x-data
+                                    @click="$dispatch('open-modal', 'delete-career-{{ $post->id }}')">Delete</button>
+
+                                <x-modal name="delete-career-{{ $post->id }}">
+                                    <div class="p-6">
+                                        <h3 class="text-lg font-semibold">Delete career post</h3>
+                                        <p class="text-gray-600 mt-1">Are you sure you want to delete
+                                            "{{ $post->title }}"?
+                                            This
+                                            action cannot be undone.</p>
+                                        <div class="mt-6 flex justify-end gap-3">
+                                            <button class="px-4 py-2 rounded-lg bg-gray-100"
+                                                x-on:click="$dispatch('close-modal', 'delete-career-{{ $post->id }}')">Cancel</button>
+                                            <form action="{{ route('admin.career-posts.destroy', $post) }}" method="POST"
+                                                onsubmit="return confirm('Delete this career post permanently?');">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="px-4 py-2 rounded-lg bg-red-600 text-white">Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </x-modal>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
     <div class="mt-4">{{ $posts->links() }}</div>
 @endsection

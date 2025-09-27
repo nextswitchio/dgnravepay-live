@@ -11,24 +11,33 @@ use Illuminate\Support\Facades\Storage;
 
 class BlogPostController extends Controller
 {
+    private const RULE_BOOL_SOMETIMES = 'sometimes|boolean';
     public function index()
     {
-        $query = BlogPost::query();
+        $query = BlogPost::with('tags');
 
         // Filters
         $search = request('q');
         $status = request('status'); // 'published' | 'draft' | null
+        $featured = request('featured'); // 'featured' | 'not_featured' | null
         if ($search) {
             $query->where(function ($q) use ($search) {
                 $q->where('title', 'like', "%{$search}%")
                     ->orWhere('excerpt', 'like', "%{$search}%")
-                    ->orWhere('author', 'like', "%{$search}%");
+                    ->orWhere('author', 'like', "%{$search}%")
+                    ->orWhere('slug', 'like', "%{$search}%");
             });
         }
         if ($status === 'published') {
             $query->where('is_published', true);
         } elseif ($status === 'draft') {
             $query->where('is_published', false);
+        }
+
+        if ($featured === 'featured') {
+            $query->where('is_featured', true);
+        } elseif ($featured === 'not_featured') {
+            $query->where('is_featured', false);
         }
 
         $posts = $query->latest('updated_at')->paginate(15)->appends(request()->query());
@@ -49,8 +58,8 @@ class BlogPostController extends Controller
             'excerpt' => 'nullable|string',
             'content' => 'required|string',
             'cover_image' => 'nullable|image|max:2048',
-            'is_featured' => 'sometimes|boolean',
-            'is_published' => 'sometimes|boolean',
+            'is_featured' => self::RULE_BOOL_SOMETIMES,
+            'is_published' => self::RULE_BOOL_SOMETIMES,
             'published_at' => 'nullable|date',
         ]);
 
@@ -109,8 +118,8 @@ class BlogPostController extends Controller
             'excerpt' => 'nullable|string',
             'content' => 'required|string',
             'cover_image' => 'nullable|image|max:2048',
-            'is_featured' => 'sometimes|boolean',
-            'is_published' => 'sometimes|boolean',
+            'is_featured' => self::RULE_BOOL_SOMETIMES,
+            'is_published' => self::RULE_BOOL_SOMETIMES,
             'published_at' => 'nullable|date',
         ]);
 
