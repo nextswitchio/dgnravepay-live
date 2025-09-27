@@ -6,7 +6,7 @@
             to
             financial freedom.</p>
         <ul class="mt-3 max-w-2xl">
-            <li class="px-5 py-5 rounded-xl mb-2 cursor-pointer join-option">
+            <li class="px-5 py-5 rounded mb-2 cursor-pointer join-option">
                 <div class="flex items-center gap-3 mb-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
@@ -22,7 +22,7 @@
                     saving
                     smartly.</div>
             </li>
-            <li class="px-5 py-5 rounded-xl mb-2 cursor-pointer join-active join-option">
+            <li class="px-5 py-5 rounded mb-2 cursor-pointer join-active join-option">
                 <div class="flex items-center gap-3 mb-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
@@ -37,7 +37,7 @@
                     saving
                     smartly.</div>
             </li>
-            <li class="px-5 py-5 rounded-xl mb-2 cursor-pointer join-option">
+            <li class="px-5 py-5 rounded mb-2 cursor-pointer join-option">
                 <div class="flex items-center gap-3 mb-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">

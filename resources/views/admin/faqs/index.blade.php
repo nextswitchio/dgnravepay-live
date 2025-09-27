@@ -54,10 +54,6 @@
                                         {{ $faq->is_published ? 'Unpublish' : 'Publish' }}
                                     </button>
                                 </form>
-                                <button type="button"
-                                    class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm bg-gray-100 text-gray-800 hover:bg-gray-200"
-                                    onclick="navigator.clipboard.writeText('{{ $faq->question }} - {{ url('/#faq-anchor') }}');this.innerText='Copied';setTimeout(()=>this.innerText='Copy link',1200);">Copy
-                                    link</button>
                                 <a href="{{ route('admin.faqs.edit', $faq) }}"
                                     class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm bg-blue-600 text-white hover:bg-blue-500">Edit</a>
                                 <button

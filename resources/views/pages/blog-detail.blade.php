@@ -37,7 +37,7 @@
                 <span
                     class="text-stone-400">{{ optional(\Illuminate\Support\Carbon::parse($post->published_at))->toFormattedDateString() }}</span>
             </div>
-            <h1 class="max-w-3xl mx-auto font-bold text-center mt-10 mb-20">{{ $post->title }}</h1>
+            <h2 class="max-w-5xl mx-auto font-bold text-center mt-10 mb-20">{{ $post->title }}</h2>
             <img src="{{ $cover }}" alt="{{ $post->title }}" class="w-full rounded-xl aspect-video mb-10 object-cover">
 
             <div class="md:grid md:grid-cols-10 md:gap-5 border-b border-slate-200 pb-20">

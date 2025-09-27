@@ -10,11 +10,11 @@
     @stack('head')
 </head>
 
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900" data-no-aos="true">
     <div x-data="{ sidebarOpen: false }" class="min-h-screen flex">
         <!-- Sidebar -->
         <aside :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'"
-            class="fixed md:static inset-y-0 left-0 z-40 w-72 transform transition-transform duration-200 ease-in-out bg-accent-black text-white md:translate-x-0">
+            class="fixed inset-y-0 left-0 z-40 w-72 transform transition-transform duration-200 ease-in-out bg-accent-black text-white md:translate-x-0">
             <div class="h-full flex flex-col">
                 <div class="flex items-center gap-3 px-5 h-16 border-b border-white/10">
                     <a href="/" class="flex items-center gap-2">
@@ -62,7 +62,7 @@
         </aside>
 
         <!-- Main content area -->
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0 md:ml-72">
             <!-- Top bar -->
             <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-gray-200">
                 <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">

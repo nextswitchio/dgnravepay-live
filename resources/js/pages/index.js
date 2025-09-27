@@ -24,31 +24,39 @@ const joinImages = [
 let currentJoinKey = 1;
 let intervalId;
 
-joinOptions.forEach((option, key) => {
-    option.addEventListener("click", function () {
-        joinOptions.forEach((option) => {
-            if (option.classList.contains("join-active")) {
-                option.classList.remove("join-active");
-                option.querySelector(".join-text").classList.add("max-h-0");
-            }
+if (joinOptions.length && joinImg) {
+    joinOptions.forEach((option, key) => {
+        option.addEventListener("click", function () {
+            joinOptions.forEach((option) => {
+                if (option.classList.contains("join-active")) {
+                    option.classList.remove("join-active");
+                    const text = option.querySelector(".join-text");
+                    if (text) text.classList.add("max-h-0");
+                }
+            });
+            this.classList.add("join-active");
+            const text = option.querySelector(".join-text");
+            if (text) text.classList.remove("max-h-0");
+            joinImg.src = joinImages[key];
+            currentJoinKey++;
+            clearInterval(intervalId);
+            startJoinInterval();
         });
-        this.classList.add("join-active");
-        option.querySelector(".join-text").classList.remove("max-h-0");
-        joinImg.src = joinImages[key];
-        currentJoinKey++;
-        clearInterval(intervalId);
-        startJoinInterval();
     });
-});
+}
 
 function startJoinInterval() {
+    if (!joinOptions.length || !joinImg) return;
     intervalId = setInterval(() => {
         if (currentJoinKey === 3) currentJoinKey = 0;
-        joinOptions.item(currentJoinKey).click();
+        const target = joinOptions.item(currentJoinKey);
+        if (target) target.click();
     }, 5000);
 }
 
-startJoinInterval();
+if (joinOptions.length && joinImg) {
+    startJoinInterval();
+}
 /*
 const custom-container = document.getElementById("bottom-to-top-slide");
 const list = custom-container.querySelector(".bottom-to-top-list");

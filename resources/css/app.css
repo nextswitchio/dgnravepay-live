@@ -20,7 +20,7 @@ h3 {
 }
 
 .custom-container {
-    @apply container max-w-[1350px];
+    @apply container max-w-[1490px];
 }
 
 /* Large screens: add generous side spacing using a fluid clamp between 60px and 120px */
@@ -91,6 +91,15 @@ button {
 .minimal-scrollbar {
     scrollbar-width: thin;
     scrollbar-color: rgb(242, 243, 245) transparent;
+}
+
+/* Mobile menu full viewport height helper */
+:root {
+    /* Will be updated by JS for mobile browsers with dynamic toolbars */
+    --vh: 1vh;
+}
+.h-screen-safe {
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .join-active {

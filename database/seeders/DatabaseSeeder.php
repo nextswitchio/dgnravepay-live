@@ -16,11 +16,7 @@ class DatabaseSeeder extends Seeder
             AdminUserSeeder::class,
             BlogPostSeeder::class,
             CareerPostSeeder::class,
-            // \App\Models\User::factory(10)->create();
-            // \App\Models\User::factory()->create([
-            //     'name' => 'Test User',
-            //     'email' => 'test@example.com',
-            // ]);
+            FaqSeeder::class,
         ]);
 
         if (\App\Models\Testimonial::count() === 0) {

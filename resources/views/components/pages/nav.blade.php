@@ -160,7 +160,7 @@
     </div>
 </nav>
 
-<nav
+<nav id="mobile-nav"
     class="absolute top-0 left-0 transition-all z-[10000] w-full lg:hidden {{ request()->is('about') ? 'bg-accent-black' : 'bg-white' }}">
     <!-- Top bar with logo and hamburger -->
     <div class="flex justify-between items-center px-4 py-3">
@@ -189,8 +189,9 @@
     </div>
 
     <!-- Mobile Menu Content -->
-    <div id="mobile-menu" class="overflow-y-scroll transition-all duration-300 max-h-0 bg-white">
-        <div class="px-4 py-4 space-y-4">
+    <div id="mobile-menu"
+        class="transition-all duration-300 max-h-0 bg-white h-screen-safe flex flex-col overflow-hidden">
+        <div class="flex-1 min-h-full flex flex-col overflow-y-auto px-4 py-4 space-y-4">
             <!-- First Dropdown - Products (2 column style) -->
             <div class="border-b border-gray-200 pb-4">
                 <button id="dropdown1-btn"
@@ -450,7 +451,7 @@
             </div>
 
             <!-- Get Started Button -->
-            <div class="pt-4">
+            <div class="sticky bottom-0 left-0 right-0 p-4 border-t border-gray-200 bg-white">
                 <a href="#"
                     class="block w-full px-4 py-3 bg-primary text-white text-center font-medium rounded-md hover:bg-yellow-500 transition-colors duration-200">
                     Get Started
