@@ -113,7 +113,7 @@
 
                 <!-- Job Description -->
                 <div class="mb-10">
-                    <h3 class="text-xl font-semibold mb-4">Job Description</h3>
+                    <h3 class="font-semibold mb-4">Job Description</h3>
                     <div class="prose max-w-none text-gray-700">
                         {!! $post->description !!}
                     </div>
@@ -128,7 +128,7 @@
         <section class="bg-accent-black">
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="py-20 md:pt-28 flex flex-col justify-center text-center">
-                    <h3 class="text-white mb-5 text-3xl md:text-5xl lg:text-[48px] leading-[1]">We’re just getting started
+                    <h3 class="text-white mb-5">We’re just getting started
                     </h3>
                     <p class="text-white">
                         There’s so much we have to accomplish. Here are a few milestones we’ve crossed so far

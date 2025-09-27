@@ -8,7 +8,7 @@
                 <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center">
                         <h2
-                            class="capitalize leading-[1.5] mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
+                            class="capitalize mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
                             We’re closer to you across Nigeria.<br />
                             Reach us at any of our state offices</h2>
                     </div>
@@ -23,7 +23,7 @@
         <section class="bg-accent-black relative -z-[0]">
             <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
                 <div class="text-center">
-                    <h2 class="text-white mb-5 leading-[1.5]">
+                    <h2 class="text-white mb-5">
                         Want to meet our team in your state? <br />
                         Come say hello near you.
                     </h2>

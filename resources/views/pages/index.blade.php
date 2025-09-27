@@ -8,9 +8,9 @@
             <div class="pt-20 md:pt-32 lg:pt-40">
                 <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
-                        <h1 class="capitalize leading-[1.2] text-center mb-5">
+                        <h1 class="capitalize text-center mb-5">
                             Take Control of Your Money without Boundaries.</h1>
-                        <p class="md:font-[500] md:text-lg lg:text-xl mb-10">One Powerful app to send, save, spend, borrow
+                        <p class="md:font-[400] md:text-lg lg:text-xl mb-10">One Powerful app to send, save, spend, borrow
                             and
                             live boldly. No paperwork. No friction.<br>Just pure financial freedom on your terms.</p>
                         <div class="">
@@ -34,7 +34,7 @@
         <section class="my-28">
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="mb-10 px-5 md:px-10" data-aos="fade-up">
-                    <h2 class="text-center mb-5 leading-[1.2]">One App. Endless <span
+                    <h2 class="text-center mb-5">One App. Endless <span
                             class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-2">Freedom</span>
                     </h2>
                     <p class="text-center">More than a wallet - it's how you pay, save, borrow and explore. Instantly,
@@ -51,10 +51,11 @@
                                 </h6>
                                 <div class="mt-6 lg:mt-8">
                                     <div>
-                                        <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">
+                                        <h4 class="text-xl md:text-2xl lg:text-[48px] font-bold mb-3">
                                             Transfers
                                             that move
-                                            at the speed of trust.</h4>
+                                            at the speed of trust.
+                                        </h4>
                                         <p>Effortlessly send and receive money across Nigeria whether to other DgnRavePay
                                             wallets
                                             or any local bank account.</p>
@@ -93,7 +94,7 @@
                                     bills payment
                                 </h6>
                                 <div class="mt-6 md:mt-8">
-                                    <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">One-tap
+                                    <h4 class="text-xl md:text-2xl lg:text-[48px] font-bold mb-3">One-tap
                                         access to
                                         essential services.</h4>
                                     <p>Handle everyday expenses in seconds with DgnRavePay s
@@ -125,7 +126,7 @@
                                 </h6>
                                 <div class="mt-6 lg:mt-8">
                                     <div>
-                                        <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">Go
+                                        <h4 class="text-xl md:text-2xl lg:text-[48px] font-bold mb-3">Go
                                             global without
                                             leaving your wallet.</h4>
                                         <p>Experience seamless international payments with instant, secure, and flexible
@@ -160,7 +161,7 @@
                                     Money Transfer
                                 </h6>
                                 <div class="mt-6 md:mt-8">
-                                    <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">Get
+                                    <h4 class="text-xl md:text-2xl lg:text-[48px] font-bold mb-3">Get
                                         financial backup
                                         when you need it most.</h4>
                                     <p>From small emergencies to life-changing purchases, DgnRavePay provides fast, flexible
@@ -221,7 +222,7 @@
                                 </h6>
                                 <div class="mt-6 lg:mt-8">
                                     <div>
-                                        <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">Make
+                                        <h4 class="text-xl md:text-2xl lg:text-[48px] font-bold mb-3">Make
                                             your money
                                             work smarter.</h4>
                                         <p>Take control of your financial future with smart, automated savings tools
@@ -271,7 +272,7 @@
         <section class="bg-accent-black">
             <div class="custom-container mx-auto  px-5 md:px-10 md:grid md:grid-cols-2">
                 <div class="pt-20 pb-10 md:py-28 flex flex-col justify-center">
-                    <h2 class="text-white mb-5 leading-[1.2]">Do more with your Personal
+                    <h2 class="text-white mb-5">Do more with your Personal
                         Account</h2>
                     <p class="text-white">Your lifestyle companion for smart payments, instant gifting, seamless travel,
                         and

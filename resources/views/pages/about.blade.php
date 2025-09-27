@@ -8,7 +8,7 @@
                 <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
                         <span class="text-xs md:text-xs text-stone-500 uppercase">About us</span>
-                        <h1 class="capitalize leading-[1.2] mt-2 mb-5">
+                        <h1 class="capitalize mt-2 mb-5">
                             Redefining
                             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-2">
                                 Digital Finance
@@ -26,7 +26,7 @@
             <x-enlarging-img />
         </section>
         <div class="my-20 md:mt-28 px-5 md:px-10">
-            <h2 class="mb-7 md:mb-10 leading-[1.5] text-center">
+            <h2 class="mb-7 md:mb-10 text-center">
                 Built for Trust. Designed for Growth
             </h2>
             <section class="splide max-w-7xl mx-auto" aria-label="Splide Basic HTML Example">
@@ -173,7 +173,7 @@
         <section class="">
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="py-20 flex flex-col justify-center text-center">
-                    <h2 class="text-white mb-5 leading-[1.5]">We’re just getting started</h2>
+                    <h2 class="text-white mb-5">We’re just getting started</h2>
                     <p class="text-white">
                         There’s so much we have to accomplish. Here are a few milestones we’ve crossed so far
                     </p>

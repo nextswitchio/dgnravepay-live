@@ -224,12 +224,12 @@
                     </div>
 
                     <!-- Products Content -->
-                    <div id="products-content1" class="space-y-2">
+                    <div id="products-content1" class="space-y-3">
                         <a href="/" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon"
                                 class="size-6">
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Personal Account</p>
+                                <p class="font-bold text-sm mb-1 leading-1 text-black">Personal Account</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -276,7 +276,7 @@
                         </a>
                     </div>
 
-                    <div id="products-content2" class="space-y-2 hidden">
+                    <div id="products-content2" class="space-y-3 hidden">
                         <a href="/business" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/briefcase.png') }}" alt="briefcase icon"
                                 class="size-6">

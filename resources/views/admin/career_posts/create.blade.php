@@ -1,8 +1,12 @@
 @extends('admin.layout')
+@section('page_title', 'New Career Post')
+@section('page_actions')
+    <a href="{{ route('admin.career-posts.index') }}"
+        class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-800 rounded-lg ring-1 ring-gray-200 hover:bg-gray-200">Back</a>
+@endsection
 @section('content')
-    <h1 class="text-2xl font-bold mb-4">New Career Post</h1>
     <form method="POST" action="{{ route('admin.career-posts.store') }}" enctype="multipart/form-data"
-        class="space-y-4 bg-white p-4 rounded shadow">
+        class="space-y-4 bg-white/90 backdrop-blur p-5 md:p-6 rounded-xl shadow ring-1 ring-black/5">
         @csrf
         <div>
             <label class="block" for="title">Title</label>

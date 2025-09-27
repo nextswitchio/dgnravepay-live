@@ -10,7 +10,23 @@ class FaqController extends Controller
 {
     public function index()
     {
-        $faqs = Faq::latest()->paginate(20);
+        $query = Faq::query();
+
+        $search = request('q');
+        $status = request('status'); // 'published' | 'draft' | null
+        if ($search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('question', 'like', "%{$search}%")
+                    ->orWhere('answer', 'like', "%{$search}%");
+            });
+        }
+        if ($status === 'published') {
+            $query->where('is_published', true);
+        } elseif ($status === 'draft') {
+            $query->where('is_published', false);
+        }
+
+        $faqs = $query->latest('updated_at')->paginate(20)->appends(request()->query());
         return view('admin.faqs.index', compact('faqs'));
     }
 
@@ -50,5 +66,12 @@ class FaqController extends Controller
     {
         $faq->delete();
         return redirect()->route('admin.faqs.index')->with('status', 'FAQ deleted');
+    }
+
+    public function togglePublish(Faq $faq)
+    {
+        $faq->is_published = !$faq->is_published;
+        $faq->save();
+        return back()->with('status', 'Publish state updated');
     }
 }

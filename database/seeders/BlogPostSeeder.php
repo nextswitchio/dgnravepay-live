@@ -47,6 +47,7 @@ class BlogPostSeeder extends Seeder
           'excerpt' => $p['excerpt'],
           'content' => $p['content'],
           'cover_image_path' => $p['cover_image_path'],
+          'is_featured' => $p['title'] === 'The Smarter Way to Spend Online: DGNRavepay’s Virtual Dollar Mastercard',
           'is_published' => true,
           'published_at' => $p['published_at'],
           'slug' => $slug,

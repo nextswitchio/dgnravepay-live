@@ -8,7 +8,7 @@
                 <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
                         <h1
-                            class="capitalize leading-[1.2] mb-5 text-center text-5xl md:text-6xl lg:text-[74px] bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
+                            class="capitalize mb-5 text-center text-5xl md:text-6xl lg:text-[74px] bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
                             Build the Future of Finance With Us.
                         </h1>
                         <p class="font-medium text-base md:text-lg">We’re not just building financial technology, we’re
@@ -35,7 +35,7 @@
         <section class="pb-20">
             <div class="custom-container mx-auto  px-5 md:px-10 py-10">
                 <div class="md:grid md:grid-cols-2 md:items-center justify-between">
-                    <h2 class="mb-3 leading-[1.2]">Don’t Just Work. Disrupt.
+                    <h2 class="mb-3">Don’t Just Work. Disrupt.
                         Redefine Fintech with
                         DgnRavePay.</h2>
                     <p class="md:font-medium text-base md:text-lg">We’re on a mission to break barriers in

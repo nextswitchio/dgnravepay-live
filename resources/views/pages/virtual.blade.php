@@ -7,7 +7,7 @@
             <div class="pt-20 md:pt-32 lg:pt-40">
                 <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
-                        <h1 class="capitalize leading-[1.2] text-center mb-5">
+                        <h1 class="capitalize text-center mb-5">
                             Spend worldwide, stay secure, with a dollar card that works.
                         </h1>
                         <p class="md:font-[500] md:text-lg lg:text-xl mb-10">Unlock global spending power with DgnRavePay s
@@ -35,7 +35,7 @@
         <section class="my-28">
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="mb-10 px-5 md:px-10" data-aos="fade-up">
-                    <h2 class="text-center mb-5 leading-[1.2]">Your Passport to Safe,
+                    <h2 class="text-center mb-5">Your Passport to Safe,
                         Smarter
                         Worldwide Spending</h2>
                 </div>
@@ -100,7 +100,7 @@
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="grid md:grid-cols-7 gap-7 pt-20">
                     <div class="md:col-span-4">
-                        <h2 class="text-white mb-5 leading-[1.2]">Why choose
+                        <h2 class="text-white mb-5">Why choose
                             <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-400">DgnRavePay’s
                                 virtual dollar</span>

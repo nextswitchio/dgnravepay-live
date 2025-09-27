@@ -90,6 +90,19 @@
                     <div class="p-3 bg-green-50 border border-green-200 text-green-700 rounded mb-4">
                         {{ session('status') }}</div>
                 @endif
+
+                @if (trim($__env->yieldContent('page_title')))
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+                        <div>
+                            <h2 class="text-xl font-semibold">@yield('page_title')</h2>
+                            @if (trim($__env->yieldContent('page_subtitle')))
+                                <p class="text-gray-500 mt-1 text-sm">@yield('page_subtitle')</p>
+                            @endif
+                        </div>
+                        <div class="flex items-center gap-2">@yield('page_actions')</div>
+                    </div>
+                @endif
+
                 @yield('content')
             </main>
         </div>

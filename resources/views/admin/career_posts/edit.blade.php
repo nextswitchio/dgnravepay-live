@@ -1,13 +1,18 @@
 @extends('admin.layout')
+@section('page_title', 'Edit Career Post')
+@section('page_actions')
+    <a href="{{ route('admin.career-posts.index') }}"
+        class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-800 rounded-lg ring-1 ring-gray-200 hover:bg-gray-200">Back</a>
+@endsection
 @section('content')
-    <h1 class="text-2xl font-bold mb-4">Edit Career Post</h1>
     <form method="POST" action="{{ route('admin.career-posts.update', $post) }}" enctype="multipart/form-data"
-        class="space-y-4 bg-white p-4 rounded shadow">
+        class="space-y-4 bg-white/90 backdrop-blur p-5 md:p-6 rounded-xl shadow ring-1 ring-black/5">
         @csrf
         @method('PUT')
         <div>
             <label class="block" for="title">Title</label>
-            <input id="title" name="title" class="w-full border p-2" value="{{ old('title', $post->title) }}" required />
+            <input id="title" name="title" class="w-full border p-2" value="{{ old('title', $post->title) }}"
+                required />
         </div>
         <div>
             <label class="block" for="slug">Slug</label>
@@ -30,7 +35,8 @@
                 <select id="employment_type" name="employment_type" class="w-full border p-2">
                     @foreach (['full_time' => 'Full-time', 'part_time' => 'Part-time', 'contract' => 'Contract', 'internship' => 'Internship'] as $val => $label)
                         <option value="{{ $val }}"
-                            {{ old('employment_type', $post->employment_type) === $val ? 'selected' : '' }}>{{ $label }}
+                            {{ old('employment_type', $post->employment_type) === $val ? 'selected' : '' }}>
+                            {{ $label }}
                         </option>
                     @endforeach
                 </select>
@@ -63,11 +69,8 @@
         <label class="block" for="published_at">Published At</label>
         <input id="published_at" type="datetime-local" name="published_at" class="border p-2"
             value="{{ old('published_at', optional($post->published_at)->format('Y-m-d\\TH:i')) }}" />
-        <input type="datetime-local" name="published_at" class="border p-2"
-            value="{{ old('published_at', optional($post->published_at)->format('Y-m-d\TH:i')) }}" />
-        
+
         <button class="px-4 py-2 bg-primary text-white rounded">Update</button>
-      </div>
     </form>
     @push('head')
         <link href="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css" rel="stylesheet">

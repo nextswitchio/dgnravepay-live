@@ -24,7 +24,6 @@ Route::view('/business', 'pages.business');
 Route::view('/about', 'pages.about');
 Route::view('/savings', 'pages.savings');
 Route::view('/virtual', 'pages.virtual');
-Route::view('/career', 'pages.career');
 Route::view('/press', 'pages.press');
 Route::view('/contact', 'pages.contact');
 Route::view('/policy', 'pages.policy');
@@ -61,9 +60,14 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('blog-posts', BlogPostController::class)->parameters([
         'blog-posts' => 'blog_post'
     ]);
+    Route::post('blog-posts/{blog_post}/toggle-publish', [BlogPostController::class, 'togglePublish'])
+        ->name('blog-posts.toggle-publish');
     Route::resource('career-posts', CareerPostController::class)->parameters([
         'career-posts' => 'career_post'
     ]);
+    Route::post('career-posts/{career_post}/toggle-publish', [CareerPostController::class, 'togglePublish'])
+        ->name('career-posts.toggle-publish');
     Route::resource('faqs', FaqController::class);
+    Route::post('faqs/{faq}/toggle-publish', [FaqController::class, 'togglePublish'])->name('faqs.toggle-publish');
     Route::resource('testimonials', TestimonialController::class);
 });

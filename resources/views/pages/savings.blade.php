@@ -7,7 +7,7 @@
             <div class="pt-20 md:pt-32 lg:pt-40">
                 <div class="custom-container mx-auto  px-5 md:px-10">
                     <div class="text-center mb-10">
-                        <h1 class="capitalize leading-[1.2] mb-5 text-center">
+                        <h1 class="capitalize mb-5 text-center">
                             Turn every Naira into
                             tomorrow’s possibilities.
                         </h1>
@@ -38,7 +38,7 @@
         <section class="my-28">
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="mb-10 px-5 md:px-10">
-                    <h2 class="text-center mb-5 leading-[1.2]" data-aos="fade-up">
+                    <h2 class="text-center mb-5" data-aos="fade-up">
                         Why People Choose DgnRavePay</h2>
                     <div class="grid md:grid-cols-3 gap-5 mt-10">
                         <div class="bg-primary rounded-xl flex flex-col justify-between hover:!scale-[1.02] transition-transform"
@@ -77,7 +77,7 @@
         <section class="bg-accent-black relative -z-[0]">
             <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
                 <div class="text-center text-white">
-                    <h2 class="text-white mb-5 leading-[1.2]">
+                    <h2 class="text-white mb-5">
                         Find the Savings Plan That Works for You
                     </h2>
                     <p class="">Whether you’re saving for a dream, building financial discipline, or securing your
@@ -101,7 +101,7 @@
                                 </h6>
                                 <div class="mt-6 lg:mt-8">
                                     <div>
-                                        <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">Achieve
+                                        <h4 class="text-xl md:text-2xl lg:text-[48px] font-bold mb-3">Achieve
                                             Your
                                             Dreams,
                                             One Goal at a Time</h4>
@@ -144,7 +144,7 @@
                                 </h6>
                                 <div class="mt-6 lg:mt-8">
                                     <div>
-                                        <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">
+                                        <h4 class="text-xl md:text-2xl lg:text-[48px] font-bold mb-3">
                                             Your Money, Flexible & Always Accessible</h4>
                                         <p>
                                             Enjoy the freedom to save at your pace without lock-ins. Add
@@ -186,7 +186,7 @@
                                 </h6>
                                 <div class="mt-6 lg:mt-8">
                                     <div>
-                                        <h4 class="text-xl md:text-2xl lg:text-[36px] font-bold mb-3 leading-[1.2]">
+                                        <h4 class="text-xl md:text-2xl lg:text-[48px] font-bold mb-3">
                                             Lock Your Savings.
                                             Unlock Higher Returns.
                                         </h4>

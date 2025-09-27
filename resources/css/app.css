@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-sm;
+    @apply text-base;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -41,17 +41,25 @@ h3 {
 }
 
 h1 {
-    @apply text-[clamp(2.4rem,_5vw,_74px)] leading-[1.3];
-    /* @apply text-5xl md:text-6xl lg:text-[74px]; */
+    /* Responsive but capped at exact 73.6px; line-height matches font size */
+    @apply text-[clamp(38px,5.5vw,73.6px)] leading-[1];
 }
 
 h2 {
-    @apply text-[clamp(2rem,_3vw,_58px)] leading-[1.3];
-    /* @apply  text-3xl md:text-5xl lg:text-[48px]; */
+    /* Responsive but capped at exact 56px; line-height capped at 61.6px */
+    @apply text-[clamp(32px,4.5vw,56px)] leading-[clamp(40px,5vw,61.6px)];
 }
 
 h3 {
-    @apply text-[clamp(1.5rem,_2vw,_24px)];
+    /* Responsive but capped at exact 48px */
+    @apply text-[clamp(24px,3.8vw,48px)];
+}
+
+/* Increase line-height for all h4s on desktop for better readability */
+@media (min-width: 1024px) {
+    h4 {
+        line-height: 1 !important;
+    }
 }
 
 button {

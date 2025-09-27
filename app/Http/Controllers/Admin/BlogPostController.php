@@ -6,13 +6,32 @@ use App\Http\Controllers\Controller;
 use App\Models\BlogPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Models\Tag;
 use Illuminate\Support\Facades\Storage;
 
 class BlogPostController extends Controller
 {
     public function index()
     {
-        $posts = BlogPost::latest()->paginate(15);
+        $query = BlogPost::query();
+
+        // Filters
+        $search = request('q');
+        $status = request('status'); // 'published' | 'draft' | null
+        if ($search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                    ->orWhere('excerpt', 'like', "%{$search}%")
+                    ->orWhere('author', 'like', "%{$search}%");
+            });
+        }
+        if ($status === 'published') {
+            $query->where('is_published', true);
+        } elseif ($status === 'draft') {
+            $query->where('is_published', false);
+        }
+
+        $posts = $query->latest('updated_at')->paginate(15)->appends(request()->query());
         return view('admin.blog_posts.index', compact('posts'));
     }
 
@@ -30,6 +49,7 @@ class BlogPostController extends Controller
             'excerpt' => 'nullable|string',
             'content' => 'required|string',
             'cover_image' => 'nullable|image|max:2048',
+            'is_featured' => 'sometimes|boolean',
             'is_published' => 'sometimes|boolean',
             'published_at' => 'nullable|date',
         ]);
@@ -51,11 +71,27 @@ class BlogPostController extends Controller
             'excerpt' => $data['excerpt'] ?? null,
             'content' => $data['content'],
             'cover_image_path' => $coverPath,
+            'is_featured' => $data['is_featured'] ?? false,
             'is_published' => $data['is_published'] ?? false,
             'published_at' => $data['published_at'] ?? null,
         ];
 
-        BlogPost::create($payload);
+        $post = BlogPost::create($payload);
+
+        // Sync tags if provided
+        if ($request->filled('tags')) {
+            $tagNames = collect(explode(',', $request->input('tags')))
+                ->map(fn($t) => trim($t))
+                ->filter()
+                ->unique();
+            $tagIds = [];
+            foreach ($tagNames as $name) {
+                $slug = Str::slug($name);
+                $tag = Tag::firstOrCreate(['slug' => $slug], ['name' => $name]);
+                $tagIds[] = $tag->id;
+            }
+            $post->tags()->sync($tagIds);
+        }
         return redirect()->route('admin.blog-posts.index')->with('status', 'Blog post created');
     }
 
@@ -73,6 +109,7 @@ class BlogPostController extends Controller
             'excerpt' => 'nullable|string',
             'content' => 'required|string',
             'cover_image' => 'nullable|image|max:2048',
+            'is_featured' => 'sometimes|boolean',
             'is_published' => 'sometimes|boolean',
             'published_at' => 'nullable|date',
         ]);
@@ -94,11 +131,27 @@ class BlogPostController extends Controller
             'excerpt' => $data['excerpt'] ?? null,
             'content' => $data['content'],
             'cover_image_path' => $coverPath,
+            'is_featured' => $data['is_featured'] ?? false,
             'is_published' => $data['is_published'] ?? false,
             'published_at' => $data['published_at'] ?? null,
         ];
 
         $blog_post->update($payload);
+
+        // Sync tags if provided
+        if ($request->has('tags')) {
+            $tagNames = collect(explode(',', (string) $request->input('tags')))
+                ->map(fn($t) => trim($t))
+                ->filter()
+                ->unique();
+            $tagIds = [];
+            foreach ($tagNames as $name) {
+                $slug = Str::slug($name);
+                $tag = Tag::firstOrCreate(['slug' => $slug], ['name' => $name]);
+                $tagIds[] = $tag->id;
+            }
+            $blog_post->tags()->sync($tagIds);
+        }
         return redirect()->route('admin.blog-posts.index')->with('status', 'Blog post updated');
     }
 
@@ -109,5 +162,15 @@ class BlogPostController extends Controller
         }
         $blog_post->delete();
         return redirect()->route('admin.blog-posts.index')->with('status', 'Blog post deleted');
+    }
+
+    public function togglePublish(BlogPost $blog_post)
+    {
+        $blog_post->is_published = !$blog_post->is_published;
+        if ($blog_post->is_published && !$blog_post->published_at) {
+            $blog_post->published_at = now();
+        }
+        $blog_post->save();
+        return back()->with('status', 'Publish state updated');
     }
 }

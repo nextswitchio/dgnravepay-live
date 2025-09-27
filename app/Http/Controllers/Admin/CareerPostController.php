@@ -13,7 +13,27 @@ class CareerPostController extends Controller
     private const STR255 = 'nullable|string|max:255';
     public function index()
     {
-        $posts = CareerPost::latest()->paginate(15);
+        $query = CareerPost::query();
+
+        // Filters
+        $search = request('q');
+        $status = request('status'); // 'published' | 'draft' | null
+        if ($search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                    ->orWhere('summary', 'like', "%{$search}%")
+                    ->orWhere('department', 'like', "%{$search}%")
+                    ->orWhere('location', 'like', "%{$search}%")
+                    ->orWhere('employment_type', 'like', "%{$search}%");
+            });
+        }
+        if ($status === 'published') {
+            $query->where('is_published', true);
+        } elseif ($status === 'draft') {
+            $query->where('is_published', false);
+        }
+
+        $posts = $query->latest('updated_at')->paginate(15)->appends(request()->query());
         return view('admin.career_posts.index', compact('posts'));
     }
 
@@ -117,5 +137,15 @@ class CareerPostController extends Controller
         }
         $career_post->delete();
         return redirect()->route('admin.career-posts.index')->with('status', 'Career post deleted');
+    }
+
+    public function togglePublish(CareerPost $career_post)
+    {
+        $career_post->is_published = !$career_post->is_published;
+        if ($career_post->is_published && !$career_post->published_at) {
+            $career_post->published_at = now();
+        }
+        $career_post->save();
+        return back()->with('status', 'Publish state updated');
     }
 }

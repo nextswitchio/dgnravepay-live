@@ -1,6 +1,6 @@
 <div class="md:grid md:grid-cols-5 md:gap-20 mb-10">
     <div class="md:col-span-3">
-        <h2 class="mb-2 text-center md:text-left leading-[1.2]" data-aos="fade-up">Join
+        <h2 class="mb-2 text-center md:text-left" data-aos="fade-up">Join
             DgnRavePay in 2 Minutes or Less</h2>
         <p class="text-center md:text-left">No queues. No paperwork. Just you, your phone, and a few taps
             to

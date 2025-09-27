@@ -3,7 +3,7 @@
     'description' =>
         'See why over 100,000 Nigerians have made DgnRavePay their go-to financial app. Real reviews, real stories, real results.',
 ])
-<div class="">
+<div class="container mx-auto py-16 md:py-24 lg:py-32">
     <div class="mb-10 px-5 md:px-10" data-aos="fade-up">
         <h2 class="text-center mb-5 leading-[1]">{{ $title }}</h2>
         <p class="text-center">{{ $description }}</p>
@@ -21,8 +21,8 @@
                         @php
                             $isYellow = $t->variant === 'yellow';
                             $cardClasses = $isYellow
-                                ? 'bg-[#fbbb0c] text-white shadow-lg p-6'
-                                : 'bg-neutral-100 shadow-lg ring-1 ring-black/5 p-6';
+                                ? 'bg-[#fbbb0c] text-white p-6'
+                                : 'bg-neutral-100 ring-1 ring-black/5 p-6';
                             $nameClasses = $isYellow ? 'font-semibold' : 'font-semibold text-neutral-900';
                             $textClasses = $isYellow ? '' : 'text-neutral-700';
                         @endphp
@@ -88,8 +88,8 @@
                         @php
                             $isYellow = $t->variant === 'yellow';
                             $cardClasses = $isYellow
-                                ? 'bg-[#fbbb0c] text-white shadow-lg p-6'
-                                : 'bg-neutral-100 shadow-lg ring-1 ring-black/5 p-6';
+                                ? 'bg-[#fbbb0c] text-white p-6'
+                                : 'bg-neutral-100  ring-1 ring-black/5 p-6';
                             $nameClasses = $isYellow ? 'font-semibold' : 'font-semibold text-neutral-900';
                             $textClasses = $isYellow ? '' : 'text-gray-700';
                         @endphp
@@ -152,126 +152,127 @@
             <div class="absolute bottom-0 w-full h-40 bg-gradient-to-t from-white to-transparent"></div>
         @endif
     </div>
+</div>
 
-    @push('scripts')
-        <script>
-            (function() {
-                const root = document.getElementById('testimonials-marquee');
-                const topWrap = document.getElementById('bottom-to-top-slide');
-                const topList = topWrap ? topWrap.querySelector('.bottom-to-top-list') : null;
-                const bottomWrap = document.getElementById('bottom-to-bottom-slide');
-                const bottomList = bottomWrap ? bottomWrap.querySelector('.bottom-to-bottom-list') : null;
+@push('scripts')
+    <script>
+        (function() {
+            const root = document.getElementById('testimonials-marquee');
+            const topWrap = document.getElementById('bottom-to-top-slide');
+            const topList = topWrap ? topWrap.querySelector('.bottom-to-top-list') : null;
+            const bottomWrap = document.getElementById('bottom-to-bottom-slide');
+            const bottomList = bottomWrap ? bottomWrap.querySelector('.bottom-to-bottom-list') : null;
 
-                const controllers = [];
+            const controllers = [];
 
-                function startMarquee(container, list, direction = 'up') {
-                    if (!container || !list) return;
-                    const items = Array.from(list.children);
-                    if (items.length === 0) return;
+            function startMarquee(container, list, direction = 'up') {
+                if (!container || !list) return;
+                const items = Array.from(list.children);
+                if (items.length === 0) return;
 
-                    // Read tuning options
-                    const interval = parseInt(container.dataset.interval || '4000', 10);
-                    const duration = parseInt(container.dataset.duration || '700', 10);
-                    const gap = parseInt(container.dataset.gap || '24', 10);
-                    const step = parseInt(container.dataset.step || '1', 10); // items to advance per tick
+                // Read tuning options
+                const interval = parseInt(container.dataset.interval || '4000', 10);
+                const duration = parseInt(container.dataset.duration || '700', 10);
+                const gap = parseInt(container.dataset.gap || '24', 10);
+                const step = parseInt(container.dataset.step || '1', 10); // items to advance per tick
 
-                    // Duplicate for seamless loop
-                    items.forEach((el) => list.appendChild(el.cloneNode(true)));
+                // Duplicate for seamless loop
+                items.forEach((el) => list.appendChild(el.cloneNode(true)));
 
-                    // Compute height; re-compute on resize in case content wraps differently
-                    let itemHeight = (items[0].offsetHeight || 0) + gap;
-                    if (itemHeight === gap) {
-                        // If height measurement failed (not yet laid out), measure after frame
-                        requestAnimationFrame(() => {
-                            itemHeight = (items[0].offsetHeight || 0) + gap;
-                        });
-                    }
-
-                    let index = 0;
-                    let paused = false;
-                    let timerId = null;
-
-                    function applyTransform() {
-                        const distance = itemHeight * index;
-                        list.style.transition = `transform ${duration}ms cubic-bezier(0.4, 0, 0.2, 1)`;
-                        list.style.transform = `translateY(${direction === 'up' ? -distance : distance}px)`;
-                    }
-
-                    function resetTransform() {
-                        list.style.transition = 'none';
-                        list.style.transform = 'translateY(0)';
-                        index = 0;
-                    }
-
-                    function tick() {
-                        if (paused) return;
-                        index += step;
-                        applyTransform();
-                        if (index >= items.length) {
-                            // After the motion finishes, jump back
-                            setTimeout(() => {
-                                if (!paused) resetTransform();
-                            }, duration);
-                        }
-                    }
-
-                    function start() {
-                        stop();
-                        timerId = setInterval(tick, interval);
-                    }
-
-                    function stop() {
-                        if (timerId) {
-                            clearInterval(timerId);
-                            timerId = null;
-                        }
-                    }
-
-                    // Expose controller to pause/resume via root events
-                    function setPaused(v) {
-                        paused = v;
-                        if (!paused && !timerId) {
-                            start();
-                        }
-                    }
-                    controllers.push({
-                        setPaused
+                // Compute height; re-compute on resize in case content wraps differently
+                let itemHeight = (items[0].offsetHeight || 0) + gap;
+                if (itemHeight === gap) {
+                    // If height measurement failed (not yet laid out), measure after frame
+                    requestAnimationFrame(() => {
+                        itemHeight = (items[0].offsetHeight || 0) + gap;
                     });
-
-                    // Keep measurement in sync with responsive layout changes
-                    const resizeObs = new ResizeObserver(() => {
-                        const newHeight = (items[0].offsetHeight || 0) + gap;
-                        if (newHeight && newHeight !== itemHeight) {
-                            itemHeight = newHeight;
-                            resetTransform();
-                        }
-                    });
-                    resizeObs.observe(container);
-
-                    // Kick off
-                    start();
                 }
 
-                window.addEventListener('load', function() {
-                    startMarquee(topWrap, topList, 'up');
-                    startMarquee(bottomWrap, bottomList, 'down');
+                let index = 0;
+                let paused = false;
+                let timerId = null;
 
-                    if (root) {
-                        const pauseAll = () => controllers.forEach(c => c.setPaused(true));
-                        const resumeAll = () => controllers.forEach(c => c.setPaused(false));
+                function applyTransform() {
+                    const distance = itemHeight * index;
+                    list.style.transition = `transform ${duration}ms cubic-bezier(0.4, 0, 0.2, 1)`;
+                    list.style.transform = `translateY(${direction === 'up' ? -distance : distance}px)`;
+                }
 
-                        // Pause both columns when hovering the whole section
-                        root.addEventListener('mouseenter', pauseAll);
-                        root.addEventListener('mouseleave', resumeAll);
+                function resetTransform() {
+                    list.style.transition = 'none';
+                    list.style.transform = 'translateY(0)';
+                    index = 0;
+                }
 
-                        // Pause-on-touch for mobile
-                        root.addEventListener('touchstart', pauseAll, {
-                            passive: true
-                        });
-                        root.addEventListener('touchend', resumeAll);
-                        root.addEventListener('touchcancel', resumeAll);
+                function tick() {
+                    if (paused) return;
+                    index += step;
+                    applyTransform();
+                    if (index >= items.length) {
+                        // After the motion finishes, jump back
+                        setTimeout(() => {
+                            if (!paused) resetTransform();
+                        }, duration);
+                    }
+                }
+
+                function start() {
+                    stop();
+                    timerId = setInterval(tick, interval);
+                }
+
+                function stop() {
+                    if (timerId) {
+                        clearInterval(timerId);
+                        timerId = null;
+                    }
+                }
+
+                // Expose controller to pause/resume via root events
+                function setPaused(v) {
+                    paused = v;
+                    if (!paused && !timerId) {
+                        start();
+                    }
+                }
+                controllers.push({
+                    setPaused
+                });
+
+                // Keep measurement in sync with responsive layout changes
+                const resizeObs = new ResizeObserver(() => {
+                    const newHeight = (items[0].offsetHeight || 0) + gap;
+                    if (newHeight && newHeight !== itemHeight) {
+                        itemHeight = newHeight;
+                        resetTransform();
                     }
                 });
-            })();
-        </script>
-    @endpush
+                resizeObs.observe(container);
+
+                // Kick off
+                start();
+            }
+
+            window.addEventListener('load', function() {
+                startMarquee(topWrap, topList, 'up');
+                startMarquee(bottomWrap, bottomList, 'down');
+
+                if (root) {
+                    const pauseAll = () => controllers.forEach(c => c.setPaused(true));
+                    const resumeAll = () => controllers.forEach(c => c.setPaused(false));
+
+                    // Pause both columns when hovering the whole section
+                    root.addEventListener('mouseenter', pauseAll);
+                    root.addEventListener('mouseleave', resumeAll);
+
+                    // Pause-on-touch for mobile
+                    root.addEventListener('touchstart', pauseAll, {
+                        passive: true
+                    });
+                    root.addEventListener('touchend', resumeAll);
+                    root.addEventListener('touchcancel', resumeAll);
+                }
+            });
+        })();
+    </script>
+@endpush

@@ -4,7 +4,7 @@
         class="absolute -z-[1] blur-[3rem] w-full bottom-28 left-0">
     <div class="custom-container mx-auto  px-5 md:px-10 py-20">
         <div class="text-center mb-20">
-            <h2 class="text-white mb-5 leading-[1.2]">Do more with your Personal
+            <h2 class="text-white mb-5">Do more with your Personal
                 Account</h2>
             <p class="text-white">Your lifestyle companion for smart payments, instant gifting, seamless travel, and
                 hassle-free bill management.</p>
@@ -31,7 +31,7 @@
                     <!-- Company info -->
                     <div class="lg:col-span-2">
                         <a href="/">
-                            <img src="{{ Vite::asset('resources/images/logo wide white.png') }}"
+                            <img src="{{ Vite::asset('resources/images/logo wide white.png') }}" alt="DgnRavePay logo"
                                 class="h-10 md:h-14 mb-5" />
                         </a>
                         <p class="text-neutral-400 mb-4 max-w-md">

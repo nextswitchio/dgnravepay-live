@@ -8,7 +8,7 @@
                 <div class="custom-container mx-auto  px-5 md:px-14 lg:py-16">
                     <div class="text-center mb-10">
                         <h1
-                            class="capitalize leading-[1.2] mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
+                            class="capitalize mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
                             Whistleblower Policy
                         </h1>
                     </div>
