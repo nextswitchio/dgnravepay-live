@@ -147,7 +147,8 @@
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Resources</h4>
                         <ul class="space-y-2 text-neutral-400">
-                            <li><a href="/blog" class="hover:text-white transition">DynRavePay Blog</a></li>
+                            <li><a href="{{ route('blog.index') }}" class="hover:text-white transition">DynRavePay
+                                    Blog</a></li>
                             <li><a href="#" class="hover:text-white transition">Help Center</a></li>
                             <li><a href="/policy" class="hover:text-white transition">IMF Policy</a></li>
                             <li><a href="/whistleblower" class="hover:text-white transition">Whistleblower Policy</a>

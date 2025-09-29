@@ -9,7 +9,9 @@ class HtmlSanitizer
    */
   public static function clean(?string $html): string
   {
-    if (!$html) return '';
+    if (!$html) {
+      return '';
+    }
 
     // Quick strip of dangerous blocks
     $html = preg_replace('#<\s*(script|style)[^>]*>.*?<\s*/\s*\1\s*>#is', '', $html ?? '');
@@ -20,6 +22,7 @@ class HtmlSanitizer
     }
 
     $allowedTags = [
+      'div',
       'p',
       'br',
       'strong',
@@ -31,9 +34,12 @@ class HtmlSanitizer
       'ul',
       'ol',
       'li',
+      'h1',
       'h2',
       'h3',
       'h4',
+      'h5',
+      'h6',
       'blockquote',
       'code',
       'pre',
@@ -43,6 +49,10 @@ class HtmlSanitizer
       'figcaption',
       'hr',
       'span',
+      'sup',
+      'sub',
+      'del',
+      'mark',
       'table',
       'thead',
       'tbody',
@@ -52,16 +62,24 @@ class HtmlSanitizer
     ];
     $globalAllowedAttrs = ['class'];
     $tagAllowedAttrs = [
+      'div' => ['class'],
       'a' => ['href', 'title', 'target', 'rel', 'class'],
       'img' => ['src', 'alt', 'title', 'class'],
       'code' => ['class'],
       'span' => ['class'],
       'p' => ['class'],
+      'h1' => ['class'],
       'h2' => ['class'],
       'h3' => ['class'],
       'h4' => ['class'],
+      'h5' => ['class'],
+      'h6' => ['class'],
       'blockquote' => ['class'],
       'pre' => ['class'],
+      'sup' => ['class'],
+      'sub' => ['class'],
+      'del' => ['class'],
+      'mark' => ['class'],
       'table' => ['class'],
       'thead' => ['class'],
       'tbody' => ['class'],
@@ -71,9 +89,12 @@ class HtmlSanitizer
     ];
 
     $doc = new \DOMDocument();
+    $doc->encoding = 'UTF-8';
     libxml_use_internal_errors(true);
     // Wrap in a div to keep fragments
-    $doc->loadHTML('<div>' . $html . '</div>', LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD | LIBXML_NOERROR | LIBXML_NOWARNING);
+    // Prepend encoding hint so multibyte characters (like emojis) are preserved
+    $doc->loadHTML('<?xml encoding="utf-8" ?>' . '<div>' . $html . '</div>', LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD
+      | LIBXML_NOERROR | LIBXML_NOWARNING);
     libxml_clear_errors();
 
     $walker = function ($node) use (&$walker, $allowedTags, $globalAllowedAttrs, $tagAllowedAttrs) {
@@ -110,7 +131,8 @@ class HtmlSanitizer
             }
             // Attr-specific validation
             if ($tag === 'a' && $name === 'href') {
-              if (!preg_match('#^(https?:|mailto:|tel:)#i', $value)) {
+              // Allow absolute URLs and safe relative anchors/paths
+              if (!preg_match('#^(https?:|mailto:|tel:|/)#i', $value)) {
                 $node->removeAttribute('href');
               } else {
                 // Security best practices
@@ -118,8 +140,8 @@ class HtmlSanitizer
               }
             }
             if ($tag === 'img' && $name === 'src') {
-              // Allow http/https and local storage paths
-              if (!preg_match('#^(https?:|/storage/)#i', $value)) {
+              // Allow http/https and local paths (incl. /storage)
+              if (!preg_match('#^(https?:|/)#i', $value)) {
                 $node->removeAttribute('src');
               }
             }

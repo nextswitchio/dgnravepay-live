@@ -32,10 +32,22 @@ Route::view('/whistleblower', 'pages.whistleblower');
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
 
-Route::get('/blog', [BlogController::class, 'index']);
-Route::get('/blog/{slug}', [BlogController::class, 'show']);
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/career', [CareerController::class, 'index']);
 Route::get('/career/{slug}', [CareerController::class, 'show']);
+
+// Fallback for serving files from storage when symlinks are not supported on the host
+Route::get('/storage/{path}', function (string $path) {
+    $base = storage_path('app/public');
+    $fullPath = realpath($base . DIRECTORY_SEPARATOR . $path);
+    if ($fullPath === false || !str_starts_with($fullPath, $base) || !is_file($fullPath)) {
+        abort(404);
+    }
+    return response()->file($fullPath, [
+        'Cache-Control' => 'public, max-age=31536000'
+    ]);
+})->where('path', '.*');
 
 // Sitemap
 Route::get('/sitemap.xml', function () {

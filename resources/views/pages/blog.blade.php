@@ -16,7 +16,8 @@
                             and strategic insights from the DgnRavePay team.
                         </p>
                         <div class="flex flex-col md:flex-row items-center gap-3 mt-10">
-                            <form method="GET" action="/blog" class="flex flex-col md:flex-row items-center gap-3 mt-10">
+                            <form method="GET" action="{{ route('blog.index') }}"
+                                class="flex flex-col md:flex-row items-center gap-3 mt-10">
                                 <input type="text" name="q" value="{{ request('q') }}"
                                     class="bg-primary/5 w-full md:w-80 px-3 py-3 rounded-xl border border-primary-2 focus:outline-0"
                                     placeholder="Search for an Article">
@@ -73,7 +74,7 @@
                                             {{ $featured->author ?? 'DgnRavePay Team' }}</p>
                                     </div>
                                     <div class="mt-6">
-                                        <a href="/blog/{{ $featured->slug }}"
+                                        <a href="{{ route('blog.show', $featured->slug) }}"
                                             class="text-primary font-semibold inline-flex items-center gap-2">
                                             <span>Read featured</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -104,7 +105,7 @@
                             @endphp
                             @foreach ($items as $post)
                                 <article class="space-y-2">
-                                    <a href="/blog/{{ $post->slug }}">
+                                    <a href="{{ route('blog.show', $post->slug) }}">
                                         @php
                                             $cover = $post->cover_image_path
                                                 ? asset('storage/' . $post->cover_image_path)

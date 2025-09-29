@@ -63,7 +63,7 @@
                     @if ($post->relationLoaded('tags') ? $post->tags->isNotEmpty() : $post->tags()->exists())
                         <div class="not-prose mb-6 flex flex-wrap gap-2">
                             @foreach ($post->tags as $tag)
-                                <a href="/blog?tag={{ $tag->slug }}"
+                                <a href="{{ route('blog.index') . '?tag=' . urlencode($tag->slug) }}"
                                     class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs uppercase">#{{ $tag->name }}</a>
                             @endforeach
                         </div>
@@ -82,7 +82,7 @@
                                     : Vite::asset('resources/images/article 1.jpg');
                             @endphp
                             <article class="space-y-2">
-                                <a href="/blog/{{ $r->slug }}">
+                                <a href="{{ route('blog.show', $r->slug) }}">
                                     <img src="{{ $rCover }}" alt="{{ $r->title }}"
                                         class="aspect-video rounded-xl object-cover">
                                     <h6 class="font-bold text-lg">{{ $r->title }}</h6>

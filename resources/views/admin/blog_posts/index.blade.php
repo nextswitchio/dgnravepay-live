@@ -97,7 +97,7 @@
                                             title="{{ $post->slug }}">{{ $post->slug }}</span>
                                         <button type="button"
                                             class="text-xs px-2 py-1 rounded bg-gray-100 hover:bg-gray-200"
-                                            onclick="navigator.clipboard.writeText('{{ url('/blog/' . $post->slug) }}');this.innerText='Copied';setTimeout(()=>this.innerText='Copy link',1200);">Copy
+                                            onclick="navigator.clipboard.writeText('{{ route('blog.show', $post->slug) }}');this.innerText='Copied';setTimeout(()=>this.innerText='Copy link',1200);">Copy
                                             link</button>
                                         <button type="button"
                                             class="text-xs px-2 py-1 rounded bg-gray-100 hover:bg-gray-200"

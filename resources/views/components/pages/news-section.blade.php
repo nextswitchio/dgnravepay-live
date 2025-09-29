@@ -27,7 +27,7 @@
                                 }
                                 $excerpt =
                                     $post->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($post->content), 140);
-                                $url = url('/blog/' . $post->slug);
+                                $url = route('blog.show', $post->slug);
                             @endphp
                             <article class="snap-center shrink-0 w-[85%] first:ml-4 last:mr-4 space-y-2">
                                 <a href="{{ $url }}" class="block">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-between mt-6 gap-4 px-4">
-                    <a href="{{ url('/blog') }}"
+                    <a href="{{ route('blog.index') }}"
                         class="inline-flex items-center gap-2 text-stone-700 hover:text-stone-900">
                         <span class="font-semibold">View all</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -92,7 +92,7 @@
                             $date = '';
                         }
                         $excerpt = $post->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($post->content), 140);
-                        $url = url('/blog/' . $post->slug);
+                        $url = route('blog.show', $post->slug);
                     @endphp
                     <article class="space-y-2">
                         <a href="{{ $url }}" class="block">
@@ -110,7 +110,7 @@
                 @endforeach
             </div>
             <div class="hidden md:flex items-center justify-end mt-20">
-                <a href="{{ url('/blog') }}"
+                <a href="{{ route('blog.index') }}"
                     class="inline-flex items-center gap-3 text-stone-700 hover:text-stone-900">
                     <span class="font-semibold">View all</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
