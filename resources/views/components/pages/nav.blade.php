@@ -101,7 +101,7 @@
                     </div>
                 </li>
                 <li class="group cursor-pointer nav-list relative">
-                    <span>Resources</span>
+                    <span>Help & Support</span>
                     <div id="navbar-resources"
                         class="group-[.is-open]:visible invisible transition-all absolute  top-10 -left-20 w-[450%] text-black bg-slate-100 rounded-xl p-3">
                         <div class="p-3 bg-white rounded-xl">
@@ -255,7 +255,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="/loan" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon"
                                 class="size-6">
 
@@ -265,7 +265,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="/travel" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/hotel-bed.png') }}" alt="hotel bed icon"
                                 class="size-6">
 
@@ -289,10 +289,10 @@
                         </a>
                         <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/pos_terminal.png') }}"
-                                alt="POS & Terminals icon" class="size-6">
+                                alt="POS & Terminal icon" class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">POS & Terminals</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">POS & Terminal</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>

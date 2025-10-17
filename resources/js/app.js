@@ -208,7 +208,7 @@ const navbarProductPersonal = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
+                                    <a href="/loan" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-loan-img" src="${getImageUrl(
     "loan.png"
 )}" alt="loan icon" class="size-6">
@@ -219,7 +219,7 @@ const navbarProductPersonal = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
+                                    <a href="/travel" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-hotel-img" src="${getImageUrl(
     "hotel-bed.png"
 )}" alt="hotel bed icon" class="size-6">
@@ -246,11 +246,11 @@ const navbarProductBusiness = `
                                     <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-pos-img" src="${getImageUrl(
     "pos_terminal.png"
-)}" alt="POS & Terminals icon"
+)}" alt="POS & Terminal icon"
                                             class="size-6">
 
                                         <div class="text-left">
-                                            <p class="font-bold text-sm mb-1.5 leading-1">POS & Terminals</p>
+                                            <p class="font-bold text-sm mb-1.5 leading-1">POS & Terminal</p>
                                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                                 grow</span>
                                         </div>

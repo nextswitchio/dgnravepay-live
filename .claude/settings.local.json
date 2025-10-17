@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan key:generate)",
+      "Bash(copy .env.example .env)",
+      "Bash(cp .env.example .env)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -173,8 +173,8 @@
                         <p class="text-neutral-500 text-sm mb-4 md:mb-5">© 2025 DgnRavePay. All Rights Reserved.
                             Company No 7195417.</p>
                         <div class="flex space-x-6">
-                            <a href="#" class="text-neutral-400 hover:text-white text-sm">Privacy Policy</a>
-                            <a href="#" class="text-neutral-400 hover:text-white text-sm">Terms of Service</a>
+                            <a href="/privacy" class="text-neutral-400 hover:text-white text-sm">Privacy Policy</a>
+                            <a href="/terms" class="text-neutral-400 hover:text-white text-sm">Terms of Service</a>
                         </div>
                     </div>
                 </div>

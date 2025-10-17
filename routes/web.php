@@ -28,6 +28,11 @@ Route::view('/press', 'pages.press');
 Route::view('/contact', 'pages.contact');
 Route::view('/policy', 'pages.policy');
 Route::view('/whistleblower', 'pages.whistleblower');
+Route::view('/privacy', 'pages.privacy');
+Route::view('/terms', 'pages.terms');
+Route::view('/pos', 'pages.pos');
+Route::view('/loan', 'pages.loan');
+Route::view('/travel', 'pages.travel');
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
