@@ -3,7 +3,9 @@
     "allow": [
       "Bash(php artisan key:generate)",
       "Bash(copy .env.example .env)",
-      "Bash(cp .env.example .env)"
+      "Bash(cp .env.example .env)",
+      "Bash(unzip -p \"DgnRavePay Privacy Policy.docx\" word/document.xml)",
+      "Bash(php artisan view:clear)"
     ],
     "deny": [],
     "ask": []
