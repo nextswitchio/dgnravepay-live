@@ -136,18 +136,21 @@ document.addEventListener("DOMContentLoaded", () => {
             console.debug('[AOS] initialized, elements:', count);
         }
     });
-    // Extra safety: refresh on full load, if it hasn’t happened yet
+    // Extra safety: refresh on full load, if it hasn't happened yet
     window.addEventListener("load", () => {
         try { AOS.refreshHard(); } catch { AOS.refresh(); }
     });
 });
 
-import.meta.glob(["../images/**", "../fonts/**"]);
-
 // Import all images from the resources/images directory eagerly.
+// Also includes fonts for Vite processing.
 const images = import.meta.glob("../images/*", {
     eager: true,
     import: "default",
+});
+
+const fonts = import.meta.glob("../fonts/**", {
+    eager: true,
 });
 
 // Create a helper function to get an image URL by name.

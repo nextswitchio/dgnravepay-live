@@ -25,6 +25,8 @@
         @vite(['resources/js/pages/about.js'])
     @endif
     @stack('head')
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="font-sans antialiased {{ request()->is('about') ? 'bg-accent-black text-white' : 'text-gray-900' }}">
