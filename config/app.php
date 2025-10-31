@@ -55,9 +55,38 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL') ?: (function() {
+        // Dynamic URL generation based on request for both www and non-www
+        if (isset($_SERVER['HTTP_HOST'])) {
+            $host = $_SERVER['HTTP_HOST'];
+            $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
+            return $scheme . '://' . $host;
+        }
+        return 'http://localhost';
+    })(),
 
-    'asset_url' => env('ASSET_URL'),
+    'asset_url' => env('ASSET_URL') ?: (function() {
+        // Dynamic asset URL generation based on request
+        if (isset($_SERVER['HTTP_HOST'])) {
+            $host = $_SERVER['HTTP_HOST'];
+            $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
+            return $scheme . '://' . $host;
+        }
+        return env('APP_URL', 'http://localhost');
+    })(),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Preferred Domain Format
+    |--------------------------------------------------------------------------
+    |
+    | This value determines whether the application should prefer www or 
+    | non-www domain format. Options: 'www', 'non-www'
+    | The NormalizeDomain middleware will redirect to the preferred format.
+    |
+    */
+
+    'preferred_domain' => env('PREFERRED_DOMAIN', 'non-www'),
 
     /*
     |--------------------------------------------------------------------------

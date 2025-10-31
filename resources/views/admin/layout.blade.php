@@ -48,6 +48,10 @@
                         class="{{ $linkBase }} {{ request()->routeIs('admin.testimonials.*') ? $active : $inactive }}">
                         <span>Testimonials</span>
                     </a>
+                    <a href="{{ route('admin.assets.dashboard') }}"
+                        class="{{ $linkBase }} {{ request()->routeIs('admin.assets.*') ? $active : $inactive }}">
+                        <span>Asset Performance</span>
+                    </a>
                 </nav>
                 <div class="p-4 mt-auto border-t border-white/10">
                     <form method="POST" action="{{ route('logout') }}" class="flex">

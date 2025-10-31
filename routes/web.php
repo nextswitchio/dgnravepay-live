@@ -87,4 +87,12 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('faqs', FaqController::class);
     Route::post('faqs/{faq}/toggle-publish', [FaqController::class, 'togglePublish'])->name('faqs.toggle-publish');
     Route::resource('testimonials', TestimonialController::class);
+    
+    // Asset Performance Dashboard
+    Route::get('assets/dashboard', [App\Http\Controllers\AssetDashboardController::class, 'index'])->name('assets.dashboard');
+    Route::get('assets/metrics', [App\Http\Controllers\AssetDashboardController::class, 'metrics'])->name('assets.metrics');
+    Route::get('assets/health', [App\Http\Controllers\AssetDashboardController::class, 'healthStatus'])->name('assets.health');
+    Route::get('assets/errors', [App\Http\Controllers\AssetDashboardController::class, 'errorReport'])->name('assets.errors');
+    Route::post('assets/performance-test', [App\Http\Controllers\AssetDashboardController::class, 'performanceTest'])->name('assets.performance-test');
+    Route::post('assets/clear-cache', [App\Http\Controllers\AssetDashboardController::class, 'clearCache'])->name('assets.clear-cache');
 });

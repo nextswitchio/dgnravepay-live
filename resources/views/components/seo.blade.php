@@ -14,7 +14,7 @@
     $fullTitle = $title ? $title . ' | ' . $siteName : $siteName;
     $url = $canonical ?? url()->current();
     $desc = $description ?? strip_tags($description ?? '');
-    $img = $image ?? url(Vite::asset('resources/images/logo wide.png'));
+    $img = $image ?? Vite::asset('resources/images/logo wide.png');
 
     // Provide sensible default JSON-LD (Organization + WebSite) if none supplied
     $appUrl = config('app.url') ?? url('/');

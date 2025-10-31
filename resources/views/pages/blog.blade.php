@@ -57,9 +57,7 @@
                                     </div>
                                     <div class="md:col-span-2 flex items-end justify-center overflow-hidden relative">
                                         @php
-                                            $featCover = $featured->cover_image_path
-                                                ? asset('storage/' . $featured->cover_image_path)
-                                                : Vite::asset('resources/images/black hand holding card.png');
+                                            $featCover = blog_cover_asset($featured->cover_image_path);
                                         @endphp
                                         <img src="{{ $featCover }}" alt="Featured: {{ $featured->title }}"
                                             class="h-[120%] object-contain md:object-cover md:h-full -rotate-[20deg] absolute -bottom-10">
@@ -107,9 +105,7 @@
                                 <article class="space-y-2">
                                     <a href="{{ route('blog.show', $post->slug) }}">
                                         @php
-                                            $cover = $post->cover_image_path
-                                                ? asset('storage/' . $post->cover_image_path)
-                                                : Vite::asset('resources/images/article 1.jpg');
+                                            $cover = blog_cover_asset($post->cover_image_path);
                                         @endphp
                                         <img src="{{ $cover }}" alt="{{ $post->title }}"
                                             class="aspect-video rounded-xl object-cover w-full mb-4">

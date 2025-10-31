@@ -42,7 +42,7 @@
                             <td class="p-3">{{ $post->title }}</td>
                             <td class="p-3">
                                 @if ($post->cover_image_path)
-                                    <img src="{{ asset('storage/' . $post->cover_image_path) }}" alt="cover"
+                                    <img src="{{ storage_asset($post->cover_image_path) }}" alt="cover"
                                         class="h-10 w-16 object-cover rounded">
                                 @endif
                             </td>

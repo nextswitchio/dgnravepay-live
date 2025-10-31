@@ -36,7 +36,7 @@
         @endpush
         @if (!empty($post->cover_image_path))
             <div class="w-full max-h-[420px] overflow-hidden bg-gray-100">
-                <img src="{{ asset('storage/' . $post->cover_image_path) }}" alt="{{ $post->title }} cover"
+                <img src="{{ safe_storage_asset($post->cover_image_path) }}" alt="{{ $post->title }} cover"
                     class="w-full h-[260px] md:h-[360px] object-cover">
             </div>
         @endif

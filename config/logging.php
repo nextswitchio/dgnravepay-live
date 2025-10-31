@@ -126,6 +126,22 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'asset_performance' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/asset-performance.log'),
+            'level' => env('LOG_LEVEL', 'info'),
+            'days' => 30,
+            'replace_placeholders' => true,
+        ],
+
+        'asset_errors' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/asset-errors.log'),
+            'level' => env('LOG_LEVEL', 'warning'),
+            'days' => 30,
+            'replace_placeholders' => true,
+        ],
     ],
 
 ];

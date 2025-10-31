@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="">
-                <img src="{{ asset('images/vector line.svg') }}" alt="vector line"
+                <img src="{{ Vite::asset('resources/images/vector line.svg') }}" alt="vector line"
                     class="absolute -z-[10] blur-[5rem] opacity-50 w-full bottom-0 left-0">
             </div>
         </section>
