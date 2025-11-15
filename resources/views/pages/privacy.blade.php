@@ -11,7 +11,7 @@
                             class="capitalize mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
                             Privacy Policy
                         </h1>
-                        <p class="text-lg text-gray-600 mt-4 mb-8">Last Updated: October 19, 2025</p>
+                        <p class="text-lg text-gray-600 mt-4 mb-8">Last Updated: [Insert Date]</p>
                     </div>
                 </div>
             </div>
@@ -61,6 +61,17 @@
                 <li class="mb-3">
                     <h6 class="text-base font-bold mb-4">Biometric & Sensitive Data</h6>
                     <p class="mb-2">We use biometric authentication (Face ID or fingerprint) for secure login and identity verification. Biometric data is processed securely on your device's hardware (Secure Enclave) and is never stored or transmitted to DgnRavePay servers.</p>
+                </li>
+                <li class="mb-3">
+                    <h6 class="text-base font-bold mb-4">TrueDepth and Face Data</h6>
+                    <p class="mb-2">Our app may use Apple's <strong>TrueDepth camera APIs</strong> to enable secure and seamless authentication experiences such as <strong>Face ID login</strong> or <strong>facial verification during KYC (Know Your Customer)</strong> processes.</p>
+                    <ul class="ml-5 list-disc mt-2 space-y-2">
+                        <li><strong>Data Collection:</strong> The TrueDepth camera analyzes facial features to confirm identity or enable authentication. This information is processed <em>in real time</em> on your device.</li>
+                        <li><strong>Data Usage:</strong> The facial data captured by the TrueDepth camera is <strong>used only for verification or authentication purposes</strong> and is <strong>not stored, shared, or transmitted</strong> to DgnRavePay's servers or any third parties.</li>
+                        <li><strong>Data Storage:</strong> TrueDepth and Face ID data are <strong>secured within Apple's Secure Enclave</strong> and remain fully controlled by your device's operating system. DgnRavePay <strong>cannot access</strong> or <strong>store</strong> this information.</li>
+                        <li><strong>Third-Party Access:</strong> None. TrueDepth data is processed locally and never leaves your device.</li>
+                    </ul>
+                    <p class="mt-2">By using Face ID or facial recognition features, you consent to this local processing for secure authentication.</p>
                 </li>
                 <li class="mb-3">
                     <h6 class="text-base font-bold mb-4">Contacts Access</h6>
@@ -117,6 +128,11 @@
                                 <td class="border border-gray-300 px-4 py-2">Smile ID</td>
                                 <td class="border border-gray-300 px-4 py-2">Biometric identity verification (KYC)</td>
                                 <td class="border border-gray-300 px-4 py-2"><a href="https://www.usesmileid.com/privacy-policy" class="text-blue-600 hover:text-blue-800">Smile ID Privacy Policy</a></td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-2">Cloud Hosting Providers</td>
+                                <td class="border border-gray-300 px-4 py-2">Secure data storage and system uptime management</td>
+                                <td class="border border-gray-300 px-4 py-2">Not applicable</td>
                             </tr>
                         </tbody>
                     </table>
