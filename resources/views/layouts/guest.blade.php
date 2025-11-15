@@ -23,6 +23,8 @@
         @vite(['resources/js/pages/index.js'])
     @elseif (request()->is('about') || request()->is('career'))
         @vite(['resources/js/pages/about.js'])
+    @elseif (request()->is('pos') || request()->is('pos'))
+        @vite(['resources/js/pages/pos.js'])
     @endif
     @stack('head')
     <!-- Alpine.js -->

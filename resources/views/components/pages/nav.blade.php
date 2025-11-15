@@ -115,7 +115,8 @@
                                         grow</span>
                                 </div>
                             </a>
-                            <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
+                            <a href="https://help.dgnravepay.com" target="_blank"
+                                class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                 <img id="nav-dropdown-resources-help_center-img"
                                     src="{{ Vite::asset('resources/images/help_center.png') }}" alt="help center icon"
                                     class="size-6">

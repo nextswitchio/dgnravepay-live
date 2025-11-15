@@ -33,6 +33,9 @@ Route::view('/terms', 'pages.terms');
 Route::view('/pos', 'pages.pos');
 Route::view('/loan', 'pages.loan');
 Route::view('/travel', 'pages.travel');
+Route::view('/business-management', 'pages.business-management');
+Route::view('/payroll', 'pages.payroll');
+Route::view('/invoice', 'pages.invoice');
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
