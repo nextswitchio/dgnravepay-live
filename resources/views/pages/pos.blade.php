@@ -147,17 +147,19 @@
                 <!-- JOIN SECTION -->
                 <x-pages.setup-section />
                 <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
-                    <div class="flex items-center justify-between gap-4 flex-wrap">
-                        <h2 class="text-center mb-5" data-aos="fade-up">Power Beyond Payments </h2>
-                        <div class="flex gap-3">
-                            <div class="w-12 h-12 p-3 rounded-full border border-black">
+                    <div class="flex items-center justify-between gap-4">
+                        <h2 class="mb-5" data-aos="fade-up">Power Beyond Payments </h2>
+                        <div class="flex gap-5 relative">
+                            <div
+                                class="w-12 h-12 p-3 rounded-full border border-black swiper-button-prev !relative !text-black">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
                                 </svg>
                             </div>
-                            <div class="w-12 h-12 p-3 rounded-full border border-black">
+                            <div
+                                class="w-12 h-12 p-3 rounded-full border border-black swiper-button-next !relative !text-black">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -166,29 +168,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-10">
-                        <div class="" role="group">
-                            <div class="">
-                                <ul class="flex gap-5 overflow-hidden splide" data-aos="fade-up">
-                                    @foreach ($articles as $article)
-                                        <li class="splide__slide">
-                                            <a href="{{ $article['link'] }}"
-                                                class="h-[24rem] aspect-[16/12] bg-black/30 block border border-gray-200 rounded-lg overflow-hidden transition-shadow relative -z-0"
-                                                style="background-image: url('{{ Vite::asset($article['image']) }}'); background-size: cover; background-position: center;">
+                    <div class="mt-10 swiper">
 
+                        <ul class="swiper-wrapper" data-aos="fade-up">
+                            @foreach ($articles as $article)
+                                <li class="swiper-slide">
+                                    <a href="{{ $article['link'] }}"
+                                        class="aspect-[16/11] bg-black/40 block border border-gray-200 rounded-lg overflow-hidden transition-shadow relative -z-0"
+                                        style="background-image: url('{{ Vite::asset($article['image']) }}'); background-size: cover; background-position: center;">
+                                        <div
+                                            class="py-8 px-7 md:px-10 h-full flex flex-col justify-between text-white z-20">
+                                            <p class="uppercase text-sm">{{ $article['category'] }}</p>
+                                            <h5 class="text-lg md:text-xl lg:text-2xl font-semibold">
+                                                {{ $article['title'] }}</h5>
+                                        </div>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
 
-                                                <div
-                                                    class="py-6 px-5 h-full flex flex-col justify-between text-white z-20">
-                                                    <p class="uppercase text-sm">{{ $article['category'] }}</p>
-                                                    <h5 class="text-lg md:text-xl lg:text-2xl font-semibold">
-                                                        {{ $article['title'] }}</h5>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!-- TESTIMONIAL -->
