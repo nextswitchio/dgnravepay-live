@@ -111,6 +111,10 @@
 
         <!-- Dark Section -->
         <section class="bg-accent-black relative -z-[0]">
+            <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="POS Image"
+                class="w-52 md:w-80 absolute top-0 left-0 opacity-30 -z-[1]">
+            <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="POS Image"
+                class="w-52 md:w-80 absolute top-0 left-0 opacity-30 -z-[1]">
             <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
                 <div class="text-center text-white">
                     <h2 class="text-white mb-5">
@@ -134,7 +138,6 @@
                 </div>
                 <div class="h-[400px] flex items-center overflow-hidden">
                     <img src="{{ Vite::asset('resources/images/pos.png') }}" alt="POS Image" class="mx-auto mt-10">
-
                 </div>
             </div>
         </section>
@@ -142,7 +145,7 @@
         <section class="my-40">
             <div class="custom-container mx-auto  px-5 md:px-10 space-y-20 md:space-y-40">
                 <!-- JOIN SECTION -->
-                <x-pages.join-section />
+                <x-pages.setup-section />
                 <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
                     <div class="flex items-center justify-between gap-4 flex-wrap">
                         <h2 class="text-center mb-5" data-aos="fade-up">Power Beyond Payments </h2>

@@ -96,7 +96,9 @@
         </section>
 
         <!-- Dark Section -->
-        <section class="bg-accent-black">
+        <section class="bg-accent-black relative -z-[0]">
+            <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="POS Image"
+                class="w-52 md:w-80 absolute top-0 left-0 opacity-30 -z-[1]">
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="grid md:grid-cols-7 gap-7 pt-20">
                     <div class="md:col-span-4">

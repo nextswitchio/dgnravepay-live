@@ -75,6 +75,8 @@
 
         <!-- Dark Section -->
         <section class="bg-accent-black relative -z-[0]">
+            <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="POS Image"
+                class="w-52 md:w-80 absolute top-0 left-0 opacity-30 -z-[1]">
             <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
                 <div class="text-center text-white">
                     <h2 class="text-white mb-5">

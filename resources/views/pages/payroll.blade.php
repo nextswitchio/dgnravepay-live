@@ -73,7 +73,7 @@
                             <h6 class="font-bold text-xl md:text-2xl mb-1">Taxes, Deductions & Deductions</h6>
                             <p>Handle PAYE, pensions, and benefits effortlessly.</p>
                         </div>
-                        <img src="{{ Vite::asset('resources/images/outbound circle logo.png') }}" alt=""
+                        <img src="{{ Vite::asset('resources/images/circle-percentage.png') }}" alt=""
                             class="w-3/5 mx-auto mb-10">
                     </div>
                 </div>
@@ -81,7 +81,9 @@
 
         <!-- Dark Section -->
         <section class="bg-accent-black relative -z-[0]">
-            <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
+            <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="POS Image"
+                class="w-52 md:w-80 absolute top-0 left-0 opacity-30 -z-[1]">
+            <div class="custom-container mx-auto  px-5 md:px-10 pt-20 md:pt-28">
                 <div class="text-center text-white">
                     <h2 class="text-white mb-5">
                         Everything you need for seamless payroll in one platform
@@ -100,7 +102,8 @@
                         </div>
                     @endforeach
                 </div>
-                <img src="{{ Vite::asset('resources/images/hand.png') }}" alt="POS Image" class="mx-auto mt-10 w-2xl">
+                <img src="{{ Vite::asset('resources/images/hand-phone-payroll.png') }}" alt="POS Image"
+                    class="mx-auto mt-10 w-2xl pl-40 md:pl-52">
             </div>
         </section>
 

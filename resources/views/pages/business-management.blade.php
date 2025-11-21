@@ -79,7 +79,9 @@
 
         <!-- Dark Section -->
         <section class="bg-accent-black relative -z-[0]">
-            <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
+            <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="POS Image"
+                class="w-52 md:w-80 absolute top-0 left-0 opacity-30 -z-[1]">
+            <div class="custom-container mx-auto  px-5 md:px-10 pt-20 md:pt-28">
                 <div class="text-center text-white">
                     <h2 class="text-white mb-5">
                         What you get with DgnRavePay Business Management
@@ -98,7 +100,8 @@
                         </div>
                     @endforeach
                 </div>
-                <img src="{{ Vite::asset('resources/images/hand.png') }}" alt="POS Image" class="mx-auto mt-10 w-2xl">
+                <img src="{{ Vite::asset('resources/images/hand-phone-business-management.png') }}" alt="POS Image"
+                    class="mx-auto mt-10 w-2xl pl-40 md:pl-52">
             </div>
         </section>
 
@@ -125,7 +128,8 @@
                     <p class="">Set up approval flows for payments, invoices, budgets automate steps and keep
                         accountability.</p>
                 </div>
-                <img src="{{ Vite::asset('resources/images/approvals-workflows.png') }}" alt="vector line" class="w-full" />
+                <img src="{{ Vite::asset('resources/images/approvals-workflows.png') }}" alt="vector line"
+                    class="w-full" />
             </div>
         </section>
 
