@@ -1,5 +1,8 @@
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // Import all images from the resources/images directory eagerly.
 const images = import.meta.glob("../../images/*", {
@@ -68,6 +71,9 @@ if (joinOptions.length && joinImg) {
 }
 
 const swiper = new Swiper(".swiper", {
+    // Configure modules
+    modules: [Navigation, Pagination],
+
     // Optional parameters
     direction: "horizontal", // or 'vertical'
     loop: true, // Enable continuous looping
