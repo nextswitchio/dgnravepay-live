@@ -108,7 +108,7 @@ Each third-party provider processes user data **solely to support DgnRavePay’s
 
 We may share your information only:
 
-* With service providers, financial institutions, and regulators as required by law  
+* With service providers, financial institutions, and regulators, as required by law  
 * To complete transactions or verify identity  
 * To comply with legal obligations, court orders, or government requests
 
@@ -124,7 +124,7 @@ We retain your data only for as long as necessary to:
 * Fulfill legal and regulatory obligations (e.g., financial record-keeping), or  
 * Resolve disputes and enforce agreements.
 
-When data is no longer needed, it is securely deleted or anonymized.
+When data is no longer needed, it is securely deleted or anonymised.
 
 ---
 
@@ -168,7 +168,27 @@ We may revise this Privacy Policy periodically.
 
 ---
 
-## **12\. Contact Us**
+## **12\. Lender Information & Regulatory Compliance**
+
+DgnRavePay loan services available within the DgnRavePay mobile application are provided by:
+
+DgnRavePay Technologies Ltd  
+Registered in Nigeria  
+Address: No. 4, Bashiru Olusesi Street, off Conservation Road, Lekki Phase 2, Lagos State.
+
+DgnRavePay Technologies Ltd is the licensed lender responsible for offering and managing loan products within the DgnRavePay app.
+
+Regulatory Authorisation:  
+DgnRavePay Technologies Ltd holds the required authorisations to offer digital lending services in Nigeria, including:
+
+* FCCPC Approval for Digital Lending Operations  
+* Money Lender’s License (see attached document: *DgnRavePay\_Licenses\_and\_FCCPC\_Approval.pdf*)
+
+These documents authorise DgnRavePay to operate loan services in accordance with Nigerian financial and consumer protection regulations.
+
+All lending operations, data collection, and loan decision processes are carried out solely by DgnRavePay Technologies Ltd.
+
+##  **12\. Contact Us**
 
 If you have questions or requests regarding this Privacy Policy, please contact:  
  📧 **help@DgnRavePay.com**  
