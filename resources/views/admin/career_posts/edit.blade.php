@@ -54,7 +54,7 @@
             <label class="block" for="cover_image">Featured Image</label>
             @if ($post->cover_image_path)
                 <div class="mb-2">
-                    <img src="{{ asset('storage/' . $post->cover_image_path) }}" alt="Current cover"
+                    <img src="{{ storage_asset($post->cover_image_path) }}" alt="Current cover"
                         class="h-24 rounded border">
                 </div>
             @endif

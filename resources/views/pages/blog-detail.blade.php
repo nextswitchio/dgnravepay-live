@@ -6,10 +6,7 @@
     DgnRavePay.')
     <x-guest-layout>
         @php
-            $cover =
-                isset($post) && $post->cover_image_path
-                    ? asset('storage/' . $post->cover_image_path)
-                    : asset('images/logo wide.png');
+            $cover = isset($post) ? blog_cover_asset($post->cover_image_path) : static_asset('resources/images/logo wide.png');
             $pub =
                 isset($post) && $post->published_at
                     ? \Illuminate\Support\Carbon::parse($post->published_at)->toIso8601String()
@@ -77,9 +74,7 @@
                     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-5 mt-3">
                         @foreach ($related ?? collect() as $r)
                             @php
-                                $rCover = $r->cover_image_path
-                                    ? asset('storage/' . $r->cover_image_path)
-                                    : Vite::asset('resources/images/article 1.jpg');
+                                $rCover = blog_cover_asset($r->cover_image_path);
                             @endphp
                             <article class="space-y-2">
                                 <a href="{{ route('blog.show', $r->slug) }}">

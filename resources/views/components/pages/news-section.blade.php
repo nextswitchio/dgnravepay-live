@@ -17,7 +17,7 @@
                         @foreach ($posts as $i => $post)
                             @php
                                 $cover = $post->cover_image_path
-                                    ? asset('storage/' . $post->cover_image_path)
+                                    ? storage_asset($post->cover_image_path)
                                     : Vite::asset('resources/images/article ' . (($i % 3) + 1) . '.jpg');
                                 $dateSource = $post->published_at ?: $post->created_at;
                                 try {
@@ -83,7 +83,7 @@
                 @foreach ($posts as $i => $post)
                     @php
                         $cover = $post->cover_image_path
-                            ? asset('storage/' . $post->cover_image_path)
+                            ? storage_asset($post->cover_image_path)
                             : Vite::asset('resources/images/article ' . (($i % 3) + 1) . '.jpg');
                         $dateSource = $post->published_at ?: $post->created_at;
                         try {

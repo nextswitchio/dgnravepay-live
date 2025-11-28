@@ -11,7 +11,15 @@ const images = import.meta.glob("../../images/*", {
 const getImageUrl = (name) => {
     // Construct the path and look it up in the images object.
     const path = `../../images/${name}`;
-    return images[path];
+    const imageUrl = images[path];
+    
+    // In production, Vite returns paths like "/assets/..." but they should be "/build/assets/..."
+    // In development, paths are correct with /@fs/ prefix
+    if (imageUrl && !import.meta.env.DEV && imageUrl.startsWith('/assets/')) {
+        return '/build' + imageUrl;
+    }
+    
+    return imageUrl;
 };
 
 const joinOptions = document.querySelectorAll(".join-option");

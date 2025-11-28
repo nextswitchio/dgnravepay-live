@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set --vh to handle mobile dynamic viewport height (address 100vh issues on mobile)
     const setVh = () => {
         const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
     };
     setVh();
-    window.addEventListener('resize', setVh);
+    window.addEventListener("resize", setVh);
     const root = document.body;
     if (root && root.hasAttribute("data-no-aos")) {
         return; // Do not enable AOS on admin portal
@@ -44,7 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (e) {
         // Fallback to a minimal, always-valid selector set if any invalid selector sneaks in
         nodes = Array.from(
-            document.querySelectorAll(".rounded-xl, .rounded-2xl, .shadow, .card, article")
+            document.querySelectorAll(
+                ".rounded-xl, .rounded-2xl, .shadow, .card, article"
+            )
         );
     }
     let idx = 0;
@@ -53,14 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (el.hasAttribute("data-aos")) return;
         // Skip interactive or nav-related elements
         if (
-            el.closest("nav, header, footer, .nav-list, #navbar-product, .nav-drop-item") ||
+            el.closest(
+                "nav, header, footer, .nav-list, #navbar-product, .nav-drop-item"
+            ) ||
             el.matches("a, button, input, select, textarea")
         )
             return;
         // Skip hidden elements/containers (will be handled when they become visible)
         if (el.closest('.hidden, [aria-hidden="true"], [x-cloak]')) return;
         const style = getComputedStyle(el);
-        if (style.display === 'none' || el.offsetParent === null) return;
+        if (style.display === "none" || el.offsetParent === null) return;
         // Avoid nested animations if a parent already has data-aos
         if (el.closest("[data-aos]")) return;
         // Avoid animating tiny chips/badges
@@ -68,16 +72,23 @@ document.addEventListener("DOMContentLoaded", () => {
         if (rect.width < 56 || rect.height < 56) return;
 
         // Preserve hover transforms: if element uses hover transform utilities, prefer animating its parent
-        const cls = (el.getAttribute('class') || '').toLowerCase();
-        const hasHoverTransform = (cls.includes('hover:') || cls.includes('group-hover:') || cls.includes('peer-hover:')) && (
-            cls.includes('scale') || cls.includes('translate') || cls.includes('rotate') || cls.includes('skew') || cls.includes('transform') || cls.includes('transition-transform')
-        );
+        const cls = (el.getAttribute("class") || "").toLowerCase();
+        const hasHoverTransform =
+            (cls.includes("hover:") ||
+                cls.includes("group-hover:") ||
+                cls.includes("peer-hover:")) &&
+            (cls.includes("scale") ||
+                cls.includes("translate") ||
+                cls.includes("rotate") ||
+                cls.includes("skew") ||
+                cls.includes("transform") ||
+                cls.includes("transition-transform"));
 
         const annotate = (target, effect) => {
-            if (!target || target.hasAttribute('data-aos')) return false;
-            target.setAttribute('data-aos', effect);
-            target.setAttribute('data-aos-delay', String((idx % 8) * 50));
-            target.setAttribute('data-aos-duration', '600');
+            if (!target || target.hasAttribute("data-aos")) return false;
+            target.setAttribute("data-aos", effect);
+            target.setAttribute("data-aos-delay", String((idx % 8) * 50));
+            target.setAttribute("data-aos-duration", "600");
             idx++;
             return true;
         };
@@ -87,23 +98,25 @@ document.addEventListener("DOMContentLoaded", () => {
             // Choose parent if it's similar in size (container) and safe
             if (
                 parent &&
-                !parent.closest('[data-aos]') &&
-                !parent.closest('nav, header, footer') &&
-                !parent.matches('a, button, input, select, textarea')
+                !parent.closest("[data-aos]") &&
+                !parent.closest("nav, header, footer") &&
+                !parent.matches("a, button, input, select, textarea")
             ) {
                 const pRect = parent.getBoundingClientRect();
-                const sizeCloseEnough = Math.abs(pRect.width - rect.width) < 40 && Math.abs(pRect.height - rect.height) < 40;
-                if (sizeCloseEnough && annotate(parent, 'fade-up')) {
+                const sizeCloseEnough =
+                    Math.abs(pRect.width - rect.width) < 40 &&
+                    Math.abs(pRect.height - rect.height) < 40;
+                if (sizeCloseEnough && annotate(parent, "fade-up")) {
                     return; // parent annotated, child remains free for hover transforms
                 }
             }
             // Fallback: animate the element with opacity only if no safe parent
-            annotate(el, 'fade');
+            annotate(el, "fade");
             return;
         }
 
         // Default: animate the element itself with fade-up
-        annotate(el, 'fade-up');
+        annotate(el, "fade-up");
         idx++;
     });
 
@@ -115,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
         anchorPlacement: "top-bottom",
         mirror: false,
         disable: false,
-        startEvent: 'DOMContentLoaded',
+        startEvent: "DOMContentLoaded",
     });
 
     // Refresh and enable AOS visibility immediately (avoid missing window.load timing)
@@ -126,35 +139,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // Let layout settle, then allow AOS to control visibility/animation
     requestAnimationFrame(() => {
-        document.body.classList.add('aos-active');
+        document.body.classList.add("aos-active");
         // Kick a scroll event to ensure in-view elements animate immediately
-        window.dispatchEvent(new Event('scroll'));
+        window.dispatchEvent(new Event("scroll"));
         // Extra nudge in case layout shifts shortly after
-        setTimeout(() => window.dispatchEvent(new Event('scroll')), 60);
+        setTimeout(() => window.dispatchEvent(new Event("scroll")), 60);
         if (!import.meta.env.PROD) {
-            const count = document.querySelectorAll('[data-aos]').length;
-            console.debug('[AOS] initialized, elements:', count);
+            const count = document.querySelectorAll("[data-aos]").length;
+            console.debug("[AOS] initialized, elements:", count);
         }
     });
-    // Extra safety: refresh on full load, if it hasn’t happened yet
+    // Extra safety: refresh on full load, if it hasn't happened yet
     window.addEventListener("load", () => {
-        try { AOS.refreshHard(); } catch { AOS.refresh(); }
+        try {
+            AOS.refreshHard();
+        } catch {
+            AOS.refresh();
+        }
     });
 });
 
-import.meta.glob(["../images/**", "../fonts/**"]);
-
 // Import all images from the resources/images directory eagerly.
+// Also includes fonts for Vite processing.
 const images = import.meta.glob("../images/*", {
     eager: true,
     import: "default",
+});
+
+const fonts = import.meta.glob("../fonts/**", {
+    eager: true,
 });
 
 // Create a helper function to get an image URL by name.
 const getImageUrl = (name) => {
     // Construct the path and look it up in the images object.
     const path = `../images/${name}`;
-    return images[path];
+    const imageUrl = images[path];
+
+    // In production, Vite returns paths like "/assets/..." but they should be "/build/assets/..."
+    // In development, paths are correct with /@fs/ prefix
+    if (imageUrl && !import.meta.env.DEV && imageUrl.startsWith("/assets/")) {
+        return "/build" + imageUrl;
+    }
+
+    return imageUrl;
 };
 
 const individualTabButton = document.getElementById("for-individuals");
@@ -178,8 +206,8 @@ const navbarProductPersonal = `
     
                                     <a href="/" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-individual-img" src="${getImageUrl(
-    "user.png"
-)}" alt="user icon" class="size-6">
+                                            "user.png"
+                                        )}" alt="user icon" class="size-6">
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Personal Account</p>
                                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
@@ -188,8 +216,8 @@ const navbarProductPersonal = `
                                     </a>
                                     <a href="/virtual" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-virtual-img" src="${getImageUrl(
-    "pos_terminal.png"
-)}" alt="pos terminal icon" class="size-6">
+                                            "pos_terminal.png"
+                                        )}" alt="pos terminal icon" class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Virtual Cards</p>
@@ -199,8 +227,8 @@ const navbarProductPersonal = `
                                     </a>
                                     <a href="/savings" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-savings-img" src="${getImageUrl(
-    "savings.png"
-)}" alt="savings icon" class="size-6">
+                                            "savings.png"
+                                        )}" alt="savings icon" class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Savings</p>
@@ -210,8 +238,8 @@ const navbarProductPersonal = `
                                     </a>
                                     <a href="/loan" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-loan-img" src="${getImageUrl(
-    "loan.png"
-)}" alt="loan icon" class="size-6">
+                                            "loan.png"
+                                        )}" alt="loan icon" class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Loan</p>
@@ -221,8 +249,8 @@ const navbarProductPersonal = `
                                     </a>
                                     <a href="/travel" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-hotel-img" src="${getImageUrl(
-    "hotel-bed.png"
-)}" alt="hotel bed icon" class="size-6">
+                                            "hotel-bed.png"
+                                        )}" alt="hotel bed icon" class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Travel and Hotel</p>
@@ -235,8 +263,8 @@ const navbarProductPersonal = `
 const navbarProductBusiness = `
                                     <a href="/business" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-business-img" src="${getImageUrl(
-    "briefcase.png"
-)}" alt="briefcase icon" class="size-6">
+                                            "briefcase.png"
+                                        )}" alt="briefcase icon" class="size-6">
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Business Account</p>
                                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
@@ -245,8 +273,8 @@ const navbarProductBusiness = `
                                     </a>
                                     <a href="/pos" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-pos-img" src="${getImageUrl(
-    "pos_terminal.png"
-)}" alt="POS & Terminal icon"
+                                            "pos_terminal.png"
+                                        )}" alt="POS & Terminal icon"
                                             class="size-6">
 
                                         <div class="text-left">
@@ -255,10 +283,10 @@ const navbarProductBusiness = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
+                                    <a href="/business-management" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-graph-img" src="${getImageUrl(
-    "graph-up.png"
-)}" alt="Business graph up icon"
+                                            "graph-up.png"
+                                        )}" alt="Business graph up icon"
                                             class="size-6">
 
                                         <div class="text-left">
@@ -267,10 +295,10 @@ const navbarProductBusiness = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
+                                    <a href="/payroll" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-loan-img" src="${getImageUrl(
-    "loan.png"
-)}" alt="loan icon" class="size-6">
+                                            "loan.png"
+                                        )}" alt="loan icon" class="size-6">
 
 
                                         <div class="text-left">
@@ -279,10 +307,10 @@ const navbarProductBusiness = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
+                                    <a href="/invoice" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-invoice-img" src="${getImageUrl(
-    "invoice.png"
-)}" alt="invoice icon" class="size-6">
+                                            "invoice.png"
+                                        )}" alt="invoice icon" class="size-6">
 
 
                                         <div class="text-left">
@@ -296,7 +324,12 @@ const navbarProductBusiness = `
 function toggleNavbarProductShown() {
     const navbarProduct = document.getElementById("navbar-product");
     const navbarSelect = document.getElementById("navbar-select");
-    if (!navbarProduct || !navbarSelect || navbarProduct.children.length < 2 || navbarSelect.children.length < 2) {
+    if (
+        !navbarProduct ||
+        !navbarSelect ||
+        navbarProduct.children.length < 2 ||
+        navbarSelect.children.length < 2
+    ) {
         return;
     }
     navbarProduct.children[1].innerHTML = navbarProductPersonal;
@@ -360,32 +393,34 @@ if (hamburger && mobileMenu) {
 
         if (isMenuOpen) {
             // Lock page scroll and show overlay menu fixed under the mobile nav header
-            document.body.style.overflow = 'hidden';
-            const header = document.getElementById('mobile-nav');
+            document.body.style.overflow = "hidden";
+            const header = document.getElementById("mobile-nav");
             const topOffset = header ? header.offsetHeight : 0;
             Object.assign(mobileMenu.style, {
-                position: 'fixed',
+                position: "fixed",
                 top: `${topOffset}px`,
-                left: '0',
-                right: '0',
+                left: "0",
+                right: "0",
                 height: `calc(100vh - ${topOffset}px)`,
                 maxHeight: `calc(100vh - ${topOffset}px)`,
-                zIndex: '10000',
+                zIndex: "10000",
             });
             // Hamburger to X animation
-            if (lines[0]) lines[0].style.transform = "translateY(6px) rotate(45deg)";
+            if (lines[0])
+                lines[0].style.transform = "translateY(6px) rotate(45deg)";
             if (lines[1]) lines[1].style.opacity = "0";
-            if (lines[2]) lines[2].style.transform = "translateY(-6px) rotate(-45deg)";
+            if (lines[2])
+                lines[2].style.transform = "translateY(-6px) rotate(-45deg)";
         } else {
             // Restore page scroll and collapse overlay
-            document.body.style.overflow = '';
+            document.body.style.overflow = "";
             mobileMenu.style.maxHeight = "0px";
             mobileMenu.style.height = "";
-            mobileMenu.style.position = '';
-            mobileMenu.style.top = '';
-            mobileMenu.style.left = '';
-            mobileMenu.style.right = '';
-            mobileMenu.style.zIndex = '';
+            mobileMenu.style.position = "";
+            mobileMenu.style.top = "";
+            mobileMenu.style.left = "";
+            mobileMenu.style.right = "";
+            mobileMenu.style.zIndex = "";
             // X back to hamburger animation
             if (lines[0]) lines[0].style.transform = "translateY(0) rotate(0)";
             if (lines[1]) lines[1].style.opacity = "1";
@@ -453,67 +488,89 @@ document.addEventListener("DOMContentLoaded", function () {
     switch (true) {
         case windowUrl.includes("/virtual"):
             {
-                const el = document.querySelector("#nav-dropdown-product-virtual-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-product-virtual-img"
+                );
                 if (el) el.src = getImageUrl("user colored.png");
             }
             break;
         case windowUrl.includes("/savings"):
             {
-                const el = document.querySelector("#nav-dropdown-product-savings-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-product-savings-img"
+                );
                 if (el) el.src = getImageUrl("user colored.png");
             }
             break;
         case windowUrl.includes("/business"):
             {
-                const el = document.querySelector("#nav-dropdown-product-business-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-product-business-img"
+                );
                 if (el) el.src = getImageUrl("briefcase colored.png");
             }
             break;
         case windowUrl.includes("/whistleblower"):
             {
-                const el = document.querySelector("#nav-dropdown-resources-whistleblower-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-resources-whistleblower-img"
+                );
                 if (el) el.src = getImageUrl("whistle colored.png");
             }
             break;
         case windowUrl.includes("/policy"):
             {
-                const el = document.querySelector("#nav-dropdown-resources-policy-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-resources-policy-img"
+                );
                 if (el) el.src = getImageUrl("policy colored.png");
             }
             break;
         case windowUrl.includes("/help_center"):
             {
-                const el = document.querySelector("#nav-dropdown-resources-help_center-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-resources-help_center-img"
+                );
                 if (el) el.src = getImageUrl("help_center colored.png");
             }
             break;
         case windowUrl.includes("/blog"):
             {
-                const el = document.querySelector("#nav-dropdown-resources-blog-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-resources-blog-img"
+                );
                 if (el) el.src = getImageUrl("blogger colored.png");
             }
             break;
         case windowUrl.includes("/invoicing"):
             {
-                const el = document.querySelector("#nav-dropdown-product-invoicing-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-product-invoicing-img"
+                );
                 if (el) el.src = getImageUrl("invoice colored.png");
             }
             break;
         case windowUrl.includes("/hotel_travel"):
             {
-                const el = document.querySelector("#nav-dropdown-product-hotel_travel-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-product-hotel_travel-img"
+                );
                 if (el) el.src = getImageUrl("hotel-bed colored.png");
             }
             break;
         case windowUrl.includes("/loan"):
             {
-                const el = document.querySelector("#nav-dropdown-product-loan-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-product-loan-img"
+                );
                 if (el) el.src = getImageUrl("loan colored.png");
             }
             break;
         case windowUrl.includes("/pos_terminal"):
             {
-                const el = document.querySelector("#nav-dropdown-product-pos_terminal-img");
+                const el = document.querySelector(
+                    "#nav-dropdown-product-pos_terminal-img"
+                );
                 if (el) el.src = getImageUrl("pos_terminal colored.png");
             }
             break;

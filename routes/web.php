@@ -33,6 +33,9 @@ Route::view('/terms', 'pages.terms');
 Route::view('/pos', 'pages.pos');
 Route::view('/loan', 'pages.loan');
 Route::view('/travel', 'pages.travel');
+Route::view('/business-management', 'pages.business-management');
+Route::view('/payroll', 'pages.payroll');
+Route::view('/invoice', 'pages.invoice');
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
@@ -87,4 +90,12 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('faqs', FaqController::class);
     Route::post('faqs/{faq}/toggle-publish', [FaqController::class, 'togglePublish'])->name('faqs.toggle-publish');
     Route::resource('testimonials', TestimonialController::class);
+    
+    // Asset Performance Dashboard
+    Route::get('assets/dashboard', [App\Http\Controllers\AssetDashboardController::class, 'index'])->name('assets.dashboard');
+    Route::get('assets/metrics', [App\Http\Controllers\AssetDashboardController::class, 'metrics'])->name('assets.metrics');
+    Route::get('assets/health', [App\Http\Controllers\AssetDashboardController::class, 'healthStatus'])->name('assets.health');
+    Route::get('assets/errors', [App\Http\Controllers\AssetDashboardController::class, 'errorReport'])->name('assets.errors');
+    Route::post('assets/performance-test', [App\Http\Controllers\AssetDashboardController::class, 'performanceTest'])->name('assets.performance-test');
+    Route::post('assets/clear-cache', [App\Http\Controllers\AssetDashboardController::class, 'clearCache'])->name('assets.clear-cache');
 });

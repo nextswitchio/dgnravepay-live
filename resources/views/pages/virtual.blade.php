@@ -96,7 +96,9 @@
         </section>
 
         <!-- Dark Section -->
-        <section class="bg-accent-black">
+        <section class="bg-accent-black relative -z-[0]">
+            <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="POS Image"
+                class="w-52 md:w-80 absolute top-0 left-0 opacity-30 -z-[1]">
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="grid md:grid-cols-7 gap-7 pt-20">
                     <div class="md:col-span-4">
@@ -117,7 +119,7 @@
                                 <span>Fund Easily in Naira</span>
                             </div>
                             <div
-                                class="rounded-full p-2 md:py-3 tex-sm md:text-base bg-white/5 border border-white/10 flex items-center gap-2">
+                                class="rounded-full p-2 md:py-3 text-sm md:text-base bg-white/5 border border-white/10 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6 fill-primary stroke-primary">
                                     <path stroke-linecap="round" stroke-linejoin="round"
