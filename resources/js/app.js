@@ -243,7 +243,7 @@ const navbarProductBusiness = `
                                                 grow</span>
                                         </div>
                                     </a>
-                                    <a href="#" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
+                                    <a href="/pos" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-pos-img" src="${getImageUrl(
     "pos_terminal.png"
 )}" alt="POS & Terminal icon"

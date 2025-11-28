@@ -287,7 +287,7 @@
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="/pos" class="p-2 flex items-start gap-5 nav-drop-item">
                             <img src="{{ Vite::asset('resources/images/pos_terminal.png') }}"
                                 alt="POS & Terminal icon" class="size-6">
 
