@@ -70,28 +70,27 @@
                     <h2 class="font-bold text-[#1a1a1c] mb-6 md:md-10 leading-[1]">Inside the news</h2>
                     <div class="grid md:grid-cols-2 gap-5">
                         <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt="Business feature article"
+                            <img src="{{ Vite::asset('resources/images/press-official-logo.png') }}" alt="Business feature article"
                                 class="aspect-video rounded object-cover">
                             <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">The ranking: Africa’s Fastest Growing
                                 Companies 2025</h6>
                             <p class="text-s md:text-sm text-stone-500">Punch Newspapers</p>
                         </article>
                         <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/article 2.jpg') }}" alt="Fintech growth story"
+                            <img src="{{ Vite::asset('resources/images/press-img-money.jpg') }}" alt="Fintech growth story"
                                 class="aspect-video rounded object-cover">
-                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">The ranking: Africa’s Fastest Growing
+                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">Nigerian businesses increasingly skip traditional banks and turn to DgnRavePay</h6>
+                            <p class="text-s md:text-sm text-stone-500">Punch Newspapers</p>
+                        </article>
+                        <article class="space-y-3">
+                            <img src="{{ Vite::asset('resources/images/press-official-logo.png') }}" alt="Industry news article"
+                                class="aspect-video rounded object-cover">
+                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg"> The ranking: Africa’s Fastest Growing
                                 Companies 2025</h6>
                             <p class="text-s md:text-sm text-stone-500">Punch Newspapers</p>
                         </article>
                         <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/article 3.jpg') }}" alt="Industry news article"
-                                class="aspect-video rounded object-cover">
-                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">The ranking: Africa’s Fastest Growing
-                                Companies 2025</h6>
-                            <p class="text-s md:text-sm text-stone-500">Punch Newspapers</p>
-                        </article>
-                        <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/article 1.jpg') }}" alt="Feature article"
+                            <img src="{{ Vite::asset('resources/images/press-img-money.jpg') }}" alt="Feature article"
                                 class="aspect-video rounded object-cover">
                             <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">The ranking: Africa’s Fastest Growing
                                 Companies 2025</h6>

@@ -194,7 +194,7 @@
                 <p>We may revise this Privacy Policy periodically. Material updates will be posted on this page and, where appropriate, communicated through in-app notifications.</p>
             </div>
 
-            <h3 class="text-xl font-bold mb-4">12. Lender Information & Regulatory Compliance</h3>
+            <h3 id="loan-services" class="text-xl font-bold mb-4">12. Lender Information & Regulatory Compliance</h3>
             <div class="mb-3">
                 <p class="mb-3">DgnRavePay loan services available within the DgnRavePay mobile application are provided by:</p>
                 <p class="mb-3">
@@ -207,7 +207,7 @@
                 <p class="mb-3">DgnRavePay Technologies Ltd holds the required authorisations to offer digital lending services in Nigeria, including:</p>
                 <ul class="ml-5 list-disc mb-3">
                     <li>FCCPC Approval for Digital Lending Operations</li>
-                    <li>Money Lender's License (see attached document: <em>DgnRavePay_Licenses_and_FCCPC_Approval.pdf</em>)</li>
+                    <li>Money Lender's License</li>
                 </ul>
                 <p class="mb-3">These documents authorise DgnRavePay to operate loan services in accordance with Nigerian financial and consumer protection regulations.</p>
                 <p>All lending operations, data collection, and loan decision processes are carried out solely by DgnRavePay Technologies Ltd.</p>
