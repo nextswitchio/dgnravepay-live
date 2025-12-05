@@ -26,7 +26,8 @@
                     content: true,
                     community: true,
                     locations: true,
-                    performance: true
+                    performance: true,
+                    requests: true
                 }">
                     @php
                         $linkBase = 'block px-5 py-3 rounded-xl mx-3 mb-1.5 transition hover:bg-white/10';
@@ -113,6 +114,26 @@
                         <a href="{{ route('admin.branches.index') }}"
                             class="{{ $linkBase }} {{ request()->routeIs('admin.branches.*') ? $active : $inactive }}">
                             <span>Branches</span>
+                        </a>
+                    </div>
+
+                    <!-- Requests Section -->
+                    <div class="{{ $categoryHeader }}" @click="requests = !requests">
+                        <span>Requests</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform" :class="requests ? '' : 'rotate-180'">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div x-show="requests"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 -translate-y-2"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 -translate-y-2">
+                        <a href="{{ route('admin.partnership-requests.index') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.partnership-requests.*') ? $active : $inactive }}">
+                            <span>Partnerships</span>
                         </a>
                     </div>
 

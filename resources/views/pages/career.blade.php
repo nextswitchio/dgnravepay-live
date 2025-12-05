@@ -228,7 +228,7 @@
                         class="flex items-center bg-slate-200 rounded-lg border border-gray-300 px-4 gap-2 py-3 w-full">
                         <option class="py-3 w-full border-none focus:outline-0">All</option>
                     </select>
-                    <button class="bg-blue-600 rounded-lg text-white py-3 px-6">Search</button>
+                    <button class="bg-primary rounded-lg text-white py-3 px-6">Search</button>
                 </div>
                 <div class="mt-10">
                     <!-- Header: Available Roles + badge -->

@@ -9,7 +9,7 @@
                     <div class="text-center mb-10">
                         <h1
                             class="capitalize mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
-                            Whistleblower Policy
+                            DgnRavePay Integrated Management System (IMS) Policy Statement
                         </h1>
                     </div>
                 </div>

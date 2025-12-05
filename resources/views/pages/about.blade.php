@@ -25,7 +25,72 @@
             </div>
             <x-enlarging-img />
         </section>
-    <div x-data="{ showPartnershipModal: false }">
+    <div x-data="{ 
+        showPartnershipModal: false,
+        form: {
+            first_name: '',
+            last_name: '',
+            company_name: '',
+            company_email: '',
+            phone: '',
+            country: 'Select',
+            proposal: ''
+        },
+        loading: false,
+        success: false,
+        error: null,
+        toast: { show: false, message: '', type: 'success' },
+        showToast(message, type = 'success') {
+            this.toast.show = true;
+            this.toast.message = message;
+            this.toast.type = type;
+            setTimeout(() => {
+                this.toast.show = false;
+            }, 5000);
+        },
+        submitForm() {
+            this.loading = true;
+            this.error = null;
+            
+            fetch('/partnership-request', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').content
+                },
+                body: JSON.stringify(this.form)
+            })
+            .then(response => {
+                if (!response.ok) throw response;
+                return response.json();
+            })
+            .then(data => {
+                this.success = true;
+                this.showToast('Partnership request submitted successfully!', 'success');
+                this.form = {
+                    first_name: '',
+                    last_name: '',
+                    company_name: '',
+                    company_email: '',
+                    phone: '',
+                    country: 'Select',
+                    proposal: ''
+                };
+                setTimeout(() => {
+                    this.showPartnershipModal = false;
+                    this.success = false;
+                }, 3000);
+            })
+            .catch(error => {
+                console.error(error);
+                this.error = 'Something went wrong. Please try again.';
+                this.showToast('Failed to submit request. Please try again.', 'error');
+            })
+            .finally(() => {
+                this.loading = false;
+            });
+        }
+    }">
         <div class="my-20 md:mt-28 px-5 md:px-10">
             <h2 class="mb-7 md:mb-10 text-center">
                 Built for Trust. Designed for Growth
@@ -223,7 +288,8 @@
                 class="block rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-black to-stone-900 relative -z-[0] hover:!scale-[1.02] transition-transform cursor-pointer">
                 <div class="p-5">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
-                    <p class="text-primary font-semibold">Explore Careers at DngRavePay</p>
+                    <p class="text-primary font-light max-w-[400px]">Explore Careers at DgnRavePay</p>
+                    <button class="bg-primary text-white mt-5 px-5 py-2 rounded-md">Explore Now</button>
                 </div>
                 <img src="{{ Vite::asset('resources/images/about-bag.png') }}" alt="" class="ml-auto w-3/5">
                 <div class="absolute left-6 bottom-6 p-3 rounded-full bg-black w-14 h-14 flex items-center justify-center">
@@ -239,7 +305,8 @@
                 class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-primary to-primary-2/50 relative -z-[0] hover:!scale-[1.02] transition-transform cursor-pointer">
                 <div class="p-5">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Partner with us</h2>
-                    <p class="font-semibold">Collaborate with DgnRavePay</p>
+                    <p class="font-light max-w-[400px]">Join forces with DgnRavePay to build the future of payments and business solutions.</p>
+                    <button class="bg-white text-black mt-5 px-5 py-2 rounded-md">Submit partnership request</button>
                 </div>
                 <div class="h-full relative overflow-hidden">
                     <img src="{{ Vite::asset('resources/images/about-handshake.png') }}" alt=""
@@ -277,37 +344,37 @@
                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
                     
-                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                         <form class="space-y-4">
+                     <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4" x-show="!success">
+                         <form class="space-y-4" @submit.prevent="submitForm">
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
                                     <label class="block text-xs font-medium text-gray-500 mb-1">First name</label>
-                                    <input type="text" placeholder="Jenny" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                                    <input type="text" x-model="form.first_name" required placeholder="Jenny" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
                                 </div>
                                 <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
                                     <label class="block text-xs font-medium text-gray-500 mb-1">Last name</label>
-                                    <input type="text" placeholder="Lee" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                                    <input type="text" x-model="form.last_name" required placeholder="Lee" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
                                 </div>
                             </div>
                             
                             <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
                                 <label class="block text-xs font-medium text-gray-500 mb-1">Company/Organization Name</label>
-                                <input type="text" placeholder="Enter Organization Name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                                <input type="text" x-model="form.company_name" required placeholder="Enter Organization Name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
                             </div>
 
                             <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
                                 <label class="block text-xs font-medium text-gray-500 mb-1">Company/Organization Email</label>
-                                <input type="email" placeholder="Enter Company/ Organization Email" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                                <input type="email" x-model="form.company_email" required placeholder="Enter Company/ Organization Email" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
                             </div>
 
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
                                     <label class="block text-xs font-medium text-gray-500 mb-1">Phone Number</label>
-                                    <input type="text" placeholder="Enter phone number" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                                    <input type="text" x-model="form.phone" required placeholder="Enter phone number" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
                                 </div>
                                 <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
                                     <label class="block text-xs font-medium text-gray-500 mb-1">Company Country</label>
-                                    <select class="block w-full border-0 p-0 text-gray-500 placeholder-gray-400 focus:ring-0 sm:text-sm bg-transparent">
+                                    <select x-model="form.country" class="block w-full border-0 p-0 text-gray-500 placeholder-gray-400 focus:ring-0 sm:text-sm bg-transparent">
                                         <option>Select</option>
                                         <option>Nigeria</option>
                                         <option>United States</option>
@@ -318,19 +385,72 @@
 
                             <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
                                 <label class="block text-xs font-medium text-gray-500 mb-1">Tell Us About Your Business/Proposal</label>
-                                <textarea rows="4" placeholder="Explain why you'd be a good fit and include any questions you have..." class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm"></textarea>
-                                <div class="text-right text-xs text-gray-400 mt-1">0/1500</div>
+                                <textarea rows="4" x-model="form.proposal" required placeholder="Explain why you'd be a good fit and include any questions you have..." class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm"></textarea>
+                                <div class="text-right text-xs text-gray-400 mt-1" x-text="form.proposal.length + '/1500'">0/1500</div>
                             </div>
+                            
+                            <div class="text-red-500 text-sm" x-show="error" x-text="error"></div>
 
                              <div class="flex items-center justify-between pt-4">
                                 <div class="text-sm text-gray-500">
                                     By continuing, you agree to our <a href="#" class="underline">Terms of Use</a> and <a href="#" class="underline">Privacy Policy</a>.
                                 </div>
-                                <button type="submit" class="bg-[#FBBB0C] text-white px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors">
-                                    Talk to us
+                                <button type="submit" :disabled="loading" class="bg-[#FBBB0C] text-white px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors disabled:opacity-50 flex items-center gap-2">
+                                    <span x-show="loading" class="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></span>
+                                    <span>Talk to us</span>
                                 </button>
                             </div>
                          </form>
+                    </div>
+                    
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 text-center" x-show="success" style="display: none;">
+                        <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                             <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">Request Submitted!</h3>
+                        <p class="mt-2 text-sm text-gray-500">
+                            Thank you for your interest. We have received your partnership request and will be in touch shortly.
+                        </p>
+                         <button @click="showPartnershipModal = false" type="button" class="mt-4 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary text-base font-medium text-white hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:ml-3 sm:w-auto sm:text-sm">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Toast Notification -->
+        <div x-show="toast.show" 
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 translate-y-2"
+            class="fixed bottom-5 right-5 z-[21000] max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden" 
+            style="display: none;">
+            <div class="p-4">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <svg x-show="toast.type === 'success'" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg x-show="toast.type === 'error'" class="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="ml-3 w-0 flex-1 pt-0.5">
+                        <p class="text-sm font-medium text-gray-900" x-text="toast.message"></p>
+                    </div>
+                    <div class="ml-4 flex-shrink-0 flex">
+                        <button @click="toast.show = false" class="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                            <span class="sr-only">Close</span>
+                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -48,6 +48,7 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/career', [CareerController::class, 'index']);
 Route::get('/career/{slug}', [CareerController::class, 'show']);
+Route::post('/partnership-request', [App\Http\Controllers\PartnershipRequestController::class, 'store'])->name('partnership.store');
 
 // Fallback for serving files from storage when symlinks are not supported on the host
 Route::get('/storage/{path}', function (string $path) {
@@ -105,6 +106,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     ]);
     Route::post('press-items/{press_item}/toggle-publish', [PressItemController::class, 'togglePublish'])
         ->name('press-items.toggle-publish');
+    Route::resource('partnership-requests', App\Http\Controllers\Admin\PartnershipRequestController::class)
+        ->only(['index', 'show', 'update', 'destroy']);
     
     // Asset Performance Dashboard
     Route::get('assets/dashboard', [App\Http\Controllers\AssetDashboardController::class, 'index'])->name('assets.dashboard');

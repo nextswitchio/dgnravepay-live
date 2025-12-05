@@ -4,14 +4,12 @@
         class="absolute -z-[1] blur-[3rem] w-full bottom-28 left-0">
     <div class="custom-container mx-auto  px-5 md:px-10 py-20">
         <div class="text-center mb-20">
-            <h2 class="text-white mb-5">Do more with your Personal
-                Account</h2>
-            <p class="text-white">Your lifestyle companion for smart payments, instant gifting, seamless travel, and
-                hassle-free bill management.</p>
+            <h2 class="text-white mb-5">Your Wallet. Your Freedom.</h2>
+            <p class="text-white">Join millions of Nigerians using DgnRavePay to take control of their finances</p>
             <div class="mt-10">
                 <a href="https://app.dgnravepay.com/register"
                     class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
-                    Create your personal account
+                    Create Wallet Now -It’s Free
                 </a>
             </div>
             <div class="flex items-center gap-3 mt-14 justify-center">
