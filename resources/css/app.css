@@ -327,3 +327,46 @@ details[open]>summary::after {
     transition: all 0.3s ease-in-out;
     filter: invert(50%) sepia(120%) saturate(1000%) contrast(100%) brightness(140%);
 }
+
+/* About Page Splide Customization */
+.splide__slide {
+    transition: transform 0.4s ease-in-out;
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
+.splide__slide.is-active {
+    transform: scale(1.05);
+    /* Make active slightly larger */
+    opacity: 1;
+    z-index: 10;
+}
+
+.splide__progress {
+    margin: 3rem auto 0 auto;
+    /* Center horizontally and add top margin */
+    /* Default (Mobile perPage: 1) */
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .splide__progress {
+        width: 100%;
+        /* perPage: 1 */
+    }
+}
+
+@media (min-width: 768px) {
+    .splide__progress {
+        width: 50%;
+        /* perPage: 2 */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Assuming default perPage is 3 from JS config (no breakpoint for 1024, so it falls to default) */
+    .splide__progress {
+        width: 33.33%;
+    }
+}

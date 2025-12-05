@@ -25,6 +25,7 @@
             </div>
             <x-enlarging-img />
         </section>
+    <div x-data="{ showPartnershipModal: false }">
         <div class="my-20 md:mt-28 px-5 md:px-10">
             <h2 class="mb-7 md:mb-10 text-center">
                 Built for Trust. Designed for Growth
@@ -63,7 +64,7 @@
                     </ul>
                 </div>
                 <!-- Add the progress bar element -->
-                <div class="splide__progress mt-10 md:mt-20">
+                <div class="splide__progress mt-10 md:mt-10">
                     <div class="splide__progress__bar">
                     </div>
                 </div>
@@ -78,7 +79,7 @@
                 <h6 class="text-xs md:text-sm text-stone-500 uppercase">OUR MISSION</h6>
                 <p class="text-base md:text-lg font-medium">
                     To simplify payments and empower people and businesses with seamless and inclusive financial
-                    solutions that inspire confidence and enable growth.
+                    solutioins.
                 </p>
             </div>
             <div class="">
@@ -105,11 +106,12 @@
             <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="DgnRavePay’s Logo"
                 class="w-full hidden lg:block">
         </div>
+
         <section class="my-20 md:mt-30">
-            <div class="custom-container mx-auto  px-5 md:px-10 py-10">
+            <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="lg:grid lg:grid-cols-2 space-y-10 lg:space-y-0">
                     <div class="">
-                        <h2 class="mb-5 leading-[1] sticky top-32">Our core values</h2>
+                        <h2 class="mb-5 leading-[3] sticky top-32">Our core values</h2>
                     </div>
                     <div class="grid md:grid-cols-2 gap-5">
                         <article
@@ -170,6 +172,7 @@
                 </div>
             </div>
         </section>
+
         <section class="">
             <div class="custom-container mx-auto  px-5 md:px-10">
                 <div class="py-20 flex flex-col justify-center text-center">
@@ -178,7 +181,7 @@
                         There’s so much we have to accomplish. Here are a few milestones we’ve crossed so far
                     </p>
                 </div>
-                <div class="text-center grid md:grid-cols-4 gap-5 border-t border-white/50 p-10">
+                <div class="text-center grid md:grid-cols-4 gap-5 border-t border-white/5 p-10">
                     <div class="text-neutral-200 p-10">
                         <h6
                             class="text-4xl font-bold text-transparent bg-gradient-to-br from-neutral-100 to-neutral-700 bg-clip-text">
@@ -207,9 +210,17 @@
             </div>
         </section>
 
+        <div class="w-full overflow-hidden">
+            <p class="font-normal text-6xl leading-tight md:text-[151.8px] md:leading-[154.52px] tracking-[-0.1em] text-[#737577] opacity-20 whitespace-nowrap text-center select-none"
+               style="font-family: 'Inter', sans-serif;">
+                Bank Smarter with DgnRavePay
+            </p>
+        </div>
+
         <section class="custom-container mx-auto  px-5 md:px-10 py-10 my-20 gap-10 grid lg:grid-cols-2">
-            <div
-                class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-black to-stone-900 relative -z-[0] hover:!scale-[1.02] transition-transform">
+            <!-- Link to Career Page -->
+            <a href="/career"
+                class="block rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-black to-stone-900 relative -z-[0] hover:!scale-[1.02] transition-transform cursor-pointer">
                 <div class="p-5">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
                     <p class="text-primary font-semibold">Explore Careers at DngRavePay</p>
@@ -221,14 +232,14 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                     </svg>
                 </div>
-                {{-- <img src="{{ Vite::asset('resources/images/hand-card-grid-bg.png') }}" alt=""
-                class="w-full absolute top-0 left-0 -z-[1]"> --}}
-            </div>
-            <div
-                class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-primary to-primary-2/50 relative -z-[0] hover:!scale-[1.02] transition-transform">
+            </a>
+            
+            <!-- Partnership Modal Trigger -->
+            <div @click="showPartnershipModal = true"
+                class="rounded-xl aspect-[16/12] overflow-hidden bg-gradient-to-b from-primary to-primary-2/50 relative -z-[0] hover:!scale-[1.02] transition-transform cursor-pointer">
                 <div class="p-5">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Love to be a part of the team?</h2>
-                    <p class="font-semibold">Explore Careers at DngRavePay</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Partner with us</h2>
+                    <p class="font-semibold">Collaborate with DgnRavePay</p>
                 </div>
                 <div class="h-full relative overflow-hidden">
                     <img src="{{ Vite::asset('resources/images/about-handshake.png') }}" alt=""
@@ -240,8 +251,89 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                     </svg>
                 </div>
-                {{-- <img src="{{ Vite::asset('resources/images/hand-card-grid-bg.png') }}" alt=""
-                class="w-full absolute top-0 left-0 -z-[1]"> --}}
             </div>
         </section>
+
+        <!-- Partnership Modal -->
+        <div x-show="showPartnershipModal" style="display: none;" class="fixed inset-0 z-[20000] overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div x-show="showPartnershipModal"
+                    x-transition:enter="ease-out duration-300"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="ease-in duration-200"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true" @click="showPartnershipModal = false"></div>
+
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+                <div x-show="showPartnershipModal"
+                    x-transition:enter="ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave="ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
+                    
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                         <form class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
+                                    <label class="block text-xs font-medium text-gray-500 mb-1">First name</label>
+                                    <input type="text" placeholder="Jenny" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                                </div>
+                                <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
+                                    <label class="block text-xs font-medium text-gray-500 mb-1">Last name</label>
+                                    <input type="text" placeholder="Lee" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Company/Organization Name</label>
+                                <input type="text" placeholder="Enter Organization Name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                            </div>
+
+                            <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Company/Organization Email</label>
+                                <input type="email" placeholder="Enter Company/ Organization Email" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
+                                    <label class="block text-xs font-medium text-gray-500 mb-1">Phone Number</label>
+                                    <input type="text" placeholder="Enter phone number" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm">
+                                </div>
+                                <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
+                                    <label class="block text-xs font-medium text-gray-500 mb-1">Company Country</label>
+                                    <select class="block w-full border-0 p-0 text-gray-500 placeholder-gray-400 focus:ring-0 sm:text-sm bg-transparent">
+                                        <option>Select</option>
+                                        <option>Nigeria</option>
+                                        <option>United States</option>
+                                        <option>United Kingdom</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Tell Us About Your Business/Proposal</label>
+                                <textarea rows="4" placeholder="Explain why you'd be a good fit and include any questions you have..." class="block w-full border-0 p-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm"></textarea>
+                                <div class="text-right text-xs text-gray-400 mt-1">0/1500</div>
+                            </div>
+
+                             <div class="flex items-center justify-between pt-4">
+                                <div class="text-sm text-gray-500">
+                                    By continuing, you agree to our <a href="#" class="underline">Terms of Use</a> and <a href="#" class="underline">Privacy Policy</a>.
+                                </div>
+                                <button type="submit" class="bg-[#FBBB0C] text-white px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors">
+                                    Talk to us
+                                </button>
+                            </div>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </x-guest-layout>

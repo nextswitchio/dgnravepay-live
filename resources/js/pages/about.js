@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination: false,
         autoplay: true,
         gap: "1rem",
+        focus: "center",
         pauseOnHover: false,
         pauseOnFocus: false,
     });
