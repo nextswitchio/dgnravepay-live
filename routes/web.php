@@ -5,7 +5,11 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\BlogPostController;
 use App\Http\Controllers\Admin\CareerPostController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\PressItemController;
+use App\Http\Controllers\Admin\StateController;
+use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,8 +28,8 @@ Route::view('/business', 'pages.business');
 Route::view('/about', 'pages.about');
 Route::view('/savings', 'pages.savings');
 Route::view('/virtual', 'pages.virtual');
-Route::view('/press', 'pages.press');
-Route::view('/contact', 'pages.contact');
+Route::get('/press', [App\Http\Controllers\PressController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index']);
 Route::view('/policy', 'pages.policy');
 Route::view('/whistleblower', 'pages.whistleblower');
 Route::view('/privacy', 'pages.privacy')->name('privacy');
@@ -90,6 +94,17 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('faqs', FaqController::class);
     Route::post('faqs/{faq}/toggle-publish', [FaqController::class, 'togglePublish'])->name('faqs.toggle-publish');
     Route::resource('testimonials', TestimonialController::class);
+    Route::resource('states', StateController::class);
+    Route::post('states/{state}/toggle-active', [StateController::class, 'toggleActive'])
+        ->name('states.toggle-active');
+    Route::resource('branches', BranchController::class);
+    Route::post('branches/{branch}/toggle-active', [BranchController::class, 'toggleActive'])
+        ->name('branches.toggle-active');
+    Route::resource('press-items', PressItemController::class)->parameters([
+        'press-items' => 'press_item'
+    ]);
+    Route::post('press-items/{press_item}/toggle-publish', [PressItemController::class, 'togglePublish'])
+        ->name('press-items.toggle-publish');
     
     // Asset Performance Dashboard
     Route::get('assets/dashboard', [App\Http\Controllers\AssetDashboardController::class, 'index'])->name('assets.dashboard');

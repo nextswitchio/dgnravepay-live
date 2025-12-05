@@ -42,17 +42,22 @@ h3 {
 
 h1 {
     /* Responsive but capped at exact 73.6px; line-height matches font size */
-    @apply text-[clamp(38px,5.5vw,73.6px)] leading-[1];
+    /* Responsive but capped at exact 73.6px; line-height matches font size */
+    font-size: clamp(38px, 5.5vw, 73.6px);
+    line-height: 1;
 }
 
 h2 {
     /* Responsive but capped at exact 56px; line-height capped at 61.6px */
-    @apply text-[clamp(32px,4.5vw,56px)] leading-[clamp(40px,5vw,61.6px)];
+    /* Responsive but capped at exact 56px; line-height capped at 61.6px */
+    font-size: clamp(32px, 4.5vw, 56px);
+    line-height: clamp(40px, 5vw, 61.6px);
 }
 
 h3 {
     /* Responsive but capped at exact 48px */
-    @apply text-[clamp(24px,3.8vw,48px)];
+    /* Responsive but capped at exact 48px */
+    font-size: clamp(24px, 3.8vw, 48px);
 }
 
 /* Increase line-height for all h4s on desktop for better readability */
@@ -98,6 +103,7 @@ button {
     /* Will be updated by JS for mobile browsers with dynamic toolbars */
     --vh: 1vh;
 }
+
 .h-screen-safe {
     height: calc(var(--vh, 1vh) * 100);
 }
@@ -113,10 +119,25 @@ button {
     content: "";
 }
 
+.savings-join-active {
+    @apply bg-stone-50 relative;
+    /* background-color: #fafaf8;
+    position: relative;
+    z-index: 0; */
+}
+
+.savings-join-active::after {
+    @apply h-20 w-full rounded-xl bg-primary absolute left-0 -bottom-[1.5px] -z-[1] transition-all;
+
+    animation: join-animate 5s ease-in-out;
+    content: "";
+}
+
 @keyframes join-animate {
     0% {
         width: 5%;
     }
+
     100% {
         width: 100%;
     }
@@ -141,36 +162,44 @@ button {
 
 .embla {
     overflow: hidden;
-    height: 23rem; /* Example height */
+    height: 23rem;
+    /* Example height */
 }
 
 .embla__custom-container {
     display: flex;
-    flex-direction: column; /* Arrange slides vertically */
+    flex-direction: column;
+    /* Arrange slides vertically */
     height: 100%;
 }
 
 .embla__slide {
-    flex: 0 0 auto; /* Adapt slide size to its content */
+    flex: 0 0 auto;
+    /* Adapt slide size to its content */
     min-height: 0;
     /* Add any other styling for your slides */
 }
+
 .embla2 {
     overflow: hidden;
-    height: 32rem; /* Example height */
+    height: 32rem;
+    /* Example height */
 }
 
 .embla2__custom-container {
     display: flex;
-    flex-direction: column-reverse; /* Arrange slides vertically */
+    flex-direction: column-reverse;
+    /* Arrange slides vertically */
     height: 100%;
 }
 
 .embla2__slide {
-    flex: 0 0 auto; /* Adapt slide size to its content */
+    flex: 0 0 auto;
+    /* Adapt slide size to its content */
     min-height: 0;
     /* Add any other styling for your slides */
 }
+
 /* 
 #bottom-to-top-slide {
     overflow: hidden;
@@ -186,45 +215,60 @@ button {
  */
 #bottom-to-top-slide {
     overflow: hidden;
-    height: 500px; /* Set to the height of your visible area */
+    height: 500px;
+    /* Set to the height of your visible area */
     position: relative;
 }
+
 .bottom-to-top-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* space-y-6 */
+    gap: 1.5rem;
+    /* space-y-6 */
     animation: scroll-up 25s linear infinite;
 }
+
 @keyframes scroll-up {
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-50%);
-    } /* Move up by half the list height (since duplicated) */
+    }
+
+    /* Move up by half the list height (since duplicated) */
 }
+
 #bottom-to-bottom-slide {
     overflow: hidden;
-    height: 500px; /* Set to the height of your visible area */
+    height: 500px;
+    /* Set to the height of your visible area */
     position: relative;
 }
+
 .bottom-to-bottom-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* space-y-6 */
+    gap: 1.5rem;
+    /* space-y-6 */
     animation: scroll-down 25s linear infinite;
 }
+
 @keyframes scroll-down {
     0% {
         transform: translateY(-50%);
     }
+
     100% {
         transform: translateY(0);
-    } /* Move down by half the list height (since duplicated) */
+    }
+
+    /* Move down by half the list height (since duplicated) */
 }
 
 /* FAQ Section */
-details[open] summary ~ * {
+details[open] summary~* {
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -233,33 +277,36 @@ details[open] summary ~ * {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-details > summary::marker {
+details>summary::marker {
     content: none;
 }
 
 /* For older WebKit browsers */
-details > summary::-webkit-details-marker {
+details>summary::-webkit-details-marker {
     display: none;
 }
+
 details {
     width: 100%;
 }
 
-details > summary {
+details>summary {
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    list-style: none; /* Remove default marker */
+    list-style: none;
+    /* Remove default marker */
 }
 
-details > summary::after {
+details>summary::after {
     content: " ";
     display: inline-block;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>');
@@ -271,13 +318,12 @@ details > summary::after {
     transition: transform 0.2s ease-in-out;
 }
 
-details[open] > summary::after {
+details[open]>summary::after {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='0.5' stroke='currentColor' class='size-4'><path stroke-linecap='round' stroke-linejoin='round' d='M5 12h14' /></svg>");
     transform: rotate(180deg);
 }
 
 .nav-drop-item:hover img {
     transition: all 0.3s ease-in-out;
-    filter: invert(50%) sepia(120%) saturate(1000%) contrast(100%)
-        brightness(140%);
+    filter: invert(50%) sepia(120%) saturate(1000%) contrast(100%) brightness(140%);
 }

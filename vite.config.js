@@ -18,6 +18,7 @@ export default defineConfig({
                 "resources/js/pages/index.js",
                 "resources/js/pages/about.js",
                 "resources/js/pages/pos.js",
+                "resources/js/pages/savings.js",
                 // Include all images from resources/images directory
                 ...glob.sync(
                     "resources/images/**/*.{png,jpg,jpeg,gif,svg,webp}"

@@ -22,36 +22,119 @@
                             alt="{{ config('app.name') }}" class="h-8">
                     </a>
                 </div>
-                <nav class="flex-1 overflow-y-auto py-4 minimal-scrollbar">
+                <nav class="flex-1 overflow-y-auto py-4 minimal-scrollbar" x-data="{
+                    content: true,
+                    community: true,
+                    locations: true,
+                    performance: true
+                }">
                     @php
                         $linkBase = 'block px-5 py-3 rounded-xl mx-3 mb-1.5 transition hover:bg-white/10';
                         $active = 'bg-white/10 text-white';
                         $inactive = 'text-white/70';
+                        $categoryHeader = 'px-5 pt-4 pb-2 text-xs font-semibold text-white/50 uppercase tracking-wider flex items-center justify-between cursor-pointer hover:text-white/70 transition';
                     @endphp
+                    
                     <a href="{{ route('admin.dashboard') }}"
                         class="{{ $linkBase }} {{ request()->routeIs('admin.dashboard') ? $active : $inactive }}">
                         <span>Dashboard</span>
                     </a>
-                    <a href="{{ route('admin.blog-posts.index') }}"
-                        class="{{ $linkBase }} {{ request()->routeIs('admin.blog-posts.*') ? $active : $inactive }}">
-                        <span>Blog Posts</span>
-                    </a>
-                    <a href="{{ route('admin.career-posts.index') }}"
-                        class="{{ $linkBase }} {{ request()->routeIs('admin.career-posts.*') ? $active : $inactive }}">
-                        <span>Career Posts</span>
-                    </a>
-                    <a href="{{ route('admin.faqs.index') }}"
-                        class="{{ $linkBase }} {{ request()->routeIs('admin.faqs.*') ? $active : $inactive }}">
-                        <span>FAQs</span>
-                    </a>
-                    <a href="{{ route('admin.testimonials.index') }}"
-                        class="{{ $linkBase }} {{ request()->routeIs('admin.testimonials.*') ? $active : $inactive }}">
-                        <span>Testimonials</span>
-                    </a>
-                    <a href="{{ route('admin.assets.dashboard') }}"
-                        class="{{ $linkBase }} {{ request()->routeIs('admin.assets.*') ? $active : $inactive }}">
-                        <span>Asset Performance</span>
-                    </a>
+
+                    <!-- Content Section -->
+                    <div class="{{ $categoryHeader }} mt-4" @click="content = !content">
+                        <span>Content</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform" :class="content ? '' : 'rotate-180'">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div x-show="content" 
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 -translate-y-2"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 -translate-y-2">
+                        <a href="{{ route('admin.blog-posts.index') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.blog-posts.*') ? $active : $inactive }}">
+                            <span>Blog Posts</span>
+                        </a>
+                        <a href="{{ route('admin.career-posts.index') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.career-posts.*') ? $active : $inactive }}">
+                            <span>Career Posts</span>
+                        </a>
+                        <a href="{{ route('admin.press-items.index') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.press-items.*') ? $active : $inactive }}">
+                            <span>Press Items</span>
+                        </a>
+                    </div>
+
+                    <!-- Community Section -->
+                    <div class="{{ $categoryHeader }}" @click="community = !community">
+                        <span>Community</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform" :class="community ? '' : 'rotate-180'">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div x-show="community"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 -translate-y-2"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 -translate-y-2">
+                        <a href="{{ route('admin.faqs.index') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.faqs.*') ? $active : $inactive }}">
+                            <span>FAQs</span>
+                        </a>
+                        <a href="{{ route('admin.testimonials.index') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.testimonials.*') ? $active : $inactive }}">
+                            <span>Testimonials</span>
+                        </a>
+                    </div>
+
+                    <!-- Locations Section -->
+                    <div class="{{ $categoryHeader }}" @click="locations = !locations">
+                        <span>Locations</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform" :class="locations ? '' : 'rotate-180'">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div x-show="locations"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 -translate-y-2"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 -translate-y-2">
+                        <a href="{{ route('admin.states.index') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.states.*') ? $active : $inactive }}">
+                            <span>States</span>
+                        </a>
+                        <a href="{{ route('admin.branches.index') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.branches.*') ? $active : $inactive }}">
+                            <span>Branches</span>
+                        </a>
+                    </div>
+
+                    <!-- Performance Section -->
+                    <div class="{{ $categoryHeader }}" @click="performance = !performance">
+                        <span>Performance</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform" :class="performance ? '' : 'rotate-180'">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div x-show="performance"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 -translate-y-2"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 -translate-y-2">
+                        <a href="{{ route('admin.assets.dashboard') }}"
+                            class="{{ $linkBase }} {{ request()->routeIs('admin.assets.*') ? $active : $inactive }}">
+                            <span>Asset Performance</span>
+                        </a>
+                    </div>
                 </nav>
                 <div class="p-4 mt-auto border-t border-white/10">
                     <form method="POST" action="{{ route('logout') }}" class="flex">

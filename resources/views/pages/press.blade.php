@@ -9,11 +9,11 @@
                     <div class="text-center">
                         <h1
                             class="capitalize text-center mb-5 bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
-                            DgnRavePay Brand & Media Resources
+                            DgnRavePay Brand &amp; Media Resources
                         </h1>
                         <p class="font-medium text-base md:text-lg">
                             Access official DgnRavePay logos, media kits, product screenshots, and brand guidelines.
-                            Whether you’re a journalist, partner, or collaborator, our press resources are designed to
+                            Whether you're a journalist, partner, or collaborator, our press resources are designed to
                             help you tell our story with accuracy and impact
                         </p>
                     </div>
@@ -69,33 +69,35 @@
                 <section id="tab-news" data-tab-panel role="tabpanel" aria-labelledby="tab-btn-news">
                     <h2 class="font-bold text-[#1a1a1c] mb-6 md:md-10 leading-[1]">Inside the news</h2>
                     <div class="grid md:grid-cols-2 gap-5">
-                        <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/press-official-logo.png') }}" alt="Business feature article"
-                                class="aspect-video rounded object-cover">
-                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">The ranking: Africa’s Fastest Growing
-                                Companies 2025</h6>
-                            <p class="text-s md:text-sm text-stone-500">Punch Newspapers</p>
-                        </article>
-                        <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/press-img-money.jpg') }}" alt="Fintech growth story"
-                                class="aspect-video rounded object-cover">
-                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">Nigerian businesses increasingly skip traditional banks and turn to DgnRavePay</h6>
-                            <p class="text-s md:text-sm text-stone-500">Punch Newspapers</p>
-                        </article>
-                        <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/press-official-logo.png') }}" alt="Industry news article"
-                                class="aspect-video rounded object-cover">
-                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg"> The ranking: Africa’s Fastest Growing
-                                Companies 2025</h6>
-                            <p class="text-s md:text-sm text-stone-500">Punch Newspapers</p>
-                        </article>
-                        <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/press-img-money.jpg') }}" alt="Feature article"
-                                class="aspect-video rounded object-cover">
-                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">The ranking: Africa’s Fastest Growing
-                                Companies 2025</h6>
-                            <p class="text-s md:text-sm text-stone-500">Punch Newspapers</p>
-                        </article>
+                        @forelse ($newsItems as $item)
+                            <article class="space-y-3 {{ $item->url ? 'cursor-pointer group' : '' }}">
+                                @if ($item->url)
+                                    <a href="{{ $item->url }}" target="_blank" rel="noopener noreferrer" class="block">
+                                @endif
+                                        @if ($item->image_path)
+                                            <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->title }}"
+                                                class="aspect-video rounded object-cover {{ $item->url ? 'group-hover:opacity-90 transition' : '' }}">
+                                        @endif
+                                        <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg {{ $item->url ? 'group-hover:text-primary transition' : '' }}">
+                                            {{ $item->title }}
+                                            @if ($item->url)
+                                                <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                                </svg>
+                                            @endif
+                                        </h6>
+                                        @if ($item->description)
+                                            <p class="text-s md:text-sm text-stone-500">{{ $item->description }}</p>
+                                        @endif
+                                @if ($item->url)
+                                    </a>
+                                @endif
+                            </article>
+                        @empty
+                            <div class="col-span-2 text-center py-12 text-stone-500">
+                                <p>No news items available at the moment.</p>
+                            </div>
+                        @endforelse
                     </div>
                 </section>
 
@@ -103,26 +105,27 @@
                 <section id="tab-logo" data-tab-panel role="tabpanel" class="hidden" aria-labelledby="tab-btn-logo">
                     <h2 class="font-bold text-[#1a1a1c] mb-6 md:md-10 leading-[1]">Logo</h2>
                     <div class="grid sm:grid-cols-2 gap-5">
-                        <div class="rounded-xl p-6 bg-white border">
-                            <div class="aspect-[3/1] rounded flex items-center justify-center bg-neutral-900">
-                                <img src="{{ Vite::asset('resources/images/logo wide white.png') }}"
-                                    alt="DgnRavePay logo white" class="h-10">
+                        @forelse ($logoItems as $item)
+                            <div class="rounded-xl p-6 bg-white border">
+                                @if ($item->image_path)
+                                    <div class="aspect-[3/1] rounded flex items-center justify-center bg-neutral-100">
+                                        <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->title }}"
+                                            class="max-h-full max-w-full object-contain">
+                                    </div>
+                                @endif
+                                <div class="mt-4">
+                                    <h6 class="font-semibold text-sm mb-2">{{ $item->title }}</h6>
+                                    @if ($item->image_path)
+                                        <a href="{{ asset('storage/' . $item->image_path) }}" download
+                                            class="px-3 py-2 rounded-lg bg-primary text-white font-semibold text-sm inline-block">Download</a>
+                                    @endif
+                                </div>
                             </div>
-                            <div class="mt-4 flex gap-3 text-sm">
-                                <a href="{{ Vite::asset('resources/images/logo wide white.png') }}" download
-                                    class="px-3 py-2 rounded-lg bg-primary text-white font-semibold">PNG</a>
+                        @empty
+                            <div class="col-span-2 text-center py-12 text-stone-500">
+                                <p>No logo files available at the moment.</p>
                             </div>
-                        </div>
-                        <div class="rounded-xl p-6 bg-white border">
-                            <div class="aspect-[3/1] rounded flex items-center justify-center bg-neutral-100">
-                                <img src="{{ Vite::asset('resources/images/logo wide white.png') }}" alt="DgnRavePay logo"
-                                    class="h-10 invert brightness-0">
-                            </div>
-                            <div class="mt-4 flex gap-3 text-sm">
-                                <a href="{{ Vite::asset('resources/images/logo wide white.png') }}" download
-                                    class="px-3 py-2 rounded-lg bg-primary text-white font-semibold">PNG</a>
-                            </div>
-                        </div>
+                        @endforelse
                     </div>
                 </section>
 
@@ -130,14 +133,16 @@
                 <section id="tab-team" data-tab-panel role="tabpanel" class="hidden" aria-labelledby="tab-btn-team">
                     <h2 class="font-bold text-[#1a1a1c] mb-6 md:md-10 leading-[1]">Team Pictures</h2>
                     <div class="grid md:grid-cols-2 gap-5">
-                        <img src="{{ Vite::asset('resources/images/black woman smiling while pressing phone.png') }}"
-                            alt="Team member smiling using phone" class="aspect-video rounded object-cover">
-                        <img src="{{ Vite::asset('resources/images/man smiling.png') }}" alt="Team member portrait"
-                            class="aspect-video rounded object-cover">
-                        <img src="{{ Vite::asset('resources/images/woman hand holding phone.png') }}"
-                            alt="Team mobile demo" class="aspect-video rounded object-cover">
-                        <img src="{{ Vite::asset('resources/images/outbound circle logo.png') }}" alt="Brand graphic"
-                            class="aspect-video rounded object-cover">
+                        @forelse ($teamItems as $item)
+                            @if ($item->image_path)
+                                <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->title }}"
+                                    class="aspect-video rounded object-cover">
+                            @endif
+                        @empty
+                            <div class="col-span-2 text-center py-12 text-stone-500">
+                                <p>No team pictures available at the moment.</p>
+                            </div>
+                        @endforelse
                     </div>
                 </section>
 
@@ -146,18 +151,16 @@
                     aria-labelledby="tab-btn-product">
                     <h2 class="font-bold text-[#1a1a1c] mb-6 md:md-10 leading-[1]">Product images</h2>
                     <div class="grid md:grid-cols-2 gap-5">
-                        <img src="{{ Vite::asset('resources/images/loan phone.png') }}" alt="Loan feature mockup"
-                            class="aspect-video rounded object-cover">
-                        <img src="{{ Vite::asset('resources/images/loan cards.png') }}" alt="Loan cards"
-                            class="aspect-video rounded object-cover">
-                        <img src="{{ Vite::asset('resources/images/hand touching cards.png') }}" alt="Cards UI"
-                            class="aspect-video rounded object-cover">
-                        <img src="{{ Vite::asset('resources/images/hand holding phone with circle.png') }}"
-                            alt="Product in hand" class="aspect-video rounded object-cover">
-                        <img src="{{ Vite::asset('resources/images/account credited.svg') }}"
-                            alt="Account credited illustration" class="aspect-video rounded object-cover bg-white p-4">
-                        <img src="{{ Vite::asset('resources/images/pie chart.png') }}" alt="Analytics pie chart"
-                            class="aspect-video rounded object-cover">
+                        @forelse ($productItems as $item)
+                            @if ($item->image_path)
+                                <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->title }}"
+                                    class="aspect-video rounded object-cover">
+                            @endif
+                        @empty
+                            <div class="col-span-2 text-center py-12 text-stone-500">
+                                <p>No product images available at the moment.</p>
+                            </div>
+                        @endforelse
                     </div>
                 </section>
 
@@ -166,18 +169,22 @@
                     aria-labelledby="tab-btn-featured">
                     <h2 class="font-bold text-[#1a1a1c] mb-6 md:md-10 leading-[1]">Featured businesses</h2>
                     <div class="grid md:grid-cols-2 gap-5">
-                        <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/world.png') }}" alt="Global reach"
-                                class="aspect-video rounded object-cover">
-                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">Empowering merchants worldwide</h6>
-                            <p class="text-s md:text-sm text-stone-500">Case study</p>
-                        </article>
-                        <article class="space-y-3">
-                            <img src="{{ Vite::asset('resources/images/Outbound integrations 1.png') }}"
-                                alt="Integrations" class="aspect-video rounded object-cover">
-                            <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">Seamless integrations at scale</h6>
-                            <p class="text-s md:text-sm text-stone-500">Case study</p>
-                        </article>
+                        @forelse ($featuredItems as $item)
+                            <article class="space-y-3">
+                                @if ($item->image_path)
+                                    <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->title }}"
+                                        class="aspect-video rounded object-cover">
+                                @endif
+                                <h6 class="font-bold text-[#1a1a1c] text-base md:text-lg">{{ $item->title }}</h6>
+                                @if ($item->description)
+                                    <p class="text-s md:text-sm text-stone-500">{{ $item->description }}</p>
+                                @endif
+                            </article>
+                        @empty
+                            <div class="col-span-2 text-center py-12 text-stone-500">
+                                <p>No featured business items available at the moment.</p>
+                            </div>
+                        @endforelse
                     </div>
                 </section>
             </div>

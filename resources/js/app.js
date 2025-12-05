@@ -206,46 +206,42 @@ const navbarProductPersonal = `
     
                                     <a href="/virtual" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-virtual-img" src="${getImageUrl(
-                                            "pos_terminal.png"
-                                        )}" alt="pos terminal icon" class="size-6">
+    "pos_terminal.png"
+)}" alt="pos terminal icon" class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Virtual Cards</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
+                                            <span class="text-black/30 text-xs font-medium">Pay globally, instantly</span>
                                         </div>
                                     </a>
                                     <a href="/savings" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-savings-img" src="${getImageUrl(
-                                            "savings.png"
-                                        )}" alt="savings icon" class="size-6">
+    "savings.png"
+)}" alt="savings icon" class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Savings</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
+                                            <span class="text-black/30 text-xs font-medium">Grow smarter, save better</span>
                                         </div>
                                     </a>
                                     <a href="/loan" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-loan-img" src="${getImageUrl(
-                                            "loan.png"
-                                        )}" alt="loan icon" class="size-6">
+    "loan.png"
+)}" alt="loan icon" class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Loan</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
+                                            <span class="text-black/30 text-xs font-medium">Quick cash, anytime</span>
                                         </div>
                                     </a>
                                     <a href="/travel" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-hotel-img" src="${getImageUrl(
-                                            "hotel-bed.png"
-                                        )}" alt="hotel bed icon" class="size-6">
+    "hotel-bed.png"
+)}" alt="hotel bed icon" class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Travel and Hotel</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
+                                            <span class="text-black/30 text-xs font-medium">Book flights and Hotels with ease</span>
                                         </div>
                                     </a>
 `;
@@ -253,50 +249,46 @@ const navbarProductPersonal = `
 const navbarProductBusiness = `
                                     <a href="/pos" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-pos-img" src="${getImageUrl(
-                                            "pos_terminal.png"
-                                        )}" alt="POS & Terminal icon"
+    "pos_terminal.png"
+)}" alt="POS & Terminal icon"
                                             class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">POS & Terminal</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
+                                            <span class="text-black/30 text-xs font-medium">Smart POS for Fast Payments</span>
                                         </div>
                                     </a>
                                     <a href="/business-management" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-graph-img" src="${getImageUrl(
-                                            "graph-up.png"
-                                        )}" alt="Business graph up icon"
+    "graph-up.png"
+)}" alt="Business graph up icon"
                                             class="size-6">
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Business Management</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
+                                            <span class="text-black/30 text-xs font-medium">Tools to Manage Your Business</span>
                                         </div>
                                     </a>
                                     <a href="/payroll" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-loan-img" src="${getImageUrl(
-                                            "loan.png"
-                                        )}" alt="loan icon" class="size-6">
+    "loan.png"
+)}" alt="loan icon" class="size-6">
 
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Payroll</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
+                                            <span class="text-black/30 text-xs font-medium">Seamless Payroll for Your Team</span>
                                         </div>
                                     </a>
                                     <a href="/invoice" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-invoice-img" src="${getImageUrl(
-                                            "invoice.png"
-                                        )}" alt="invoice icon" class="size-6">
+    "invoice.png"
+)}" alt="invoice icon" class="size-6">
 
 
                                         <div class="text-left">
                                             <p class="font-bold text-sm mb-1.5 leading-1">Invoicing</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
+                                            <span class="text-black/30 text-xs font-medium">Quick and Easy Business Invoicing</span>
                                         </div>
                                     </a>
 `;

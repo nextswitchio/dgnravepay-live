@@ -25,7 +25,7 @@
                         <p class="md:font-[500] md:text-lg lg:text-xl mb-10">Automate payroll, manage deductions, taxes, and
                             payslips all inside DgnRavePay Business Suite.</p>
                         <div class="">
-                            <a href="#"
+                            <a href="https://app.dgnravepay.com/register"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                                 Create Your Business Account
                             </a>
@@ -71,7 +71,7 @@
                         data-aos="fade-up">
                         <div class="px-4 py-5 md:px-5 md:py-6">
                             <h6 class="font-bold text-xl md:text-2xl mb-1">Taxes, Deductions & Deductions</h6>
-                            <p>Handle PAYE, pensions, and benefits effortlessly.</p>
+                            <p class="text-stone-200">Handle PAYE, pensions, and benefits effortlessly.</p>
                         </div>
                         <img src="{{ Vite::asset('resources/images/circle-percentage.png') }}" alt=""
                             class="w-3/5 mx-auto mb-10">

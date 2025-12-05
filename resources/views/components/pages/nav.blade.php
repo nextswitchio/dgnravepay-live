@@ -65,8 +65,7 @@
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">About Us</p>
-                                    <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                        grow</span>
+                                    <span class="text-black/30 text-xs font-medium">Who we are and what we do</span>
                                 </div>
                             </a>
                             <a href="/career" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
@@ -74,8 +73,7 @@
                                     alt="virtual card icon" class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Careers</p>
-                                    <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                        grow</span>
+                                    <span class="text-black/30 text-xs font-medium">Build the future with us</span>
                                 </div>
                             </a>
                             <a href="/contact" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
@@ -83,8 +81,7 @@
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Contact Us</p>
-                                    <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                        grow</span>
+                                    <span class="text-black/30 text-xs font-medium">Connect with our team</span>
                                 </div>
                             </a>
                             <a href="/press" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
@@ -92,8 +89,7 @@
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Press and Media</p>
-                                    <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                        grow</span>
+                                    <span class="text-black/30 text-xs font-medium">News and media resources</span>
                                 </div>
                             </a>
 
@@ -111,8 +107,7 @@
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">DgnRavePay Blog</p>
-                                    <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                        grow</span>
+                                    <span class="text-black/30 text-xs font-medium">Trends and insights in fintech.</span>
                                 </div>
                             </a>
                             <a href="https://help.dgnravepay.com" target="_blank"
@@ -122,8 +117,7 @@
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Help Center</p>
-                                    <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                        grow</span>
+                                    <span class="text-black/30 text-xs font-medium">Quick answers and support</span>
                                 </div>
                             </a>
                             <a href="/policy" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
@@ -132,8 +126,7 @@
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">IMF Policy</p>
-                                    <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                        grow</span>
+                                    <span class="text-black/30 text-xs font-medium">Integrity and fair practices</span>
                                 </div>
                             </a>
                             <a href="/whistleblower" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
@@ -142,8 +135,7 @@
                                     class="size-6">
                                 <div class="text-left">
                                     <p class="font-bold text-sm mb-1.5 leading-1">Whistleblower Policy</p>
-                                    <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                        grow</span>
+                                    <span class="text-black/30 text-xs font-medium"> Confidential, safe reporting</span>
                                 </div>
                             </a>
 
@@ -152,7 +144,7 @@
                 </li>
             </ul>
             <div class="">
-                <a href="#"
+                <a href="https://app.dgnravepay.com/register"
                     class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 font-medium shadow-lg">Get
                     Started
                 </a>
@@ -233,8 +225,7 @@
 
                             <div class="text-left">
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('virtual') ? 'text-yellow-600' : '' }}">Virtual Cards</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
+                                <span class="text-black/30 text-xs font-medium">Pay globally, instantly</span>
                             </div>
                         </a>
                         <a href="/savings" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('savings') ? 'bg-yellow-50' : '' }}">
@@ -243,8 +234,7 @@
 
                             <div class="text-left">
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('savings') ? 'text-yellow-600' : '' }}">Savings</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
+                                <span class="text-black/30 text-xs font-medium">Grow smarter, save better</span>
                             </div>
                         </a>
                         <a href="/loan" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('loan') ? 'bg-yellow-50' : '' }}">
@@ -253,8 +243,7 @@
 
                             <div class="text-left">
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('loan') ? 'text-yellow-600' : '' }}">Loan</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
+                                <span class="text-black/30 text-xs font-medium">Quick cash, anytime</span>
                             </div>
                         </a>
                         <a href="/travel" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('travel') ? 'bg-yellow-50' : '' }}">
@@ -263,8 +252,7 @@
 
                             <div class="text-left">
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('travel') ? 'text-yellow-600' : '' }}">Travel and Hotel</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
+                                <span class="text-black/30 text-xs font-medium">Book flights and Hotels with ease </span>
                             </div>
                         </a>
                     </div>
@@ -276,40 +264,36 @@
 
                             <div class="text-left">
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('pos') ? 'text-yellow-600' : '' }}">POS & Terminal</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
+                                <span class="text-black/30 text-xs font-medium">Smart POS for Fast Payments</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('business-management') ? 'bg-yellow-50' : '' }}">
+                        <a href="/business-management" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('business-management') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/graph-up.png') }}"
                                 alt="Business graph up icon" class="size-6">
 
                             <div class="text-left">
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('business-management') ? 'text-yellow-600' : '' }}">Business Management</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
+                                <span class="text-black/30 text-xs font-medium">Tools to Manage Your Business</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('payroll') ? 'bg-yellow-50' : '' }}">
+                        <a href="/payroll" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('payroll') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon"
                                 class="size-6">
 
 
                             <div class="text-left">
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('payroll') ? 'text-yellow-600' : '' }}">Payroll</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
+                                <span class="text-black/30 text-xs font-medium">Seamless Payroll for Your Team</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('invoice') ? 'bg-yellow-50' : '' }}">
+                        <a href="/invoice" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('invoice') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/invoice.png') }}" alt="invoice icon"
                                 class="size-6">
 
 
                             <div class="text-left">
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('invoice') ? 'text-yellow-600' : '' }}">Invoicing</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
+                                <span class="text-black/30 text-xs font-medium">Quick and Easy Business Invoicing</span>
                             </div>
                         </a>
                     </div>
@@ -340,8 +324,7 @@
                         <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon" class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('about') ? 'text-yellow-600' : '' }}">About Us</p>
-                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                grow</span>
+                            <span class="text-black/30 text-xs font-medium">Who we are and what we do</span>
                         </div>
                     </a>
                     <a href="/career" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('career') ? 'bg-yellow-50' : '' }}">
@@ -349,8 +332,7 @@
                             class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('career') ? 'text-yellow-600' : '' }}">Careers</p>
-                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                grow</span>
+                            <span class="text-black/30 text-xs font-medium">Build the future with us</span>
                         </div>
                     </a>
                     <a href="/contact" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('contact') ? 'bg-yellow-50' : '' }}">
@@ -358,16 +340,14 @@
                             class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('contact') ? 'text-yellow-600' : '' }}">Contact Us</p>
-                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                grow</span>
+                            <span class="text-black/30 text-xs font-medium">Connect with our team</span>
                         </div>
                     </a>
                     <a href="/press" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item {{ request()->is('press') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon" class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('press') ? 'text-yellow-600' : '' }}">Press and Media</p>
-                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                grow</span>
+                            <span class="text-black/30 text-xs font-medium">News and media resources</span>
                         </div>
                     </a>
                 </div>
@@ -399,17 +379,15 @@
                             class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('blog') ? 'text-yellow-600' : '' }}">DgnRavePay Blog</p>
-                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                grow</span>
+                            <span class="text-black/30 text-xs font-medium">Trends and insights in fintech.</span>
                         </div>
                     </a>
-                    <a href="#" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('help-center') ? 'bg-yellow-50' : '' }}">
+                    <a href="https://help.dgnravepay.com" target="_blank" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('help-center') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/help_center.png') }}" alt="help center icon"
                             class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('help-center') ? 'text-yellow-600' : '' }}">Help Center</p>
-                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                grow</span>
+                            <span class="text-black/30 text-xs font-medium">Quick answers and support</span>
                         </div>
                     </a>
                     <a href="/policy" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('policy') ? 'bg-yellow-50' : '' }}">
@@ -417,8 +395,7 @@
                             class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 {{ request()->is('policy') ? 'text-yellow-600' : '' }}">IMF Policy</p>
-                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                grow</span>
+                            <span class="text-black/30 text-xs font-medium">Integrity and fair practices</span>
                         </div>
                     </a>
                     <a href="/whistleblower" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('whistleblower') ? 'bg-yellow-50' : '' }}">
@@ -426,8 +403,7 @@
                             class="size-6">
                         <div class="text-left">
                             <p class="font-bold text-sm mb-1.5 leading-1 {{ request()->is('whistleblower') ? 'text-yellow-600' : '' }}">Whistleblower Policy</p>
-                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                grow</span>
+                            <span class="text-black/30 text-xs font-medium">Confidential, safe reporting</span>
                         </div>
                     </a>
                 </div>
@@ -436,7 +412,7 @@
             </div>
         <!-- Get Started Button -->
         <div class="p-4 border-t border-gray-200 bg-white">
-            <a href="#"
+            <a href="https://app.dgnravepay.com/register"
                 class="block w-full px-4 py-3 bg-primary text-white text-center font-medium rounded-md hover:bg-yellow-500 transition-colors duration-200">
                 Get Started
             </a>

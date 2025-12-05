@@ -16,11 +16,11 @@
                             people. Join a team where your impact goes beyond work.
                         </p>
                         <div class="flex flex-col md:flex-row items-center justify-center gap-3 mt-10">
-                            <a href="#"
+                            <a href="#roles"
                                 class="w-full md:w-auto bg-primary text-white py-3 px-4 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                                 Explore Opportunities
                             </a>
-                            <a href="#"
+                            <a href="#culture"
                                 class="bg-primary/5 w-full md:w-auto px-4 py-4 rounded-xl border border-primary-2 hover:bg-amber-100 transition-all">Discover
                                 Our Culture</a>
                         </div>
@@ -49,7 +49,7 @@
             <x-enlarging-img />
         </section>
 
-        <section class="py-20 bg-slate-200">
+        <section id="culture" class="py-20 bg-slate-200">
             <div class="custom-container mx-auto  px-5 md:px-10 py-10">
                 <div class="lg:grid lg:grid-cols-2 space-y-10 lg:space-y-0">
                     <div class="">
@@ -198,7 +198,7 @@
         </section>
 
         <!-- Available roles -->
-        <section class="py-20 bg-slate-200">
+        <section id="roles" class="py-20 bg-slate-200">
             <div class="custom-container mx-auto  px-5 md:px-10 py-10">
                 <div class="mb-10 px-5 md:px-10">
                     <h2 class="mb-3 leading-[1] text-center">

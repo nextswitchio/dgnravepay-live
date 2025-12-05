@@ -15,7 +15,7 @@
                             powerful tools built to
                             help you thrive<br>whether you re just starting or scaling fast.</p>
                         <div class="">
-                            <a href="#"
+                            <a href="https://app.dgnravepay.com/register"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                                 Start Managing Smarter
                             </a>
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="https://app.dgnravepay.com/register" class="text-primary font-bold flex items-center gap-2">
                                     <span>Open Business Wallet</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -102,7 +102,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="/pos" class="text-primary font-bold flex items-center gap-2">
                                     <span>Request for POS</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -140,7 +140,7 @@
                                         payments, subscriptions, and international transactions.
                                     </p>
                                     <div class="mt-10">
-                                        <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                        <a href="/virtual" class="text-primary font-bold flex items-center gap-2">
                                             <span>Create Virtual Card</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -180,7 +180,7 @@
                                         activity.
                                     </p>
                                     <div class="mt-10">
-                                        <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                        <a href="/loan" class="text-primary font-bold flex items-center gap-2">
                                             <span>Apply now</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -227,7 +227,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="/invoice" class="text-primary font-bold flex items-center gap-2">
                                     <span>Send My First Invoice</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -267,7 +267,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="/payroll" class="text-primary font-bold flex items-center gap-2">
                                     <span>Convert money</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -279,8 +279,8 @@
                             </div>
                         </div>
                         <div class="md:col-span-3 aspect-[16/12] lg:aspect-square relative overflow-hidden">
-                            <img src="{{ Vite::asset('resources/images/phone app mockup.png') }}" alt=""
-                                class="w-full absolute -bottom-20">
+                            <img src="{{ Vite::asset('resources/images/invoice-correct.png') }}" alt=""
+                                class="w-full absolute -bottom-0">
                         </div>
                     </div>
                 </div>
@@ -299,7 +299,7 @@
                         and
                         hassle-free bill management.</p>
                     <div class="mt-10">
-                        <a href="#"
+                        <a href="https://app.dgnravepay.com/register"
                             class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                             Get Your Personal Account
                         </a>
@@ -314,7 +314,7 @@
             <div class="w-full border-t border-white/20"></div>
             <div class="custom-container mx-auto  px-5 md:px-10 py-10 md:py-20 grid md:grid-cols-3 gap-5 text-white">
                 <div
-                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                    class="hover:!scale-[1.05] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/statistics.png') }}" alt=""
                         class="w-full object-cover mx-auto">
                     <div class="mt-10 md:mt-0">
@@ -324,7 +324,7 @@
                     </div>
                 </div>
                 <div
-                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                    class="hover:!scale-[1.05] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/cards stack.png') }}" alt="" class="w-full">
                     <div class="mt-10 md:mt-0">
                         <span class="text-sm text-white/40">02-</span>
@@ -335,7 +335,7 @@
                     </div>
                 </div>
                 <div
-                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                    class="hover:!scale-[1.05] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/pie chart dark.png') }}" alt="" class="w-full">
                     <div class="mt-10 md:mt-0">
                         <span class="text-sm text-white/40">03-</span>
@@ -346,7 +346,7 @@
                     </div>
                 </div>
                 <div
-                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                    class="hover:!scale-[1.05] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/world.png') }}" alt="" class="w-4/5 mx-auto">
                     <div class="mt-10">
                         <span class="text-sm text-white/40">04-</span>
@@ -357,7 +357,7 @@
                     </div>
                 </div>
                 <div
-                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
+                    class="hover:!scale-[1.05] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between">
                     <img src="{{ Vite::asset('resources/images/outbound card circle dark.png') }}" alt=""
                         class="w-full">
                     <div class="mt-10 md:mt-0">
@@ -369,7 +369,7 @@
                     </div>
                 </div>
                 <div
-                    class="hover:scale-[1.02] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between relative">
+                    class="hover:!scale-[1.05] transition-transform bg-white/5 rounded-xl p-5 pb-7 flex flex-col justify-between relative">
                     {{-- <img src="{{ Vite::asset('resources/images/logo black.png') }}" alt="DngRavePay Logo black colored"
                     class="absolute w-full top-0 left-0 -z-[1]"> --}}
                     <img src="{{ Vite::asset('resources/images/outbound circle logo.png') }}" alt=""

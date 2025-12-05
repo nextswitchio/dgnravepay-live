@@ -2,6 +2,9 @@
 @section('meta_description',
     'Automate savings with RaveGoals, stay flexible with RaveFlex, and lock value with
     RaveVault—earn more and stay in control.')
+
+    @vite('resources/js/pages/savings.js')
+
     <x-guest-layout>
         <section class="min-h-screen relative pt-10">
             <div class="pt-20 md:pt-32 lg:pt-40">
@@ -15,7 +18,7 @@
                             choose how you save, how you grow, and when
                             you access your money.</p>
                         <div class="">
-                            <a href="#"
+                            <a href="https://app.dgnravepay.com/register"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                                 Start Saving Now
                             </a>
@@ -86,13 +89,13 @@
                         future,
                         DgnRavePay offers flexible savings tailored to your life</p>
                     <div class="mt-10">
-                        <a href="#"
+                        <a href="#plans"
                             class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                             Compare Plans
                         </a>
                     </div>
                 </div>
-                <div class="mt-20 space-y-10">
+                <div id="plans" class="mt-20 space-y-10">
                     <!-- Card 1 -->
                     <div class="rounded-2xl bg-gradient-to-br from-white to-secondary lg:grid grid-cols-7 hover:!scale-[1.02] transition-transform"
                         data-aos="zoom-in">
@@ -115,7 +118,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="https://app.dgnravepay.com/register" class="text-primary font-bold flex items-center gap-2">
                                     <span>Send & Your First Goal</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -157,7 +160,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="https://app.dgnravepay.com/register" class="text-primary font-bold flex items-center gap-2">
                                     <span>Start Flexible Saving</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -200,7 +203,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="https://app.dgnravepay.com/register" class="text-primary font-bold flex items-center gap-2">
                                     <span>Lock & Earn More</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -229,11 +232,11 @@
         <section class="my-40">
             <div class="custom-container mx-auto  px-5 md:px-10 space-y-20 md:space-y-40">
                 <!-- JOIN SECTION -->
-                <x-pages.join-section />
+                <x-pages.savings-section />
                 <!-- TESTIMONIAL -->
-                <x-pages.testimonial-section page="savings" />
+                <x-pages.testimonial-section title="Why Smart Users Trust Our Virtual USD Cards" page="savings" />
                 <!-- FAQ -->
-                <x-pages.faq-section page="savings" />
+                <x-pages.faq-section title="Everything About Your Virtual USD Card, Made Simple" page="savings" />
             </div>
 
         </section>

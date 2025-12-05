@@ -9,7 +9,7 @@
             <p class="text-white">Your lifestyle companion for smart payments, instant gifting, seamless travel, and
                 hassle-free bill management.</p>
             <div class="mt-10">
-                <a href="#"
+                <a href="https://app.dgnravepay.com/register"
                     class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                     Create your personal account
                 </a>
@@ -84,22 +84,22 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-5">
-                            <a href="#"
+                            <a href="https://twitter.com/dgnravepay" target="_blank"
                                 class="flex items-center justify-center px-2 aspect-square rounded-full border-2 border-white/10 hover:bg-white/10 transition">
                                 <img src="{{ Vite::asset('resources/images/twitter icon.svg') }}"
                                     alt="Twitter/X Icon svg" class="">
                             </a>
-                            <a href="#"
+                            <a href="https://linkedin.com/company/dgnravepay" target="_blank"
                                 class="flex items-center justify-center px-2 aspect-square rounded-full border-2 border-white/10 hover:bg-white/10 transition">
                                 <img src="{{ Vite::asset('resources/images/linkedin icon.svg') }}"
                                     alt="LinkedIn Icon svg" class="">
                             </a>
-                            <a href="#"
+                            <a href="https://instagram.com/dgnravepay" target="_blank"
                                 class="flex items-center justify-center px-2 aspect-square rounded-full border-2 border-white/10 hover:bg-white/10 transition">
                                 <img src="{{ Vite::asset('resources/images/instagram icon.svg') }}"
                                     alt="Instagram Icon svg" class="">
                             </a>
-                            <a href="#"
+                            <a href="https://facebook.com/dgnravepay" target="_blank"
                                 class="flex items-center justify-center px-2 aspect-square rounded-full border-2 border-white/10 hover:bg-white/10 transition">
                                 <img src="{{ Vite::asset('resources/images/facebook icon.svg') }}"
                                     alt="Facebook Icon svg" class="">
@@ -114,8 +114,8 @@
                             <li><a href="/" class="hover:text-white transition">Personal Account</a></li>
                             <li><a href="/virtual" class="hover:text-white transition">Virtual USD Card</a></li>
                             <li><a href="/savings" class="hover:text-white transition">Savings</a></li>
-                            <li><a href="#" class="hover:text-white transition">Loans</a></li>
-                            <li><a href="#" class="hover:text-white transition">Travels</a></li>
+                            <li><a href="/loan" class="hover:text-white transition">Loans</a></li>
+                            <li><a href="/travel" class="hover:text-white transition">Travels</a></li>
                         </ul>
                     </div>
 
@@ -124,12 +124,12 @@
                         <h4 class="text-lg font-semibold mb-4">For Businesses</h4>
                         <ul class="space-y-2 text-neutral-400">
                             <li><a href="/business" class="hover:text-white transition">Business Account</a></li>
-                            <li><a href="#" class="hover:text-white transition">Business Loan</a></li>
-                            <li><a href="#" class="hover:text-white transition">Point of Sale Terminal</a></li>
-                            <li><a href="#" class="hover:text-white transition">Loans</a></li>
-                            <li><a href="#" class="hover:text-white transition">Business Management</a></li>
-                            <li><a href="#" class="hover:text-white transition">Payroll</a></li>
-                            <li><a href="#" class="hover:text-white transition">Invoicing</a></li>
+                            <li><a href="/loan" class="hover:text-white transition">Business Loan</a></li>
+                            <li><a href="/pos" class="hover:text-white transition">Point of Sale Terminal</a></li>
+                            <li><a href="/loan" class="hover:text-white transition">Loans</a></li>
+                            <li><a href="/business-management" class="hover:text-white transition">Business Management</a></li>
+                            <li><a href="/payroll" class=" hover:text-white transition">Payroll</a></li>
+                            <li><a href="/invoice" class="hover:text-white transition">Invoicing</a></li>
                         </ul>
                     </div>
 
@@ -149,7 +149,7 @@
                         <ul class="space-y-2 text-neutral-400">
                             <li><a href="{{ route('blog.index') }}" class="hover:text-white transition">DynRavePay
                                     Blog</a></li>
-                            <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                            <li><a href="/contact" class="hover:text-white transition">Help Center</a></li>
                             <li><a href="/policy" class="hover:text-white transition">IMF Policy</a></li>
                             <li><a href="/whistleblower" class="hover:text-white transition">Whistleblower Policy</a>
                             </li>

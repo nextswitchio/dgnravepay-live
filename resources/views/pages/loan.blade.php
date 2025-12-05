@@ -70,7 +70,7 @@
                         <p class="md:font-[500] md:text-lg lg:text-xl mb-10">Business, salary, or car loan one platform,
                             instant approval, seamless disbursal.</p>
                         <div class="">
-                            <a href="#"
+                            <a href="https://app.dgnravepay.com/register"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                                 Apply in 2 minutes
                             </a>
@@ -118,7 +118,7 @@
                                 <h6 class="font-bold text-xl md:text-2xl mb-1">Transparent</h6>
                                 <p>No hidden fees, clear interest</p>
                             </div>
-                            <img src="{{ Vite::asset('resources/images/amount circle.png') }}" alt=""
+                            <img src="{{ Vite::asset('resources/images/amount circle-orange.png') }}" alt=""
                                 class="w-full">
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                         </div>
                     @endforeach
                 </div>
-                <img src="{{ Vite::asset('resources/images/hand.png') }}" alt="POS Image" class="mx-auto mt-10 w-2xl">
+                <img src="{{ Vite::asset('resources/images/hand-white.png') }}" alt="POS Image" class="mx-auto mt-10 w-2xl">
                 <div class="mt-20 space-y-10">
                     <!-- Card 1 -->
                     @foreach ($cards as $card)

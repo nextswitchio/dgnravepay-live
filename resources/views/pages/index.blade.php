@@ -14,7 +14,7 @@
                             and
                             live boldly. No paperwork. No friction.<br>Just pure financial freedom on your terms.</p>
                         <div class="">
-                            <a href="#"
+                            <a href="https://app.dgnravepay.com/register"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">Get
                                 the app - It's Free
                             </a>
@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="https://app.dgnravepay.com/register" class="text-primary font-bold flex items-center gap-2">
                                     <span>Send & Receive Instantly</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -101,7 +101,7 @@
                                         smart bill payment system designed for ease, insights, and
                                         rewards.</p>
                                     <div class="mt-10">
-                                        <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                        <a href="https://app.dgnravepay.com/register" class="text-primary font-bold flex items-center gap-2">
                                             <span>Pay My Bills</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -136,7 +136,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="/virtual" class="text-primary font-bold flex items-center gap-2">
                                     <span>Convert money</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -184,7 +184,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-10">
-                                        <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                        <a href="/loan" class="text-primary font-bold flex items-center gap-2">
                                             <span>Make a transfer</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -248,7 +248,7 @@
                                 </div>
                             </div>
                             <div class="mt-10">
-                                <a href="#" class="text-primary font-bold flex items-center gap-2">
+                                <a href="/savings" class="text-primary font-bold flex items-center gap-2">
                                     <span>Convert money</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-5">
@@ -278,7 +278,7 @@
                         and
                         hassle-free bill management.</p>
                     <div class="mt-10">
-                        <a href="#"
+                        <a href="https://app.dgnravepay.com/register"
                             class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                             Get Your Card Now
                         </a>
@@ -292,7 +292,7 @@
             </div>
             <div class="w-full border-t border-white/20"></div>
             <div class="custom-container mx-auto  px-5 md:px-10 py-10 md:py-20 grid md:grid-cols-3 gap-5 text-white">
-                <div class="bg-white/5 rounded-xl hover:scale-[1.02] transition-transform">
+                <div class="bg-white/5 rounded-xl hover:!scale-[1.05] transition-transform">
                     <div class="p-5 pb-7">
                         <img src="{{ Vite::asset('resources/images/Outbound integrations 1.png') }}" alt=""
                             class="w-full">
@@ -302,7 +302,7 @@
                         <h5 class="text-base md:text-xl lg:text-2xl">Request Money and Bills with Ease</h5>
                     </div>
                 </div>
-                <div class="bg-white/5 rounded-xl hover:scale-[1.02] transition-transform flex flex-col relative -z-[0]">
+                <div class="bg-white/5 rounded-xl hover:!scale-[1.05] transition-transform flex flex-col relative -z-[0]">
                     <div class="p-5 pb-7 relative overflow-hidden">
                         <img src="{{ Vite::asset('resources/images/outbound circle logo.png') }}" alt=""
                             class="w-[90%] -mt-20">
@@ -312,7 +312,7 @@
                         <h5 class="text-base md:text-xl lg:text-2xl">Smart, Fast, and Borderless Gift Cards</h5>
                     </div>
                 </div>
-                <div class="bg-white/5 rounded-xl hover:scale-[1.02] transition-transform">
+                <div class="bg-white/5 rounded-xl hover:!scale-[1.05] transition-transform">
                     <div class="p-5 pb-7 relative">
                         <img src="{{ Vite::asset('resources/images/world.png') }}" alt="" class="w-4/5 mx-auto">
                     </div>

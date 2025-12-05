@@ -14,7 +14,7 @@
                             secure Virtual USD Card
                             shop, subscribe, and pay anywhere with confidence.</p>
                         <div class="">
-                            <a href="#"
+                            <a href="https://app.dgnravepay.com/register"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                                 Start Managing Smarter
                             </a>
@@ -200,7 +200,7 @@
                     Stay in control of every payment with your DgnRavePay Dollar Card.
                 </h3>
                 <div class="mt-10 text-center">
-                    <a href="#"
+                    <a href="https://app.dgnravepay.com/register"
                         class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                         Get Your Card Now
                     </a>

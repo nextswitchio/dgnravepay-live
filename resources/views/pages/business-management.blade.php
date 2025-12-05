@@ -25,7 +25,7 @@
                         <p class="md:font-[500] md:text-lg lg:text-xl mb-10">Join the all-in-one business management platform
                             built for Nigerian SMEs, scalable teams and multi-unit operators.</p>
                         <div class="">
-                            <a href="#"
+                            <a href="https://app.dgnravepay.com/register"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                                 Create Your Business Account
                             </a>

@@ -19,25 +19,25 @@
                 'title' => 'Pay salaries, track deductions, and generate payslips all within one secure dashboard',
                 'image' => 'resources/images/pos-payroll.jpg',
                 'category' => 'Payroll Management',
-                'link' => '#',
+                'link' => '/payroll',
             ],
             [
                 'title' => 'We are fully regulated by Fintrac and Fincen, so your money is 100% Protected.',
                 'image' => 'resources/images/pos-invoice.jpg',
                 'category' => 'Business Invoicing',
-                'link' => '#',
+                'link' => '/invoice',
             ],
             [
                 'title' => 'Send professional invoices and accelerate your global payments from your clients.',
                 'image' => 'resources/images/pos-approval.jpg',
                 'category' => 'Approvals',
-                'link' => '#',
+                'link' => '/business-management',
             ],
             [
                 'title' => 'We are fully regulated by Fintrac and Fincen, so your money is 100% Protected.',
                 'image' => 'resources/images/pos-bills.jpg',
                 'category' => 'Bills Payment',
-                'link' => '#',
+                'link' => '/business-management',
             ],
         ];
     @endphp
@@ -54,7 +54,7 @@
                             network, our POS makes payments fast, secure, and stress-free while helping you track
                             transactions in real time and scale with ease.</p>
                         <div class="">
-                            <a href="#"
+                            <a href="https://app.dgnravepay.com/register"
                                 class="bg-primary text-white py-2 px-4 md:py-4 md:px-5 hover:bg-primary/70 transition-all rounded-lg border-b-2 border-primary-2 md:text-base font-medium shadow-lg">
                                 Start Managing Smarter
                             </a>
@@ -146,7 +146,7 @@
             <div class="custom-container mx-auto  px-5 md:px-10 space-y-20 md:space-y-40">
                 <!-- JOIN SECTION -->
                 <x-pages.setup-section />
-                <div class="custom-container mx-auto  px-5 md:px-10 py-20 md:py-28">
+                <div class="py-20 md:py-28">
                     <div class="flex items-center justify-between gap-4">
                         <h2 class="mb-5" data-aos="fade-up">Power Beyond Payments </h2>
                         <div class="flex gap-5 relative">
@@ -190,9 +190,9 @@
                     </div>
                 </div>
                 <!-- TESTIMONIAL -->
-                <x-pages.testimonial-section page="pos" />
+                <x-pages.testimonial-section title="Why Businesses Trust Our POS" description="From global shopping to streaming subscriptions, see how thousands of people like you are using DgnRavePay cards to spend securely and without borders." page="pos" />
                 <!-- FAQ -->
-                <x-pages.faq-section page="pos" />
+                <x-pages.faq-section title="FAQs about our POS" description="We’ve answered the most common questions so you can get started with confidence — no hidden fees, no confusion, just clarity." page="pos" />
             </div>
 
         </section>
