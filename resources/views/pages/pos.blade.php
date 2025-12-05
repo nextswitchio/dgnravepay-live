@@ -16,27 +16,27 @@
 
         $articles = [
             [
-                'title' => 'How to Choose the Right POS Terminal for Your Business',
-                'image' => 'resources/images/payroll.png',
-                'category' => 'POS Terminal',
+                'title' => 'Pay salaries, track deductions, and generate payslips all within one secure dashboard',
+                'image' => 'resources/images/pos-payroll.jpg',
+                'category' => 'Payroll Management',
                 'link' => '#',
             ],
             [
-                'title' => 'Top 5 Benefits of Using a POS System for Small Businesses',
-                'image' => 'resources/images/payroll.png',
-                'category' => 'POS System',
+                'title' => 'We are fully regulated by Fintrac and Fincen, so your money is 100% Protected.',
+                'image' => 'resources/images/pos-invoice.jpg',
+                'category' => 'Business Invoicing',
                 'link' => '#',
             ],
             [
-                'title' => 'Understanding POS Transaction Fees: What You Need to Know',
-                'image' => 'resources/images/payroll.png',
-                'category' => 'Transaction Fees',
+                'title' => 'Send professional invoices and accelerate your global payments from your clients.',
+                'image' => 'resources/images/pos-approval.jpg',
+                'category' => 'Approvals',
                 'link' => '#',
             ],
             [
-                'title' => 'The Future of POS Technology: Trends to Watch in 2024',
-                'image' => 'resources/images/payroll.png',
-                'category' => 'POS Technology',
+                'title' => 'We are fully regulated by Fintrac and Fincen, so your money is 100% Protected.',
+                'image' => 'resources/images/pos-bills.jpg',
+                'category' => 'Bills Payment',
                 'link' => '#',
             ],
         ];

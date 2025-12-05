@@ -34,7 +34,7 @@
                 'category' => 'SALARY LOAN',
                 'title' => 'Instant Salary Support When You Need It',
                 'description' => 'Handle emergencies, school fees, or personal expenses with confidence. ',
-                'image' => 'resources/images/loan-card-image.jpg',
+                'image' => 'resources/images/loan-woman-money.jpg',
                 'bg-color' => 'to-amber-200',
                 'list' => [
                     'Get up to 70% of your monthly income.',
@@ -48,7 +48,7 @@
                 'title' => 'Own The Car You’ve Been Dreaming Of',
                 'description' =>
                     'Whether for personal comfort or business mobility, DgnRavePay Car Loan gets you behind the wheel with flexible repayment plans and clear ownership terms no hidden fees.',
-                'image' => 'resources/images/loan-card-image.jpg',
+                'image' => 'resources/images/loan-woman-key.jpg',
                 'bg-color' => 'to-teal-200',
                 'list' => [
                     'Finance up to 80% of your vehicle cost.',
@@ -189,10 +189,8 @@
             </div>
         </section>
 
-        <section class="my-40">
+        <section class="my-20">
             <div class="custom-container mx-auto  px-5 md:px-10 space-y-20 md:space-y-40">
-                <!-- JOIN SECTION -->
-                <x-pages.join-section />
                 <!-- TESTIMONIAL -->
                 <x-pages.testimonial-section />
                 <!-- FAQ -->
