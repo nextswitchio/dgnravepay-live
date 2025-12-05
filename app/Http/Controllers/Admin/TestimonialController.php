@@ -33,6 +33,7 @@ class TestimonialController extends Controller
       'is_featured' => self::BOOL_SOMETIMES,
       'is_published' => self::BOOL_SOMETIMES,
       'sort_order' => 'nullable|integer',
+      'page' => 'nullable|string',
     ]);
 
     $avatarPath = null;
@@ -50,6 +51,7 @@ class TestimonialController extends Controller
       'is_featured' => (bool)($data['is_featured'] ?? false),
       'is_published' => (bool)($data['is_published'] ?? false),
       'sort_order' => $data['sort_order'] ?? 0,
+      'page' => $data['page'] ?? null,
     ]);
 
     return redirect()->route('admin.testimonials.index')->with('status', 'Testimonial created');
@@ -72,6 +74,7 @@ class TestimonialController extends Controller
       'is_featured' => self::BOOL_SOMETIMES,
       'is_published' => self::BOOL_SOMETIMES,
       'sort_order' => 'nullable|integer',
+      'page' => 'nullable|string',
     ]);
 
     if ($request->hasFile('avatar')) {
@@ -90,6 +93,7 @@ class TestimonialController extends Controller
       'is_featured' => (bool)($data['is_featured'] ?? false),
       'is_published' => (bool)($data['is_published'] ?? false),
       'sort_order' => $data['sort_order'] ?? $testimonial->sort_order,
+      'page' => $data['page'] ?? $testimonial->page,
     ])->save();
 
     return redirect()->route('admin.testimonials.index')->with('status', 'Testimonial updated');

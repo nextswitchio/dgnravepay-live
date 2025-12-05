@@ -2,6 +2,7 @@
     'title' => 'Voices of Trust. Stories of Impact.',
     'description' =>
         'See why over 100,000 Nigerians have made DgnRavePay their go-to financial app. Real reviews, real stories, real results.',
+    'page' => null,
 ])
 <div class="container mx-auto py-16 md:py-24 lg:py-32">
     <div class="mb-10 px-5 md:px-10" data-aos="fade-up">
@@ -10,7 +11,13 @@
     </div>
     <div id="testimonials-marquee" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
         @php
-            $testimonials = \App\Models\Testimonial::published()->orderBy('sort_order')->orderByDesc('id')->get();
+            $query = \App\Models\Testimonial::published();
+            if ($page) {
+                $query->where('page', $page);
+            } else {
+                $query->whereNull('page');
+            }
+            $testimonials = $query->orderBy('sort_order')->orderByDesc('id')->get();
         @endphp
         @if ($testimonials->isNotEmpty())
 

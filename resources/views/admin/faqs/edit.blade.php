@@ -18,6 +18,15 @@
             <label class="block" for="answer">Answer</label>
             <textarea id="answer" name="answer" class="w-full border p-2 h-48" required>{{ old('answer', $faq->answer) }}</textarea>
         </div>
+        <div>
+            <label class="block" for="page">Page (Optional)</label>
+            <select id="page" name="page" class="w-full border p-2">
+                <option value="">Global (All Pages)</option>
+                @foreach (\App\Models\Faq::PAGES as $key => $label)
+                    <option value="{{ $key }}" @selected(old('page', $faq->page) === $key)>{{ $label }}</option>
+                @endforeach
+            </select>
+        </div>
         <div class="flex items-center gap-2">
             <input type="checkbox" name="is_published" value="1" id="is_published"
                 {{ old('is_published', $faq->is_published) ? 'checked' : '' }} />

@@ -36,10 +36,21 @@
                 </select>
             </div>
         </div>
-        <div>
-            <label class="block">Avatar</label>
-            <input type="file" name="avatar" accept="image/*" class="w-full border p-2" />
-            <p class="text-xs text-gray-500 mt-1">Max 2MB. JPG/PNG.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block">Page (Optional)</label>
+                <select name="page" class="w-full border p-2">
+                    <option value="">Global (All Pages)</option>
+                    @foreach (\App\Models\Testimonial::PAGES as $key => $label)
+                        <option value="{{ $key }}">{{ $label }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div>
+                <label class="block">Avatar</label>
+                <input type="file" name="avatar" accept="image/*" class="w-full border p-2" />
+                <p class="text-xs text-gray-500 mt-1">Max 2MB. JPG/PNG.</p>
+            </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <label class="inline-flex items-center gap-2">

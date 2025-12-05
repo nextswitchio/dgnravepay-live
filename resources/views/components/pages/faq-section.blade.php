@@ -5,12 +5,34 @@
     'limit' => null,
     // Optional: pass a $faqs collection from a controller to override internal query.
     'faqs' => null,
+    'page' => null,
 ])
 
 @php
     // Load published FAQs if not provided, preserving the current design style
     if (!isset($faqs) || $faqs === null) {
-        $query = \App\Models\Faq::query()->where('is_published', true)->latest('updated_at');
+        $query = \App\Models\Faq::query()->where('is_published', true);
+        
+        if ($page) {
+            $query->where('page', $page);
+        } else {
+             // If no page specified, show global FAQs (page is null) or default to home if desired?
+             // Requirement says "admin will have to choose the page".
+             // Let's assume if page is not passed, we show global ones (null).
+             // But wait, existing ones are null.
+             // Let's filter where page is null OR page matches if page is not provided?
+             // Actually, for specific pages, we want specific FAQs.
+             // If I'm on 'loan' page, I want 'loan' FAQs.
+             // If I'm on 'home' page, I want 'home' FAQs.
+             // If the component is used without page prop, maybe it should show global (null)?
+             // Let's stick to: if page is provided, filter by that page.
+             // If page is NOT provided, maybe show all? Or show global?
+             // Let's show global (null) if no page provided.
+             $query->whereNull('page');
+        }
+
+        $query->latest('updated_at');
+
         if (!empty($limit)) {
             $query->limit((int) $limit);
         }

@@ -204,16 +204,6 @@ if (individualTabButton && businessTabButton) {
 
 const navbarProductPersonal = `
     
-                                    <a href="/" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
-                                        <img id="nav-dropdown-product-individual-img" src="${getImageUrl(
-                                            "user.png"
-                                        )}" alt="user icon" class="size-6">
-                                        <div class="text-left">
-                                            <p class="font-bold text-sm mb-1.5 leading-1">Personal Account</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
-                                        </div>
-                                    </a>
                                     <a href="/virtual" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-virtual-img" src="${getImageUrl(
                                             "pos_terminal.png"
@@ -261,16 +251,6 @@ const navbarProductPersonal = `
 `;
 
 const navbarProductBusiness = `
-                                    <a href="/business" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
-                                        <img id="nav-dropdown-product-business-img" src="${getImageUrl(
-                                            "briefcase.png"
-                                        )}" alt="briefcase icon" class="size-6">
-                                        <div class="text-left">
-                                            <p class="font-bold text-sm mb-1.5 leading-1">Business Account</p>
-                                            <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                                grow</span>
-                                        </div>
-                                    </a>
                                     <a href="/pos" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
                                         <img id="nav-dropdown-product-pos-img" src="${getImageUrl(
                                             "pos_terminal.png"
@@ -430,13 +410,26 @@ if (hamburger && mobileMenu) {
 }
 
 // Dropdown functionality
-function setupDropdown(btnId, contentId, arrowId) {
+function setupDropdown(btnId, contentId, arrowId, defaultOpen = false) {
     const btn = document.getElementById(btnId);
     const content = document.getElementById(contentId);
     const arrow = document.getElementById(arrowId);
-    let isOpen = false;
+    let isOpen = defaultOpen;
 
     if (!btn || !content || !arrow) return;
+
+    if (isOpen) {
+        // If default open, we need to set height. 
+        // Since it might be hidden initially by parent, we can set a large max-height or 'none'
+        // However, for transition to work later, we might need a fixed value.
+        // But 'none' is safest for content that might change size.
+        // Let's try setting it to a large value or just 'none' and see if transition works back to 0.
+        // Actually, if we set it to 'none', we can't transition TO 0 easily without setting it to pixel value first.
+        // But for initial state, let's just set it.
+        content.style.maxHeight = "2000px"; // Large enough value
+        arrow.style.transform = "rotate(180deg)";
+    }
+
     btn.addEventListener("click", () => {
         isOpen = !isOpen;
 
@@ -451,7 +444,7 @@ function setupDropdown(btnId, contentId, arrowId) {
 }
 
 // Setup all dropdowns
-setupDropdown("dropdown1-btn", "dropdown1-content", "dropdown1-arrow");
+setupDropdown("dropdown1-btn", "dropdown1-content", "dropdown1-arrow", true);
 setupDropdown("dropdown2-btn", "dropdown2-content", "dropdown2-arrow");
 setupDropdown("dropdown3-btn", "dropdown3-content", "dropdown3-arrow");
 

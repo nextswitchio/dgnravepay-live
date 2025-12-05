@@ -390,9 +390,9 @@
                 <!-- JOIN SECTION -->
                 <x-pages.join-section />
                 <!-- TESTIMONIAL -->
-                <x-pages.testimonial-section />
+                <x-pages.testimonial-section page="business" />
                 <!-- FAQ -->
-                <x-pages.faq-section />
+                <x-pages.faq-section page="business" />
                 <!-- News -->
                 <x-pages.news-section />
             </div>

@@ -137,10 +137,12 @@
             <div class="custom-container mx-auto px-5 md:px-10 space-y-20 md:space-y-40">
                 <!-- TESTIMONIAL -->
                 <x-pages.testimonial-section title="Why Smart Users Trust Our Virtual USD Cards"
-                    description="From global shopping to streaming subscriptions, see how thousands of people like you are using DgnRavePay cards to spend securely and without borders." />
+                    description="From global shopping to streaming subscriptions, see how thousands of people like you are using DgnRavePay cards to spend securely and without borders."
+                    page="payroll" />
                 <!-- FAQ -->
                 <x-pages.faq-section title="Everything About Your Virtual USD Card, Made Simple"
-                    description="We've answered the most common questions so you can get started with confidence no hidden fees, no confusion, just clarity." />
+                    description="We've answered the most common questions so you can get started with confidence no hidden fees, no confusion, just clarity."
+                    page="payroll" />
             </div>
         </section>
     </x-guest-layout>

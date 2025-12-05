@@ -190,9 +190,9 @@
                     </div>
                 </div>
                 <!-- TESTIMONIAL -->
-                <x-pages.testimonial-section />
+                <x-pages.testimonial-section page="pos" />
                 <!-- FAQ -->
-                <x-pages.faq-section />
+                <x-pages.faq-section page="pos" />
             </div>
 
         </section>

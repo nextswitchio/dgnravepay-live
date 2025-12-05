@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
         // Ensure asset URLs work with both www and non-www domains
         if (request()->getHost()) {
             $scheme = request()->isSecure() ? 'https' : 'http';
-            $host = request()->getHost();
+            $host = request()->getHttpHost();
             $baseUrl = $scheme . '://' . $host;
             
             // Update both app.url and app.asset_url to ensure consistency

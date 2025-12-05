@@ -20,6 +20,20 @@ class Testimonial extends Model
     'is_featured',
     'is_published',
     'sort_order',
+    'page',
+  ];
+
+  public const PAGES = [
+    'home' => 'Home',
+    'loan' => 'Loan',
+    'pos' => 'POS',
+    'virtual' => 'Virtual Card',
+    'savings' => 'Savings',
+    'travel' => 'Travel',
+    'payroll' => 'Payroll',
+    'business' => 'Business',
+    'invoice' => 'Invoice',
+    'business-management' => 'Business Management',
   ];
 
   protected $casts = [

@@ -248,13 +248,22 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-primary mt-1 flex-shrink-0">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                     </svg>
-                                    <span class="text-gray-700">FCCPC Approval for Digital Lending</span>
+                                    <div>
+                                        <a href="{{ asset('docs/FCCPC APPROVAL DGNRAVEPAY.pdf') }}" target="_blank" class="text-gray-700 hover:text-primary underline">FCCPC Approval for Digital Lending</a>
+                                        <p class="text-sm text-gray-500 mt-1">Reference No: FCCPC/DSI/INV/ML/605</p>
+                                        <p class="text-sm text-gray-500">Issued: 16 June 2025</p>
+                                    </div>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-primary mt-1 flex-shrink-0">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                     </svg>
-                                    <span class="text-gray-700">Money Lender's License</span>
+                                    <div>
+                                        <a href="{{ asset('docs/DgnRavePay Loan License Document 176.pdf') }}" target="_blank" class="text-gray-700 hover:text-primary underline">Money Lender's License</a>
+                                        <p class="text-sm text-gray-500 mt-1">License No: MLA/WZ2/1542025</p>
+                                        <p class="text-sm text-gray-500">Issued by: Magistrate of Abuja, Magisterial District</p>
+                                        <p class="text-sm text-gray-500">Issued: 20th May 2025</p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

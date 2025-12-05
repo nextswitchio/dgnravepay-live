@@ -192,9 +192,9 @@
         <section class="my-20">
             <div class="custom-container mx-auto  px-5 md:px-10 space-y-20 md:space-y-40">
                 <!-- TESTIMONIAL -->
-                <x-pages.testimonial-section />
+                <x-pages.testimonial-section page="loan" />
                 <!-- FAQ -->
-                <x-pages.faq-section />
+                <x-pages.faq-section page="loan" />
             </div>
 
         </section>

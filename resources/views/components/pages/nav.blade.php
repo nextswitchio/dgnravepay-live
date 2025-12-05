@@ -192,7 +192,7 @@
     <!-- Mobile Menu Content -->
     <div id="mobile-menu"
         class="transition-all duration-300 max-h-0 bg-white h-screen-safe flex flex-col overflow-hidden">
-        <div class="flex-1 min-h-full flex flex-col overflow-y-auto px-4 py-4 space-y-4">
+        <div class="flex-1 flex flex-col overflow-y-auto px-4 py-4 space-y-4">
             <!-- First Dropdown - Products (2 column style) -->
             <div class="border-b border-gray-200 pb-4">
                 <button id="dropdown1-btn"
@@ -204,7 +204,7 @@
                         </svg>
                         <span class="font-medium">Product</span>
                     </div>
-                    <svg id="dropdown1-arrow" class="w-4 h-4 transition-transform duration-200" fill="currentColor"
+                    <svg id="dropdown1-arrow" class="w-4 h-4 transition-transform duration-200 rotate-180" fill="currentColor"
                         viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -212,66 +212,57 @@
                     </svg>
                 </button>
 
-                <div id="dropdown1-content" class="overflow-hidden transition-all duration-300 max-h-0 ml-4 mt-2">
+                <div id="dropdown1-content" class="overflow-hidden transition-all duration-300 ml-4 mt-2">
                     <!-- Toggle Buttons -->
-                    <div class="flex space-x-2 mb-3">
+                    <div class="flex gap-2 mb-3">
                         <button id="products-btn1"
-                            class="px-3 py-1 text-sm bg-primary text-white rounded-md transition-colors duration-200">
+                            class="flex-1 px-3 py-3 text-sm bg-primary text-white rounded-md transition-colors duration-200">
                             For Individuals
                         </button>
                         <button id="products-btn2"
-                            class="px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors duration-200">
+                            class="flex-1 px-3 py-3 text-sm bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors duration-200">
                             For Business
                         </button>
                     </div>
 
                     <!-- Products Content -->
                     <div id="products-content1" class="space-y-3">
-                        <a href="/" class="p-2 flex items-start gap-5 nav-drop-item">
-                            <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon"
-                                class="size-6">
-                            <div class="text-left">
-                                <p class="font-bold text-sm mb-1 leading-1 text-black">Personal Account</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
-                            </div>
-                        </a>
-                        <a href="/virtual" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="/virtual" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('virtual') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/pos_terminal.png') }}" alt="pos terminal icon"
                                 class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Virtual Cards</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('virtual') ? 'text-yellow-600' : '' }}">Virtual Cards</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
                         </a>
-                        <a href="/savings" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="/savings" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('savings') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/savings.png') }}" alt="savings icon"
                                 class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Savings</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('savings') ? 'text-yellow-600' : '' }}">Savings</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
                         </a>
-                        <a href="/loan" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="/loan" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('loan') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon"
                                 class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Loan</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('loan') ? 'text-yellow-600' : '' }}">Loan</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
                         </a>
-                        <a href="/travel" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="/travel" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('travel') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/hotel-bed.png') }}" alt="hotel bed icon"
                                 class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Travel and Hotel</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('travel') ? 'text-yellow-600' : '' }}">Travel and Hotel</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -279,53 +270,44 @@
                     </div>
 
                     <div id="products-content2" class="space-y-3 hidden">
-                        <a href="/business" class="p-2 flex items-start gap-5 nav-drop-item">
-                            <img src="{{ Vite::asset('resources/images/briefcase.png') }}" alt="briefcase icon"
-                                class="size-6">
-                            <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Business Account</p>
-                                <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
-                                    grow</span>
-                            </div>
-                        </a>
-                        <a href="/pos" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="/pos" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('pos') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/pos_terminal.png') }}"
                                 alt="POS & Terminal icon" class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">POS & Terminal</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('pos') ? 'text-yellow-600' : '' }}">POS & Terminal</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('business-management') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/graph-up.png') }}"
                                 alt="Business graph up icon" class="size-6">
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Business Management</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('business-management') ? 'text-yellow-600' : '' }}">Business Management</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('payroll') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon"
                                 class="size-6">
 
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Payroll</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('payroll') ? 'text-yellow-600' : '' }}">Payroll</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
                         </a>
-                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
+                        <a href="#" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('invoice') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/invoice.png') }}" alt="invoice icon"
                                 class="size-6">
 
 
                             <div class="text-left">
-                                <p class="font-bold text-sm mb-1.5 leading-1 text-black">Invoicing</p>
+                                <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('invoice') ? 'text-yellow-600' : '' }}">Invoicing</p>
                                 <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                     grow</span>
                             </div>
@@ -354,36 +336,36 @@
 
                 <div id="dropdown2-content"
                     class="overflow-hidden transition-all duration-300 max-h-0 ml-4 mt-2 space-y-2">
-                    <a href="/about" class="p-2 flex items-start gap-5 nav-drop-item">
+                    <a href="/about" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('about') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/user.png') }}" alt="user icon" class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">About Us</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('about') ? 'text-yellow-600' : '' }}">About Us</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/career" class="p-2 flex items-start gap-5 nav-drop-item">
+                    <a href="/career" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('career') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/virtual_card.png') }}" alt="virtual card icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">Careers</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('career') ? 'text-yellow-600' : '' }}">Careers</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/contact" class="p-2 flex items-start gap-5 nav-drop-item">
+                    <a href="/contact" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('contact') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/savings.png') }}" alt="savings icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">Contact Us</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('contact') ? 'text-yellow-600' : '' }}">Contact Us</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/press" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
+                    <a href="/press" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item {{ request()->is('press') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/loan.png') }}" alt="loan icon" class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">Press and Media</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('press') ? 'text-yellow-600' : '' }}">Press and Media</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
@@ -412,38 +394,38 @@
 
                 <div id="dropdown3-content"
                     class="overflow-hidden transition-all duration-300 max-h-0 ml-4 mt-2 space-y-2">
-                    <a href="/blog" class="p-2 flex items-start gap-5 nav-drop-item">
+                    <a href="/blog" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('blog') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/blogger.png') }}" alt="blogger icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">DgnRavePay Blog</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('blog') ? 'text-yellow-600' : '' }}">DgnRavePay Blog</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
                     </a>
-                    <a href="#" class="p-2 flex items-start gap-5 nav-drop-item">
+                    <a href="#" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('help-center') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/help_center.png') }}" alt="help center icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1 text-black">Help Center</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('help-center') ? 'text-yellow-600' : '' }}">Help Center</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/policy" class="p-2 flex items-start gap-5 nav-drop-item">
+                    <a href="/policy" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('policy') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/policy.png') }}" alt="policy icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1">IMF Policy</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 {{ request()->is('policy') ? 'text-yellow-600' : '' }}">IMF Policy</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
                     </a>
-                    <a href="/whistleblower" class="p-2 flex items-start gap-5 nav-drop-item">
+                    <a href="/whistleblower" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('whistleblower') ? 'bg-yellow-50' : '' }}">
                         <img src="{{ Vite::asset('resources/images/whistle.png') }}" alt="whistle icon"
                             class="size-6">
                         <div class="text-left">
-                            <p class="font-bold text-sm mb-1.5 leading-1">Whistleblower Policy</p>
+                            <p class="font-bold text-sm mb-1.5 leading-1 {{ request()->is('whistleblower') ? 'text-yellow-600' : '' }}">Whistleblower Policy</p>
                             <span class="text-black/30 text-xs font-medium">Bank, pay, save, and
                                 grow</span>
                         </div>
@@ -451,13 +433,13 @@
                 </div>
             </div>
 
-            <!-- Get Started Button -->
-            <div class="sticky bottom-0 left-0 right-0 p-4 border-t border-gray-200 bg-white">
-                <a href="#"
-                    class="block w-full px-4 py-3 bg-primary text-white text-center font-medium rounded-md hover:bg-yellow-500 transition-colors duration-200">
-                    Get Started
-                </a>
             </div>
+        <!-- Get Started Button -->
+        <div class="p-4 border-t border-gray-200 bg-white">
+            <a href="#"
+                class="block w-full px-4 py-3 bg-primary text-white text-center font-medium rounded-md hover:bg-yellow-500 transition-colors duration-200">
+                Get Started
+            </a>
         </div>
     </div>
 </nav>

@@ -41,6 +41,7 @@ class FaqController extends Controller
             'question' => 'required|string|max:255',
             'answer' => 'required|string',
             'is_published' => 'sometimes|boolean',
+            'page' => 'nullable|string',
         ]);
         Faq::create($data);
         return redirect()->route('admin.faqs.index')->with('status', 'FAQ created');
@@ -57,6 +58,7 @@ class FaqController extends Controller
             'question' => 'required|string|max:255',
             'answer' => 'required|string',
             'is_published' => 'sometimes|boolean',
+            'page' => 'nullable|string',
         ]);
         $faq->update($data);
         return redirect()->route('admin.faqs.index')->with('status', 'FAQ updated');

@@ -329,9 +329,9 @@
                 <!-- JOIN SECTION -->
                 <x-pages.join-section />
                 <!-- TESTIMONIAL -->
-                <x-pages.testimonial-section />
+                <x-pages.testimonial-section page="home" />
                 <!-- FAQ -->
-                <x-pages.faq-section />
+                <x-pages.faq-section page="home" />
                 <!-- News -->
                 <x-pages.news-section />
             </div>
