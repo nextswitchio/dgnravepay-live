@@ -246,7 +246,7 @@
                                 <span class="text-black/30 text-xs font-medium">Quick cash, anytime</span>
                             </div>
                         </a>
-                        <a href="/travel" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('travel') ? 'bg-yellow-50' : '' }}">
+                        <!-- <a href="/travel" class="p-2 flex items-start gap-5 nav-drop-item {{ request()->is('travel') ? 'bg-yellow-50' : '' }}">
                             <img src="{{ Vite::asset('resources/images/hotel-bed.png') }}" alt="hotel bed icon"
                                 class="size-6">
 
@@ -254,7 +254,7 @@
                                 <p class="font-bold text-sm mb-1.5 leading-1 text-black {{ request()->is('travel') ? 'text-yellow-600' : '' }}">Travel and Hotel</p>
                                 <span class="text-black/30 text-xs font-medium">Book flights and Hotels with ease </span>
                             </div>
-                        </a>
+                        </a> -->
                     </div>
 
                     <div id="products-content2" class="space-y-3 hidden">

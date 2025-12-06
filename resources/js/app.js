@@ -234,16 +234,6 @@ const navbarProductPersonal = `
                                             <span class="text-black/30 text-xs font-medium">Quick cash, anytime</span>
                                         </div>
                                     </a>
-                                    <a href="/travel" class="rounded-xl p-3 flex items-start gap-5 nav-drop-item">
-                                        <img id="nav-dropdown-product-hotel-img" src="${getImageUrl(
-    "hotel-bed.png"
-)}" alt="hotel bed icon" class="size-6">
-
-                                        <div class="text-left">
-                                            <p class="font-bold text-sm mb-1.5 leading-1">Travel and Hotel</p>
-                                            <span class="text-black/30 text-xs font-medium">Book flights and Hotels with ease</span>
-                                        </div>
-                                    </a>
 `;
 
 const navbarProductBusiness = `
