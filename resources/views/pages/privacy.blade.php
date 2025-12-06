@@ -11,7 +11,7 @@
                             class="capitalize mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
                             Privacy Policy
                         </h1>
-                        <p class="text-lg text-gray-600 mt-4 mb-8">Last Updated: [Insert Date]</p>
+                        <p class="text-lg text-gray-600 mt-4 mb-8">Last Updated: {{ date('F d, Y', filemtime(resource_path('views/pages/privacy.blade.php'))) }}</p>
                     </div>
                 </div>
             </div>
