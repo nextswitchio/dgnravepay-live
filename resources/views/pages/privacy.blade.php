@@ -205,9 +205,28 @@
                 <p class="mb-3">DgnRavePay Technologies Ltd is the licensed lender responsible for offering and managing loan products within the DgnRavePay app.</p>
                 <p class="mb-3"><strong>Regulatory Authorisation:</strong></p>
                 <p class="mb-3">DgnRavePay Technologies Ltd holds the required authorisations to offer digital lending services in Nigeria, including:</p>
-                <ul class="ml-5 list-disc mb-3">
-                    <li>FCCPC Approval for Digital Lending Operations</li>
-                    <li>Money Lender's License</li>
+                <ul class="space-y-2 ml-5 list-disc">
+                    <li class="flex items-start gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-primary mt-1 flex-shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                        <div>
+                            <a href="{{ asset('docs/FCCPC APPROVAL DGNRAVEPAY.pdf') }}" target="_blank" class="text-gray-700 hover:text-primary underline">FCCPC Approval for Digital Lending</a>
+                            <p class="text-sm text-gray-500 mt-1">Reference No: FCCPC/DSI/INV/ML/605</p>
+                            <p class="text-sm text-gray-500">Issued: 16 June 2025</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-primary mt-1 flex-shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                        <div>
+                            <a href="{{ asset('docs/DgnRavePay Loan License Document 176.pdf') }}" target="_blank" class="text-gray-700 hover:text-primary underline">Money Lender's License</a>
+                            <p class="text-sm text-gray-500 mt-1">License No: MLA/WZ2/1542025</p>
+                            <p class="text-sm text-gray-500">Issued by: Magistrate of Abuja, Magisterial District</p>
+                            <p class="text-sm text-gray-500">Issued: 20th May 2025</p>
+                        </div>
+                    </li>
                 </ul>
                 <p class="mb-3">These documents authorise DgnRavePay to operate loan services in accordance with Nigerian financial and consumer protection regulations.</p>
                 <p>All lending operations, data collection, and loan decision processes are carried out solely by DgnRavePay Technologies Ltd.</p>
@@ -218,93 +237,9 @@
                 <p>If you have questions or requests regarding this Privacy Policy, please contact:</p>
                 <ul class="ml-5 list-disc mt-3">
                     <li><strong>Email:</strong> <a href="mailto:help@DgnRavePay.com" class="text-blue-600 hover:text-blue-800">help@DgnRavePay.com</a></li>
-                    <li><strong>Address:</strong> DgnRavePay HQ, [Insert Office Address]</li>
+                    <li><strong>Address:</strong> DgnRavePay HQ, No. 4, Bashiru Olusesi Street, off Conservation Road, Lekki Please 2, Lagos State.</li>
                 </ul>
             </div>
         </div>
         
-        <!-- Loan Services Support Section -->
-        <section class="bg-white relative py-20 md:py-28">
-            <div class="custom-container mx-auto px-5 md:px-10">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-12">
-                        <h2 class="capitalize mb-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-black to-primary">
-                            Loan Services Support
-                        </h2>
-                        <p class="text-gray-600 text-lg">
-                            DgnRavePay loan products are provided by DgnRavePay Technologies Ltd, a licensed digital lender in Nigeria.
-                        </p>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 md:p-10 space-y-8">
-                        <!-- Regulatory Status -->
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-                                </svg>
-                                Regulatory Status
-                            </h3>
-                            <p class="text-gray-700 mb-3">DgnRavePay Technologies Ltd is authorised to offer loan services under:</p>
-                            <ul class="space-y-2">
-                                <li class="flex items-start gap-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-primary mt-1 flex-shrink-0">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                    </svg>
-                                    <div>
-                                        <a href="{{ asset('docs/FCCPC APPROVAL DGNRAVEPAY.pdf') }}" target="_blank" class="text-gray-700 hover:text-primary underline">FCCPC Approval for Digital Lending</a>
-                                        <p class="text-sm text-gray-500 mt-1">Reference No: FCCPC/DSI/INV/ML/605</p>
-                                        <p class="text-sm text-gray-500">Issued: 16 June 2025</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-primary mt-1 flex-shrink-0">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                    </svg>
-                                    <div>
-                                        <a href="{{ asset('docs/DgnRavePay Loan License Document 176.pdf') }}" target="_blank" class="text-gray-700 hover:text-primary underline">Money Lender's License</a>
-                                        <p class="text-sm text-gray-500 mt-1">License No: MLA/WZ2/1542025</p>
-                                        <p class="text-sm text-gray-500">Issued by: Magistrate of Abuja, Magisterial District</p>
-                                        <p class="text-sm text-gray-500">Issued: 20th May 2025</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Loan Privacy Policy -->
-                        <div class="border-t border-gray-300 pt-8">
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-                                </svg>
-                                Loan Privacy Policy
-                            </h3>
-                            <p class="text-gray-700">
-                                Read our Loan Services Privacy Policy here: 
-                                <a href="{{ route('privacy') }}#loan-services" class="text-primary hover:text-primary-2 underline font-medium">
-                                    https://dgnravepay.com/privacy
-                                </a>
-                            </p>
-                        </div>
-
-                        <!-- Contact Support -->
-                        <div class="border-t border-gray-300 pt-8">
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
-                                </svg>
-                                Loan Support Contact
-                            </h3>
-                            <p class="text-gray-700 mb-3">For loan-related support, please contact:</p>
-                            <a href="mailto:hello@dgnravepay.com" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-2 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
-                                </svg>
-                                hello@dgnravepay.com
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </x-guest-layout>
